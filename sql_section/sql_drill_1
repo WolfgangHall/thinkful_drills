@@ -1,0 +1,27 @@
+1.
+SELECT
+    trip_id,
+    duration
+FROM
+    trips
+ORDER BY duration DESC
+LIMIT 5
+
+
+2.
+SELECT
+    *
+FROM
+    stations
+WHERE
+    station_id = 84
+
+
+3.
+SELECT
+    Date
+FROM
+    weather
+WHERE
+    ZIP = 94301 AND
+    Events like 'Rain'
