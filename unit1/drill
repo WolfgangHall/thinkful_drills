@@ -1,0 +1,7 @@
+1. Use the data to compare the number of pageviews and the number of purchases for each product. The most popular product should be featured in the advertising campaign. Ideally, the most popular product leads to the highest number of paid customer conversions.
+
+2. Use the data to find out which steps of the onboarding tunnel have the lowest rates of completion. Look to either get rid of the least completed step or combine it with another. Potentially combine it with the step that takes the least amount of time to complete.
+
+3. I'd like to prioritize the hotels that are avaiable above all else, as though are going to be the locations that are actually useful. I would then prioritize the most popular locations based on session information and then rank by price.
+
+4. Figure out whether the sessions lengths are exhibiting strange tendencies or the number of logins has decreased dramatically in a time series over the three year period.
