@@ -1,0 +1,29 @@
+Methods for cleaning data
+
+-> Replace with missing indicator
+    - None in python
+    - NULL in SQL
+
+    - If the values are anomalies
+        - incredibly high or low in comparison to the rest of the data
+
+    - Fake answers
+        - straightlining -> giving the same answer to every question
+        - repeating pattern of answers
+        - plot response times for indicator of correctness
+
+-> Replace to a valid response
+
+    - if the value is an anomaly
+        - scale of 1 to 7 -> answer is 77
+            - may be acceptable to change to 7
+
+    - extreme but plausible values
+        - 'winsorizing'
+            - choose a percentile like 90%
+            - all values below the 5th percentile are equal to the value at the 5th percentile
+            - all values above the 95th percentile are equal to the value at the 95th percentile
+
+-> Remove values
+    - user submits a form twice
+    - overlap of two data sources

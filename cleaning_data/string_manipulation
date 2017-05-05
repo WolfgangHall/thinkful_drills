@@ -1,0 +1,76 @@
+regular expression -> a sequence of characters that defines a search pattern
+
+character categories in a string
+    .isdigit() -> at least one character all are digits
+    .isalpha() -> at least one character and alphetical
+    .isnumeric() -> all characters are numeric (fractions, roman numeral, glyphs)
+    .isspace() -> only whitespace characters
+
+
+Apply
+    specify a function and apply that function to each element in the data frame or series
+
+    def is_a_string(x):
+        return str(x).isdigit()
+
+    df.apply(is_a_string)
+
+
+Lambda
+    - small, temporary, unnamed function created with lambda keyword
+
+    lambda input: str(input).isdigit()
+
+    start with lambda
+    add parameters for function (comma-separated)
+    add colon
+    add the expression that would be in the function body
+    omit the return keyword
+
+
+
+Filter
+    - use to extract parts of a string
+    - expects 2 arguments
+        - function that takes a single input
+        - iterable
+    - returns true for values that match
+
+    print(list(filter(lambda x: str(x).isdigit(), random_list)))
+
+
+
+Splitting Strings
+    .split()
+        - takes one argument, the character or substring to split the string on
+            - delimiter
+    Series.str.split()
+        - use on series objects
+
+        words_split = words.str.split('@', expand=True)
+        names = word_split[0]
+        print(names, '\n')
+
+    using regex
+        import re
+
+        firstname = names.apply(lambda x: re.findall('[A-Z][a-z]*', x)[0])
+
+        print(firstname, '\n')
+
+
+Change contents of strings
+
+    Replace
+        Series.str.replace()
+
+        emails.str.replace('@', 'at')
+
+    Change case
+        series.str.lower()
+        series.str.upper()
+        series.str.capitalize()
+
+    stripping whitespace
+        .strip()
+        series.str.strip()
