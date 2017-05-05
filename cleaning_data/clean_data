@@ -27,3 +27,9 @@ Methods for cleaning data
 -> Remove values
     - user submits a form twice
     - overlap of two data sources
+
+Systemetic Cleaning
+    - dirty patterns that are widespread/systematic
+        - income survey -> low income respondents may skip this question
+        - high income respondents will answer
+            - skews data
