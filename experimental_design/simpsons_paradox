@@ -1,0 +1,9 @@
+The phenomenon when an average over a number of groups shows one trend, but an average for each individual group shows the opposite trend, or no trend
+
+    - the lurking variable problem => an unaccounted-for third variable changes the relations
+
+    - pay attention to how groups differ from one another before averaging across them
+
+    - be wary of:
+        - averaging a small group with a large one
+        - averaging multiple groups with very different demographics
