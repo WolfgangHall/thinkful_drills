@@ -1,0 +1,48 @@
+- basic stats methods like ANOVA, t-tests, and correlations will fail if any of the variable involved has a missing value
+
+drop empty rows
+    - .dropna() -> pandas method
+        parameters
+        - how => where to drop values
+        - thresh => drop values with this number of missing values in a row
+        - subset => define columns to search for missing values
+
+
+missingness matters
+    - loss of statistical power => harder to detect effects and trends
+    - bias due to certain values being more prone to emptiness
+
+
+missing completely at random (MCAR)
+    - a flood washes away some servers and 20% of data is lost
+    - unless amount of data lost makes the sample size too small, it's fair to get rid of missing data
+
+
+missing at random (MAR)
+    - women are more likey to skip questions about weight
+    - if we can explain why data is missing with data we have
+    - if we find a variable that differentiates between missing and non-missing values
+        - 90% of the people w/ missing values on depression score are men -> suspect MAR
+
+
+missing not at random (MNAR)
+    - lgbt persons are less likely to answer questions are sexual orientation
+    - systematic missingness: people who would answer in a certain way are less likely to answer at all
+    - if you throw out MNAR data, you get a biased sample leading to biased conclusions
+    - an assumption based on looking at data collected
+
+
+Input data
+
+    - imputation => guessing what the missing data is and filling in the cell
+        - commonly replace missing values with the mean, median, or mode
+            - keeps central tendency the same, reduces variance and variable correlations
+
+# replaces missing values with the most common value in data frame
+df = df.apply(lambda x:x.fillna(x.value_counts().index[0]))
+print(df)
+
+
+
+- sometimes collecting new data is easiest course of action
+    - either re-collect or collect more information to fill in the gaps of the missing data
