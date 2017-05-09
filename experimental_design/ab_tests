@@ -1,0 +1,35 @@
+A/B and A/A tests
+    - a technique used to identify whether one version of an object of interest is better at producing a desired outcome than another
+        - product, marketing campaign, email text
+
+components of a/b test
+    - two versions of something, so you can compare effect
+        - control version and test version
+        - the difference between the two versions is often called the treatment
+    - a sample -> divided into two groups
+        - groups should be similar to one another
+    - a hypothesis
+        - whatever you expect to happen
+    - outcomes of interest
+        - what you expect to change?
+        - how you will measure the change
+        - decide on the key metric -> captures effect of change
+    - other measured variables
+        - info about the two groups to ensure similarities
+
+
+Good samples
+    - getting random samples to test marketing emails is fairly simple because the test is easily randomizable
+    - other things are harder to test because you can't seperate them as easily
+        - playing music in a store -> you can't have some people hear it and others not
+            - needs to be either 'all on' or 'all off'
+        - think about things like seasonality, day of week, time of year
+
+
+Key Metrics
+    - the factor you want to measure
+    - make sure it's as closely related to the business goal as possible
+    - make sure you can reliable measure it
+        - preferrably a passive measurement that needs no extra engagement from users
+        - avoid self reported data -> lots of potential bias
+

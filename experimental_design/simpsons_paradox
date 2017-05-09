@@ -7,3 +7,8 @@ The phenomenon when an average over a number of groups shows one trend, but an a
     - be wary of:
         - averaging a small group with a large one
         - averaging multiple groups with very different demographics
+
+    - Use randomization to equalize the effects of lurking variables
+        - does not remove the possibility of lurking differences entirely but it certainly helps
+
+    - look at subgroups to see if trends match overall

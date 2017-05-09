@@ -1,0 +1,43 @@
+Bias
+
+    - bias refers to anything that causes a sample to systematically differ from the population
+
+    - can come from:
+        - the sampling procedure
+        - the assignment to conditions procedure
+        - context of the study
+        - the people running the study
+
+    - sampling bias (selection bias)
+        - when the sample differs from the population in some way (more women, younger, richer)
+        - conclusions based on the sample do not apply to greater population
+        - can be avoided with random selection
+
+    - assignment to conditions
+        - failure of randomness
+        - sample should be separated into simlar groups
+            - the only difference should be the variable introduced
+            - if one group has a median age of 13 and the other 30, you can't make assertive statements
+
+    - context of study
+        - sometimes the setting plays a large role on the sample
+            - hot, cold
+
+    - bias from the people running the study
+        - interviewer smiles when given an answer they like, frowns when the answer is not wanted
+        - not recording answers that refute the hypothesis
+        - observer bias
+
+
+A/A testing
+    - all but selection bias may be detectable using A/A testing
+    - provides context for results of A/B testing
+
+    - compares the outcome of choice between two identical versions of something
+
+    A/A testing is useful for:
+        - different testing methods: send the same email out in the morning when people are at work, send the email in the evening
+
+        - random split method: send the email to long-term subs and short-term sub groups
+
+        - outside factors
