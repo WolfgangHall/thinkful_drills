@@ -1,0 +1,28 @@
+experimentation RFC
+
+    - rfc => 'request for comment'
+    - research proposal
+    - organized in 3 parts
+
+    The Problem
+        - define the question or problem
+        - why should this question be answered
+        - review what we know about the problem
+
+    The Potential Solution
+        - propose a hypothesis to be tested
+
+    Method for Testing the Solution
+        - describe the design of the experiment, the analysis plan, set benchmarks
+
+
+    RFC helps to avoid common experimentation pitfalls
+        - mis-match between question and study design
+            - a question that proposes to measure something but doesn't actually measure that value
+
+        - a design that does not generate usable data
+            - comparing employee satisfaction, but each group uses different measures
+
+        - False positives
+            - moving benchmarks
+            - stopping data collection early when things look promising, lack of real trends, reflects random chance
