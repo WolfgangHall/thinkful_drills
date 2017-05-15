@@ -1,0 +1,56 @@
+p-values
+    - p stands for probability
+
+    - p-value less than .05 is good, greater than .05 is bad
+
+    - null hypothesis testing
+        - the most common system used to test provisional beliefs about data
+
+        - tester has hypothesis that describes what they think their data will look like if their expectations are confirmed
+
+        - null hypothesis => describes what the data will look like if their expectations are not confirmed
+
+        - data is then compared to the null hypothesis
+
+        - t-test => the size of the difference between the two groups is divided by the combined variance of the groups
+            - ratio is known as t-value
+            - situtated within a t-distribution (like a normal distribution)
+                - represents that t-values you get if the null hypothesis is true
+                - the farther away the from the center the t-value is, the less likely it is that the null hypothesis is true
+                - area under the curve is equal to 1
+                - total area defined by the t-value adds up to the p-value
+
+        - p-valie of < 0.05 means reject the null hypothesis
+        - 0.05 is the threshold
+            - in theory, returns a false positive for 1 in 20 tests
+            - corresponds to two standard deviations or two sigma
+
+
+T-Values
+    - default t-test is 'two-tailed' accounting for negative values
+    - if using a one tailed t-test, only sum the area under the curve of one of the tails
+    - one-tailed test is appropriate when comparing an average weight to zero
+        - the weight cannot be negative
+    - two-tailed test is used as it is typically better to be too conservative (higher p-values than you should) than too liberal (lower p-values than we should)
+
+
+Philosophy of Null Hypothesis Significance testing
+
+    - p-value represents the probability of getting the data you have if the null hypothesis were true in the population
+
+    - null hypothesis => typically a no-effect hypothesis
+
+    - when p-value is less than .05 => there is less than 5% chance of getting your particular data by random chance, even though there was no effect in the population
+        - rejection of null hypothesis
+
+    - all NHST allows the data scientist to do is to conclude that there is probably not no effect
+
+
+    - purpose of A/B test is to create a situation where there are only two possible outcomes
+        - if your hypothesis is correct -> leads to outcome X
+        - if the null hypothesis is correct -> does not lead to outcome X
+
+    - very difficult to limit to just two outcomes
+        - very hard to definitively say, the outcome is based on just one effect
+        - can disprove a hypothesis, can never definitively prove a hypothesis correct
+            - can add support by disproving others

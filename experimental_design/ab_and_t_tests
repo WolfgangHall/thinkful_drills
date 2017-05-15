@@ -1,0 +1,48 @@
+Evaluate A/B test data using t-tests
+
+- if two groups have different means, is that meaningful or a result of random chance?
+
+- need 3 pieces of information
+    - summaries of central tendency => mean
+    - amount of variability => standard deviations
+    - size of each group => N
+
+- use the standard deviations and the Ns to put the size of the difference between the group means into context
+    - the higher the variability, the larger a difference between them must be for confidence in a real difference and the result of noisiness
+    - larger groups give more accurate means (more accurate meaning, more likely to represent the population)
+        - reduces variable noise
+        - allows for detection of smaller group differences
+
+
+t-test
+    - a statistical test that calculates the size of the difference between two means given their variance and sample size
+    - formula
+        https://www.screencast.com/t/8yvsKIw5hM
+    => y1 and y2 represent the means of each group
+    => s1 and s2 represent the sample std dev of each group
+    => N1 and N2 represent the sample sizes for each group
+
+    => top part -> difference between mean1 and mean2
+    => bottom part -> sum of each respective standard dev squared divided by the sample size
+        - squaring the std devs decreases bias in estimates
+    ==> divide top by bottom (difference in means / variability over sample size) -> gets the relative size of the difference in means given th amount of noise in the data
+        - t-value
+
+    -> larger t-values => the difference between the groups is less likely to be due to noise
+
+
+- t-test statistic provides a one-number summary of the information in a plot
+
+- use a/b tests in conjunction with t-tests to determine: are the groups actually different?
+
+- using a t-test => calculate the t-statistic
+    - t-statistic gives the size of the group difference divided by the noise level of the data
+    - larger t-values signal a group difference large enough to be interesting
+        - is the t-value meaningfully large?
+        - what is the probability of getting a t-value this extreme or more, if there were no difference between the groups in the population?
+
+        - decide how improbable you want the t-value to be before we claim a real difference between the groups
+            - the probability is the p-value
+                - a threshold of improbability -> significance level
+
+- variability as a metric to evalute the meaningfulness of patterns
