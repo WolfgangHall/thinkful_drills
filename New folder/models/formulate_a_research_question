@@ -1,0 +1,33 @@
+statistical model
+    - the mathematical expression of a research question
+
+supervised learning
+    - begin with an outcome of interest
+    - a particular variable that you want to understand, explain or predict
+
+    sample research question
+        - (broad question) How do we best predict the outcome of interest given the data?
+        - (narrow question) What is the most accurate estimate of the outcome of interest for N groups under X conditions?
+
+    different types of research questions call for different types of models
+        - questions about odds or likelihoods
+            - use models that deal with binary outcomes
+        - questions about quantity
+            - use models that deal with continuous outcomes
+
+Questions to ask as you go
+    - what is already known about the topic?
+        - no need to reinvent the wheel
+
+    - what sort of data, or ways to collect data are available to me on this topic?
+        - without relvant data, you're merely speculating
+
+    - what skills do I have?
+        - the question should be addressable using the statistical and programming skills you know, or you can learn in the time allotted
+
+    - can this question be answered using quantities or probabilities?
+        - if using a math model, must be amenable to a numeric solution
+
+    - can the research question be asked in one sentence?
+        - more refined questions are better than those that are too broad or vague
+

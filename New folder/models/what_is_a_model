@@ -1,0 +1,44 @@
+Models
+    - weather report
+    - movie recommendations from netflix
+    - forecasting elections
+    - train maps
+
+
+statistical model
+    - represent complex info in a simple way to serve a goal
+    -> a simplified mathematical representation of the data scientist's best guess about the underlying processes that created the data
+
+    simplified
+        - prioritize information-dense features
+        - elements that explain a large amount of variance in the outcome of interest
+        - excluding data leads to a less perfect representation but it's easier to work with
+
+    mathematical representation
+        - statistical model is a math formula or series of formulas
+
+    best guess
+        - the model represents the best understanding of data at the time
+        - best guess about the underlying processes that lead to the observed outcomes
+        - model design is informed by
+            - prior knowledge about the topic
+            - visual inspection of the data
+            - outcomes of fitting previous models to the data
+
+    underlying processes
+        - good models give insight into how the variable of interest came to have the values that it does
+            - useful in predicting future outcomes
+            - reasonable approximation of underlying process that created outcomes
+                - when given new data, you can predict the outcome
+
+    getting rid of non-essential aspects in a dataset, can provide great insights
+
+
+Models and math
+    - stats models are based on mathematical formula(s)
+        - in theory, any set of relationships among variables that can be represented with math can be used as a model
+    - choose from a set of models whose math properties are well understood
+        - some work well with continuous data, others with categorical
+        - some allow only two variables
+            - t-test -> categorical predictor and continuous outcome
+        - others allow as many as wanted

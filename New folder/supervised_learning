@@ -1,0 +1,9 @@
+supervised learning
+    -> all of the models will be trained to generate a certain outcome or dependent variable
+    - outcome is something observed in the past
+        - want to use new inputs to generate a prediction or better understand the underlying process
+
+    - used for sales or predicting susceptibility to a disease
+
+    - the key -> having an outcome we have previously observed that we want to understand in the future
+
