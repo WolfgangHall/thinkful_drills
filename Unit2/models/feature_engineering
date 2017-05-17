@@ -1,0 +1,69 @@
+At this point:
+    - the data set has been cleaned
+    - data set contains outcome variable and a set of other variables that are valuable to the model
+        - other variables are kept based on initial exploration and/or domain knowledge
+
+next step is transforming potential predictor variables into 'features'
+
+features
+    -> variables that have been transformed in ways that make them best-suited to work within our model to explain variance in the outcome of interest
+
+feature engineering allows you to get creative with your data
+
+
+
+Fun with categorical variables
+    - most models will only run on numerical data
+        - to get info from a categorical variable with X levels, you need to create X - 1 numerical features
+            - each is coded 1 or 0
+            - if you know the values for 5 variables are 0, the sixth will have a value of 1
+                - the level without a feature is called a 'reference value'
+                - can make indicators that gather together categories that you think are related
+
+
+Changing variable types
+
+    - can take a continuous variable and make it categorical
+        - example => comparing older adults (age > 65) to all other ages in a sample
+
+
+Data Scientist  vs.  Programmer
+    - programmers think in terms of strings, ints, and floats
+    - data scientists see variables as categorical (nominal) or continuous
+        - continuous group is subdivided into ordinal, interval, and ratio
+
+            ordinal
+                - indicate rank order (first, second, third ...)
+                - does not give information in regard to distance between scores
+                - often treated like categorical variables in analysis
+                    - not useful in math operations
+
+            interval
+                - indicate rank-order and distance
+                - example -> temperature (distance between 30 and 40 is same as 50 and 60)
+                - lacks an absolute zero
+                    - cannot logically make a ration
+                        - 60 degrees is not twice as hot as 30 degrees
+                        - degrees of heat in the air
+                - can be treated as categorical or continuous
+                    - most models assume a continuous variable has an absolute zero
+
+            ratio
+                - indicate rank, distance, and a meaningful absolute zero value
+                - when ratio has a score of 0, none of the quantity measured by the variable is present
+                - example -> age (someone 0 years old has not been born, someone 20 years old has lived twice as long as a 10 year old)
+
+Categorize each variable in the ESS dataset:
+country - categorical
+idno    - continuous - ordinal
+year    - continuous - ratio
+tvtot   - continuous - ratio
+ppltrst - continuous - ordinal
+pplfair - continuous - ordinal
+pplhlp  - continuous - ordinal
+happy   - continuous - ordinal
+sclmeet - continuous - ordinal
+sclact  - continuous - ordinal
+gndr    - categorical
+agea    - continuous - ratio
+partner - categorical

@@ -1,0 +1,60 @@
+Combining two or more highly-correlated variables
+
+    - many models assume:
+        - features are correlated with the outcome
+        - but the features are uncorrelated with each other
+
+    - two highly correlated variables can be averaged to create a feature, or can be dropped
+
+    - three or more highly correlated variables can also be combined using a stats method called 'Principal Components Analysis (PCA)'
+
+    Principal Components Analysis
+        -> reduces the correlated set of variables into a smaller set of uncorrelated features
+
+
+
+Dealing with non-normality
+    - if normality is a model-assumption (often it is), then non-normal variables can sometimes be transformed into normally-distributed features using transformation
+        - taking the square root
+        - finding the inverse
+        - finding the log of the variable
+
+
+
+Creating linear relationships
+    - many models assume that the relationship between a feature and an outcome is linear
+        - sometimes you want to include a variable that has a non-linear component to its relationship with the outcome
+
+        - to capture non-linearity and keep model happy
+            - can create quadratic or higher-level features
+                - squaring
+                - cubing
+                - otherwise multipying a variable by itself
+
+
+
+Making variables easier to understand in light of the research question
+    - if research question involves centimeters, but variable is measured in feet
+        - create a feature that uses centimeters to make interpretation of results easier
+
+    - can re-encode a variable into a feature that matches terminology of the research question
+        - research question about 'sadness'
+            - higher values indicate greater, rather than less, sadness
+
+
+
+Leveling the playing field
+    - some modeling methods assume that all features have values in the same range
+        - example -> all features have a min 0 and a max of 1
+        - features that vary in range can result in incorrect estimates
+        - can normalize all the variables to the same scale
+            - usually a mean of 0 and standard deviation of 1
+
+
+All about interactions
+    - if you think the relationship between the outcome and a feature depends on the value of a second feature
+        -> create a feature that represents the interaction
+
+    - relationship between sadness and watching tv
+        - perhaps those who watch with a partner are less sad
+All about interactions

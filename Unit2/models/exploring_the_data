@@ -1,0 +1,81 @@
+Univariate Analysis
+
+    after defining a research question -> learn about individual variables through inspection
+        - inspect data file itself
+        - create visualizations
+        - univariate descriptive stats
+            -> univariate pertains to one variable, rather than many
+
+    questions to ask:
+        - how many variables do I have?
+        - how many datapoints?
+        - which variables are continuous?
+            -> have an infinite number of possible values -> like age
+        - which variables are categorical?
+            -> limited number of values -> gender
+        - do any of my variables have a known probability distribution?
+            -> normal, Poisson, Gamma
+        - do I have missing data? how much?
+        - how much variance is there in each of my variables?
+
+        After cleaning the data, you should know the answer to most of these questions
+
+
+Bivariate Analysis
+
+    after univariate analysis look for pairwise relationships in your data
+
+
+    => 2 continuous variables
+        - scatterplot
+            -> represents relationship between 2 continuous variables
+            -> can create scatterplot matrixplot that shows all bivariate relationships in one plot with multiple subplots
+
+            - correlation coefficient R
+                - numeric representation of the linear relationship between two continuous variables
+                - range from -1 to 0 to 1
+
+            what to look for?
+                - two-dimensional outliers that represent unusual combinations of values
+
+
+    => 1 continuous variable, 1 categorical variable
+        - boxplot, violin plot, similar plots estimate the value of the continuous variable for each variable of the categorical
+            - provide descriptive stats, including estimates of central tendency and variance, for the continuous variable at each level of categorical variable
+            - t-tests and ANOVA (analysis of variance)
+
+            - what to look for?
+                - Outliers in each group
+                - very small groups
+
+
+    => 2 categorical variables
+        - barplot
+            - the height of each bar indicates the number of datapoints in each combination of levels of the two variables
+        - a table of counts
+            - provides the number of datapoints for each combination of levels of the two variables
+        - chi-square tests
+            - test that indicate whether one combination of levels is signficantly smaller or larger than the rest
+
+            -what to look for?
+                - subgroups with very small counts relative to other subgroups
+
+
+Interpreting pairwise plots and statistics
+
+    - which of your variables are redundant?
+    - which provide unique information?
+
+    - are there unusual two-dimensional datapoints that could skew analysis?
+        - outliers?
+        - subgroups with very small variance relative to other subgroups?
+        - subgroups with very small Ns? (sample sizes)
+
+
+
+After looking through the data -> decide strategy for dealing with unusual two-dimensional datapoints
+    - discarding data
+    - winsorizing
+    - collapsing small or similar groups into one larger category
+
+Leads to feature engineering
