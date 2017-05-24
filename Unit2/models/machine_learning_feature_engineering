@@ -1,0 +1,160 @@
+how do you get the most out of your data for predictive modeling?
+    - problem and practie that feature engineering solves
+
+good features = closer to underlying problem and representation of all the data available
+
+results achieved have 3 factors:
+    1. model chosen
+    2. data available
+    3. features prepared
+
+    - framing of the problem
+    - objective measures used to estimate accuracy
+
+- features need to describe the structures inherent in the data
+
+Better features:
+    - flexibility
+    - simplier models
+    - better results
+
+    Flexibility
+        - can choose 'wrong' models and get good results
+            - most models can pick up on good structure in data
+            - good features will allow you to lose lesss complex models
+                - these models are faster to run, easier to understand and easier to maintain
+
+    Simpler models
+        - do not need to work harder to pick optimal models
+
+    Better results
+
+
+
+-> What is feature engineering?
+    - the process of transforming raw data into features that better represent the underlying problem to the predictive models
+        - results in improved model accuracy on unseen data
+
+    - feature engineering is manually designing what the input x's should be
+
+
+FE is a representation problem
+    - machine learning algorithms learn a solution to a problem from sample data
+    - FE asks: what is the best representation of the sample data to learn a solution to your problem?
+    - turning inputs into things the algorithm can understand
+
+
+FE is an art
+    - well defined procedures that are methodical, provable and understood
+
+
+sub-problems of FE
+
+    -> Feature: An attribute useful for your modeling task
+        - feature is an attribute that is useful or meaningful to the problem
+            - part of observation of learning about the structure of the problem being modeled
+        - no such thing as a non-meaningful feature
+            - discriminates attributes from features
+
+
+    -> Feature Importance: An estimate of the usefulness of a feature
+        - can objectively estimate the usefulness of features
+        - allocate feature scores to determine importance and info that can be used to develop new features
+
+
+    -> Feature Extraction: The automatic construction of new features from raw data
+        - feature extraction -> the process of automatically reducing the dimensionality of voluminous data to much smaller sets that can be modeled
+            - PCA
+            - unsupervised clustering methods
+        - methods are automatic
+        - solves problem of unmanageably high dimensional data
+            - typically used for analog observations stored in digital formats
+                - image
+                - audio
+                - textual data
+
+
+    -> Feature Selection: From many features to a few that are useful
+        - not all features are created equal
+        - irrelevant attributes need to be removed
+        - feature selection is th process of selecting the subset that is most useful to the problem
+        - algorithms can use a scoring method to rank and choose features
+            - correlation
+            - other feature importance methods
+            -> advanced methods search subsets
+                - trial and error
+                - stepwise regression
+                - LASSO
+                - ridge regression
+
+    -> Feature Construction: The manual construction of new features from raw data
+        - best results come from the crafting of features
+        - need to be manually created
+
+        tabular data
+            1. aggregate/combine features to create new features
+            2. decompose/split features to create new features
+
+        textual data
+            1. devise context specific indicators relevant to the problem
+
+        image data
+            1. enormous amounts of time prescribing automatic filters to pick out relevant structures
+
+
+    -> Feature Learning: The automatic identification and use of features in raw data
+        - do not have automatic feature construction just yet
+
+
+
+Process of Feature Engineering
+
+    -> process of machine learning
+        - problem definition
+        - data selection and preparation
+        - model preparation
+        - evaluation
+        - presenting results
+
+        1. (tasks before here…)
+        2. Select Data: Integrate data, de-normalize it into a dataset, collect it together.
+        3. Preprocess Data: Format it, clean it, sample it so you can work with it.
+        4. Transform Data: Feature Engineer happens here.
+        5. Model Data: Create models, evaluate them and tune them.
+        6. (tasks after here…)
+
+        - transforming data from a raw state to a state suitable for modeling is where FE fits in
+
+        - transforming data == FE
+
+    -> Iterative Process of Feature Engineering
+
+        1. Brainstorm features:
+            - Really get into the problem, look at a lot of data, study feature engineering on other problems and see what you can steal.
+        2. Devise features:
+            - Depends on your problem, but you may use automatic feature extraction, manual feature construction and mixtures of the two.
+        3. Select features:
+            - Use different feature importance scorings and feature selection methods to prepare one or more “views” for your models to operate upon.
+        4. Evaluate models:
+            - Estimate model accuracy on unseen data using the chosen features.
+
+        - need a well defined problem to know when to stop this process and try other models
+
+
+General Examples of Feature Engineering
+
+    -> Decompose Categorical Attributes
+        - instead of using attribute like 'Item_color' that has values of red, blue, unknown
+            - can use attribute 'Has_Color' or 'Is_red' or 'Is_unknown'
+
+    -> Decompose a Date-Time
+        - date-times usually contain lots of information that is difficult for a model to take advantage of in its native form
+
+        - create new feature:
+            - 'Hour_of_Day'
+            - 'Part_of_Day'
+                => morning, midday, afternoon, night -> based on hours
+            - 'time_of_month'
+
+    -> Reframe Numerical Quantities
+        - convert grams to rounded kilograms

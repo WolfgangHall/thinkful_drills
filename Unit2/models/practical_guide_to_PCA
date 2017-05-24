@@ -1,0 +1,73 @@
+PCA
+    - a method of extracting important variables (in form of components) from a large set of variables in the data set
+    - extracts low dimensional set of features from a high dimensional data set
+        - motive is to capture as much info as possible
+
+    - fewer variables => more meaningful visualizations
+
+    - deals with 3 or higher dimensional data
+
+    - performed on a symmetric correlation or covariance matrix
+        - matrix should be numeric
+        - matrix should have standardized data
+
+    for p number of predictors there can be p(p-1)/2 scatter plots
+        - this can get quite large
+        - for example with 50 predictors, there can be more than 1000 scatter plots
+            - lots to look through
+
+    - transformation of a high dimensional data (3) to a lower dimension (2) is PCA
+        - resultant dimension is a linear combination of p features
+
+
+What are prinipal components?
+    - a principal component is a normalized linear combination of the original predictors in a data set
+
+    1st prinicpal component
+        - linear combination of original predictor variables
+        - captures the maximum variance in the data
+        - the larger the variability captured in the 1st component, the more info captured
+        - no other component can have variability higher than the first principal component
+        - results in a line which is closet to the data
+            - it minimizes the sum of squared distance between a data point and the line
+
+    2nd principal component
+        - also a linear combination or original predictors which captures the remaining variance in the data set
+        - correlation between 1st and 2nd component should be zero (0)
+            - if uncorrelated, directions should be orthogonal
+
+
+Why is normalization of variables necessary?
+    - principal components are given normalized versions of original predictors
+        - original predictors may have different scales
+            - gallons, kilometers, light years
+            - definte that scales in these variables will be large
+        - PCA on un-normalized variables leads to very large loadings for variables with high variance
+            - leads to dependence of a principal component on the variable with high variance
+                - undesirable
+
+
+* PCA can only be applied on numerical data
+
+
+Points to Remember
+
+- PCA is used to overcome features redundancy in a data set.
+
+- These features are low dimensional in nature.
+
+- These features a.k.a components are a resultant of normalized linear combination of original predictor variables.
+
+- These components aim to capture as much information as possible with high explained variance.
+
+- The first component has the highest variance followed by second, third and so on.
+
+- The components must be uncorrelated (remember orthogonal direction ? ). See above.
+
+- Normalizing data becomes extremely important when the predictors are measured in different units.
+
+- PCA works best on data set having 3 or higher dimensions. Because, with higher dimensions, it becomes increasingly difficult to make interpretations from the resultant cloud of data.
+
+- PCA is applied on a data set with numeric variables.
+
+- PCA is a tool which helps to produce better visualizations of high dimensional data.

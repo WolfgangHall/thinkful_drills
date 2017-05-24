@@ -1,0 +1,16 @@
+numpy functions
+np.random.uniform
+np.where
+
+
+pandas functions
+- pd.crosstab
+- pd.melt
+- point of jitters
+
+
+
+seaborn elements
+g.map_upper
+g.map_lower
+g.map_diag

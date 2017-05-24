@@ -1,0 +1,43 @@
+PCA
+    - a complexity-reduction technique
+    - tries to reduce a set of variables down to a smaller set of components that represent most of the information in the variables
+
+    - conceptually, identifies sets of variables that share variance and creates components to represent that variance
+
+    - you lose variance, but you get a smaller set of features
+        - can be worthwhile
+
+    - some model types assume features will be uncorrelated with each other and high levels of inter-feature correlation create unstable solutions
+        - regressions operate this way
+
+    - solutions with fewer features are easier to understand
+        - more computationally efficient
+        - less vulnerable to overfitting
+
+
+- works best for normally-distributed data
+- assumes relationships among variables are linear
+- works best when variables involved range from:
+    - weakly correlated (> 0)
+        - correlations near 0 mean no information is shared
+    - moderately strong (< .7)
+        - correlations that are too high can result in:
+            -> components that are unstable and change a lot in response to very small changes in data
+            -> components that are made up of variance from only one or two variables
+    -> a few very high or very low correlations are fine
+        -> not advised to have to many that are high or low
+
+
+
+Rotation in Space
+    - imagine dataset of n variable as as n-dimensional space
+        - generalization of 2-D scatterplot
+    - In PCA, the variables are first standardized to have a mean of 0 and a standard deviation of 1
+        - important because now all variables go through the origin point (where the value of all axes is 0) and share the same variance
+    - the aces of the n-dimensional space are rotated to minimize the distance between the datapoints and the axes
+        - during rotation, some axes become shorter
+            - indicates that variance along that axis is small
+            - axis contains little information
+            - can be dropped without much loss of info
+
+    - A significant part of doing PCA is deciding whether the gain from dropping a component from the feature pool is worth the loss of information

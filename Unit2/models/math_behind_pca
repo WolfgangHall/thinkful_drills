@@ -1,0 +1,118 @@
+Math behind PCA
+
+    - 'rotation' is based on:
+        1. calculating the covariance matrix of the data
+        2. applying a linear transformation (rotation)
+            - deriving from that the eigenvalues and eigenvectors that express the amount of variance in the data explained by the new axes
+
+Covariance Matrix
+    - correlation matrix
+        => a covariance matrix where the covariances have been divided by the variances
+        - standardizes the covariances so they are on the same scale (-1 to 1)
+            - makes them comparable
+    - contain information about the amount of variance shared between pairs of variables
+
+    - variance of x is the sum of the squared differences between each value in x and the mean of x, divided by the sample size n
+
+    - standard deviation is the square root of the variance of x
+
+    - the covariance between two variables x and y is the product of the differences of each variable value and its mean, divided by the sample size
+
+
+Data as a matrix
+
+    - PCA deals with many variables at once and represents those variables in formulas as a matrix
+        - has m rows and n columns
+            - each row represents a measurement instance (example -> data from one participant over many variables)
+            - each column represents a variable
+
+    - mathematical convention for matrices
+        - referred to in capital letter variables
+        - refer to number of rows first, then the columns
+            - 4 x 3 matric -> 4 rows, 3 participants
+
+    - matrices behave differently from individual variables
+        - especially multiplication
+            - need to do dot product multiplication
+
+    - due to matrix multiplication
+        - can express covariance matrix for X as the product of X and the transpose of X(X^T)
+            - a matrix is transposed by flipping it on its diagonal so that the row and column indices are switched
+                - take row and make it a column
+        - covariance matrix for X is an m by m matrix where the diagonal terms represent the variance of each variable
+            - off-diagonals are the covariances
+        - covariance matrix forumula
+            => https://www.screencast.com/t/8eoHbMlvv
+
+
+
+Back to PCA
+
+    - goal of PCA is to transform the covariance matrix so that all the information is in the diagonals (variances) and none is in the off-diagonals (covariances)
+        - do this by finding a matrix P where when we multiply P and X we get a matrix Y with a covariance matrix CsubY with only 0s on the off-diagonals
+
+    - https://www.screencast.com/t/sZ8xK4EoSF
+
+
+
+Eigenvectors
+    - eigenvector is the directional aspect of a component
+        - the red line in the graph
+    - during PCA, eigenvectors are orthogonal
+    - have a correlation of 0 with another
+    - done sequentially
+        - first, vector is found that minimizes the distance between that vector and the datapoints
+            - this vector is the first component
+        - second vector is found that also minimizes the distance between the vector and the datapoints
+            - catch is, second vector must be perpendicular to the first in one of he n dimensions of the spance
+
+        - procedure continues until there are n vectors
+
+
+Eigenvalues
+    - represent the length of the Eigenvectors
+    - each eigenvector has an eigenvalue
+    - length of eigenvector encodes the proportion of total variance explained by a component
+        - total variance is equal to the number of variables in the PCA
+    - eigenvalue of 1 means that the component explains the same amount of variance as one variable
+        - adds no value
+     - eigenvalue greater than 1 is desirable
+     - eigenvalue of less than 1 is less efficient than a variable by itself
+     - eigenvalue of 2 means the component contains amount of info equal to 2 variables
+
+     - proportion of the variance that each eigenvector represents can calculated by dividing the eigenvalue corresponding to that eigenvector by the sum of all eigenvalues
+
+
+
+Components
+    - components are eigenvectors that have been divided by the square root of the eigenvalues
+        - standardizes the components so that the amount of variance in each variable explained by a component can be compared across components
+
+    - in data reduction:
+        - components will replaced the factored variables
+        - components of a given solution, together, represent all the shared variance of the variables
+
+    - benefit of PCA
+        - fewer components than variables -> simplifies data space
+        - components can be used exactly like variables
+
+    - can use eigenvectors and covariance matrix to calculate the components
+
+
+
+How many components?
+    - when running PCA, you must decide how many components to keep
+    - PCA gives back as many components are there are variables in the correlation matrix
+        - n variables and n components, you'll reproduce 100% of the info but you haven't simplified the info
+
+    - rules:
+        - keep components with eigenvalues greater than 1 -> they add value
+        - visualize the eigenvalues in order from highest to lowest, connecting them with a line
+            - called a scree plot
+            - keep all components whose eigenvalue falls above the point where the slope of the line changes the most drastically
+                - called the elbow
+        - variance cutoffs where you keep components that explain at least x% of the variance in the data
+        - simulating PCA solution on equivalent randomized data
+
+
+Check out Singular Value Decomposition

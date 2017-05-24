@@ -20,6 +20,9 @@ Fun with categorical variables
                 - the level without a feature is called a 'reference value'
                 - can make indicators that gather together categories that you think are related
 
+                - Example -> 5 states are in the south, 1 is not
+                    - use 0 to represent states in the south, 1 to represent states in the north
+
 
 Changing variable types
 
@@ -42,7 +45,7 @@ Data Scientist  vs.  Programmer
                 - indicate rank-order and distance
                 - example -> temperature (distance between 30 and 40 is same as 50 and 60)
                 - lacks an absolute zero
-                    - cannot logically make a ration
+                    - cannot logically make a ratio
                         - 60 degrees is not twice as hot as 30 degrees
                         - degrees of heat in the air
                 - can be treated as categorical or continuous

@@ -1,0 +1,58 @@
+Feature Selection
+
+    - keep the features that have the strongest connection to the outcome
+    - prioritize features that bring something unique to the table
+
+    features should:
+        - be straightforward
+        - be predictively powerful
+        - minimize overfitting
+        - computationally efficient
+
+    - feature selection algorithms
+        - work better when data is separated into a training set and a test set
+        - feature selection is run on the training set
+
+    - Feature selection algorithms fall into 3 groups
+        - Filter methods
+        - Wrapper methods
+        - Embedded methods
+
+    - Filter methods
+        - evaluate each feature separately and assign it a 'score'
+            - used to rank features
+            - scores above a certain cutoff points were either retained or discarded
+        - feature may be evaluated independently of outcome or in combination
+            - variance threshold -> independent
+            - correlation of each feature with outcome -> combo filter
+
+        - good at selecting relevant features that are likely to be related to the outcome
+        - computationally simple -> straightforward
+        - produce lists of redundant features
+            - inter-relationships are not considered
+        - good for a first pass on data
+            - cheap to run
+
+    Wrapper methods
+        - select sets of features
+        - sets are constructed -> evaluated for the predictive power in a model -> compared to other sets
+
+        - wrapper methods have different construction methods, some include
+            - forward passes
+                - algorithm begins with no features and adds features one-by-one
+                    - adds features that result in highest increase in predictive power accouting for predetermined threshold
+            - backward passes
+                - begins with all features and drops features one-by-one
+                    - drops features that do not meet the threshold
+
+            - these passes are considered 'greedy'
+                - once a feature is added or removed, it is not evaluated again
+
+    Embedded methods
+        - also selects sets of features
+            - an intrinsic part of the fitting method for whatever model is being used
+        - may involve regularization
+            - a 'complex penalty' is added to goodness-of-fit measures
+                - these measures are typically used to assess the predictive power of a model
+        - provide the benefits of the wrapper -> less intensive
+        - different models use different embedded methods
