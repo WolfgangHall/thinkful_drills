@@ -1,0 +1,56 @@
+algorithm
+    - set of instructions for a computer
+        - sort lsits
+        - run tests
+        - generate models
+
+    judge algorithms on efficiency
+
+    steps -> the things the computer has to do when running code
+
+    1 step actions
+        - assign values
+        - compare values
+        - change values
+        - look up the value at a specific index
+        - etc
+
+
+Algorithmic efficiency and complexity
+    - matters because you are often dealing with large amounts of data
+        - the more data you have the tolerance for inefficieny goes down
+
+    - different kinds of algorithms scale in different ways
+
+        - a basic comparitive for loop has linear complexity
+            - every additional element in dataset adds a step
+
+            for i in [0, 1, 2]:
+                print(i > 4)
+
+        - a more complex loop
+            - this no longer scales linearly
+            - scales according to the square of the length of numbers
+                - quadratic complexity
+
+            for i in numbers:
+                for j in numbers:
+                    print(i > j)
+
+
+Big O Notation
+    - describes scaling rate
+    - use big O to describe a limiting functional form
+
+    - as the number of elements in the algorithm's input grows > notation shows th lower bound of performance
+
+    O(n) -> at worst, n steps
+    O(n ^ 2) -> at worst n^2 steps
+
+    linear complex algorithm -> n is length of input list
+
+    - when thinking about big O -> only observe the thing that grows most quickly as the dataset scales
+        - no need to look at constant values that are only evaluated once
+
+
+

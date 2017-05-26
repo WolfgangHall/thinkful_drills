@@ -1,0 +1,131 @@
+algorithm complexity
+    - way to formally measure how fast a program or algorithm runs
+        - pragmatic
+
+
+
+Motivation
+    - programs called 'profilers' -> measure how fast a program runs in milliseconds
+        - spot bottlenecks
+
+    - algorithm complexity is designed to compare two algorithms at the idea level
+        - ignores things like programming language, hardware, instruction set of CPU
+
+    - complexity analysis -> measure how fast a program is when performing computations
+        - addition, multiplcation
+        - database searching
+        - determining path of AI in a video game
+        - running a regular expression pattern match on string
+
+        -> also measures how an algorithm behaves as the input grows larger
+
+        1. count how many fundamental instructions this piece of code executes
+            - only done once
+            - break piece of code up into simple instructions
+                - assume choice (if - else) is done instantly
+
+            ** -> not necessary often because it depends on language, CPU
+
+        - worst case analysis
+            - consider the situation with the most use cases
+            - when it is challenged to do something difficult
+
+    asymptotic behavior
+        - dropping all esoteric factors
+            - differences between languages
+        - keep the largest growing term
+
+        => f(n) = 2n + 8  becomes   f(n) = n
+            - interested in the limit of function f as n tends to infinity
+
+            f( n ) = 5n + 12 gives f( n ) = n.
+
+            f( n ) = 109 gives f( n ) = 1.
+
+            f( n ) = n2 + 3n + 112 gives f( n ) = n2
+
+            f( n ) = n3 + 1999n + 1337 gives f( n ) = n3
+
+            f( n ) = n + sqrt( n ) gives f( n ) = n
+
+            => looking for whichever variable grows the fastest
+
+Complexity
+    - any program without loops will have f(n) = 1
+
+    - any program with a single loop which goes from 1 to n will have f(n) = n
+        - does constant number of instructions
+
+        -> if has a nested loop => n * n => n^2
+
+        * simple programs can be analyzed by counting the number of loops
+
+    - linear search
+        - method of searching for a value within an array
+
+    - use theta symbol to describe the asymptotic behavior
+        n6 + 3n ∈ Θ( n6 )
+        2n + 12 ∈ Θ( 2n )
+
+        - called the time complexity (or just complexity) of the algorithm
+
+        - programs with higher time complexities take longer to run
+
+Big-O notation
+    - hard to figure out the exact behavior of an algorithm but we can know our boundary
+
+    - sorting problem
+    - visibility problem
+
+    O(n2) -> Big O of n squared -> does not use theta symbol -> means program is asymptotically no worse than n^2
+
+    - if the O is worse than the theta -> evalutes to True
+
+    - O gives the upper bound for the complexity
+    - theta gives the actual complexity  -> the tight bound
+
+    if O == theta the bound is tight
+
+    - easier to figure out O than theta
+
+    - Omega gives the complexity that we know our program won't be better than -> the lower bound
+        - is useful to prove that a program runs slowly or an algorithm is a bad one
+
+
+
+Logarithms
+    - an operation applied to a number that makes it quite smaller
+        - much like a square root
+    - the inverse operation of exponentiating something
+
+    2^x = 1024  ==  log(1024)
+    2 base logarithm
+
+
+Recursive Complexity
+    - a recursive function is a function that calls itself
+
+    def factorial( n ):
+        if n == 1:
+            return 1
+        return n * factorial( n - 1 )
+
+    - has no loops but the complexity is not constant
+    - the factorial function is theta(n)
+
+
+Logarithmic complexity
+    - binary search -> looking through a sorted array -> look at the middle element -> then check either higher or lower than the middle
+
+    def binarySearch( A, n, value ):
+        if n = 1:
+            if A[ 0 ] = value:
+                return true
+            else:
+                return false
+        if value < A[ n / 2 ]:
+            return binarySearch( A[ 0...( n / 2 - 1 ) ], n / 2 - 1, value )
+        else if value > A[ n / 2 ]:
+            return binarySearch( A[ ( n / 2 + 1 )...n ], n / 2 - 1, value )
+        else:
+            return true

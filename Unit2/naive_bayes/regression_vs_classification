@@ -1,0 +1,68 @@
+first question to ask when building a model
+    => what kind of model do I need to build?
+
+    - work from the top down
+
+2 main groups of supervised learning:
+
+    1. classification
+    2. regression
+
+    - when building a supervised model there is always an outcome that we are interested in
+        - the kind of variable determines the model
+
+
+
+Classification
+    - outcome is a categorical variable
+    - only takes discrete values from a data set
+        => {yes, no}
+        => {heads, tails}
+        => {high, medium, low}
+        => {buy, rent, no purchase}
+    - anything that can be discretely counted and labaled
+        - categorical types
+            - ordinal
+            - interval
+            - ratio
+
+    classifier is typically one of two things:
+        - assigns a category to a test observation
+        - will assign a probability of each category
+            -> if given outcomes are {yes, no}, will assign a probability measure like {0.2, 0.8}
+
+    - the only outcomes that will be possible must be in the training set
+        - if you have a value that is not in the training set set, there is no way for the model to predict it
+
+        => if you are trying to predict a show someone would watch and a movie is not in the training set, no way to predict that particular movie
+
+
+Regression
+    - outcome is a continuous variable
+    - can output a bounded or unbounded number line
+        - implies a relationship between the variables
+            - 3 > 2 > 1
+    => variable that could work
+        amount spent
+            - ranges from 0 to ??
+        temperature
+
+
+Example
+    - outcome of interest: number of cars owned {0, 1, 2, 3, 4, 5}
+    - can use either regression or classification
+        - classiffication
+            - evalute likelihood for each value
+            - each level will be treated discretely
+            - relationship between each level is not predefined
+        regression
+            - find the most likely place along a continuous line
+                - many not even be within the bounds of 0 and 5
+
+
+* classifiers do not not generally provide average values
+- out come will be a single value that is the most likely, not the average
+
+
+
+
