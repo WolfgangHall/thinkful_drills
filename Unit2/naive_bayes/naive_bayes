@@ -1,0 +1,115 @@
+Naive bayes
+    - modeling and prediction based around the bayes rule theorem
+
+
+Bayes
+    - covers the probablistic relationship between multiple variables
+    - specifically allows us to define on conditional in terms of the underlying probabilities and the inverse condition
+
+    P(y|x) = P(y)P(x|y) / P(x)
+
+    - the probability of y given x equals the probability of y times the probability of x given y divided by the probablity of x
+
+    - theorem can be extended to when x is a vector (containing the multiple x variables used as inputs for the model)
+
+    P(y|x1,...,xn) = P(y)P(x1,...,xn) / P(x1,...,xn)
+
+    - explains the relationship of an outcome to a vector of conditions rather than to a single event
+
+    - probability of y is the categorical outcome that we are interested in
+        -> given a set of observations is equal to the probability of that set of observations given y divided by the probability of that set of outcomes
+
+
+Naive
+    - refers to the assumption that any pair of variablees in the conditional vector (the x variables) are independent from each other
+
+    - independence is important to the vectorized Bayes rule equation
+        - allows you to break the large P(x1,...,xn|y) into the product of each individual condition
+
+    P(y|x1,...,xn) = P(y) * P(x1|y) * ... * P(xn|y) / P(x1,...,xn)
+
+    - can simplify it further because for any observation we are attempting to predict, the x-vector is constant
+        - part of the probability simplfies even further:
+
+        P(y|x1,..,xn) ~ P(y) * P(x1|y) * ... * P(xn|y)
+
+    Naive Bayes returns the y value that maximizes the following argument
+        -* it returns a single value or category
+
+    - the estimate is the y that maximizes the argument
+    - Naive Bayes is used as a classifer
+        - interest in which y value is most likely to have given the observed set of x variables based on the Bayesian probabilities
+            - there are ways to manipulate rules to return probabilities but these are generally not accurate
+                - should NOT be used
+
+    - a good classifier but a bad estimator
+
+
+Assumpations made
+    - independence between each pair is hugely important and rarely totally accurate
+        - columns of dataframe are typically not independent of each other
+
+Why Naive Bayes
+    - it is very simple
+    - easy to understand its operations and what it's doing
+    - very fast
+    - relies on probability -> based on counts
+        - can train classifier with more data that could fit into memory at one time
+        - count reliance -> computational simplicity
+
+    - common in sentiment classification
+        - classify text samples according to sentiment
+    - spam filtering
+
+
+-* we need to make one more assumption -> distribution of P(xi|y)
+
+
+Types of Naive Bayes
+    - three main classifiers
+        1. Bernoulli
+        2. Multinomial
+        3. Gaussian
+
+        - each classifier assumes that the distribution of the conditional P(xi|y) is the given distribution
+
+        - these distributions have limitations
+
+        - binomial/bernoulli -> only takes two possible values
+        - multinomial -> has discrete outcomes
+        - guassian -> takes values along the normal distribution
+
+        - choosing which kind of classifier you want to use depends on the distribution of the outcome variable
+
+
+Improve Performance
+    - feature engineering
+        -> particularly helpful in text based problems
+        -> up to creativity of the one building the model to grab the right features
+
+    - features are equally weighted in Naive Bayes
+        - heavily correlated features can lead to doubling the impact of what is essentially a single feature
+        - making assumption that every pair of variables is independent of each other
+            - the more you move from this assumption, the more problems we will have
+
+
+Downsides of Naive Bayes
+    - the assumption of independence
+        - often a condition we will fail to have (even if model works well)
+        - any time two variables affect the outcome in a connected fashion, the model will not see it
+            - called 'interaction'
+                - lost in Naive Bayes
+                - occurs when any two features create a difference effect when they both have a specific value than they would as independent occurrences
+
+    - can only predict the outcome of categories it has seen before
+        - applies to the outcome and the inputs
+        - unknown values will be ignored
+
+
+Bayesian Poisoning
+    - because NB relies on probabilities and these probabilities are often based around obvious keywords it is a vulnerable model
+    - can manipulate the model
+        -> Bayesian poisoning
+
+    - done through including words in your spam message that your model correctly identified
+        - convinces the model that the message is legitimate
