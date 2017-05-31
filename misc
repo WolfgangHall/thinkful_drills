@@ -14,3 +14,36 @@ seaborn elements
 g.map_upper
 g.map_lower
 g.map_diag
+
+
+
+PCA
+
+assumes linear relationship
+
+rotation axes are not dependent on each other
+
+one major component is the first one
+
+
+cos(theta) = hypotenuse
+sin(theta) = hypotenuse
+
+imagine straight line going through origin
+
+if you want component of line of x -> l cos theta
+if you want component of line of y -> l sin theta
+
+
+
+Naive Bayes
+
+probability of people watching a video
+
+start with assumption of prior -> can assume anything -> can assume normal distribution
+
+do computation on whatever you are observing
+
+using a prior to compute something that is the opposite
+
+multiplies each feature ->

@@ -1,0 +1,48 @@
+- based on Nayes' probability theorem
+- simple yet well performing models
+    - field of document classification and disease prediction
+
+- one sub field of predictive modeling is supervised pattern classification
+    - the task of training a model based on labeled training data
+        - can be used to assign a pre-defined class label to new objects
+
+- naive bayes classifiers are linear classifiers
+    - probablistic model of naive bayes is based on the theorem
+    - adjective naive is based on the idea that the features are mutually independent
+        - classifier still works with this unreal assumption
+
+- used for the classification of RNA sequences and spam filtering in email
+
+- non linear problem is not suitable for naive Bayes
+
+
+NB theorem
+                    conditional probability * prior probablity
+posterior probability =  ------------------------------
+                                    evidence
+
+- posterior probablity -> what is the probability that a particular object belongs to class i given its observed feature values?
+    - Example: 'what is the probability that a person has diabetes given a certain value for a pre-breakfast blood glucose measurement and a certain value for a post-breakfast blood glucose measurement?'
+
+P(w sub j | x sub i) = P(x sub i | w sub j) * P(w sub j)
+                        ---------------------------------
+                              P (x sub i)
+
+person has diabetes if
+P (diabetes | xi) >= P(not-diabetes|xi)
+else classify person as healthy
+
+
+
+
+- one assumption that Bayes classifiers make is that samples are independent and identically distributed
+    - describes random variables that are independent from one another
+    Examples: coin toss
+- additional assumption of NB is the conditional independence of features
+    - class-conditional probabilities or likelihoods of the samples can be directly estimated from the training data instead of evaluating all possibilities of x
+
+
+P(x | wj) -> 'how likely is it to observe this particular patter x given that it belongs to class wj?'
+    - individual likelihood for every feature in the feature vector can be estimated via the maximum-likelihood estimate
+        - simply a frequency in the case of categorical data
+

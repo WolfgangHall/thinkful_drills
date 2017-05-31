@@ -21,7 +21,7 @@ Bayes
 
 
 Naive
-    - refers to the assumption that any pair of variablees in the conditional vector (the x variables) are independent from each other
+    - refers to the assumption that any pair of variables in the conditional vector (the x variables) are independent from each other
 
     - independence is important to the vectorized Bayes rule equation
         - allows you to break the large P(x1,...,xn|y) into the product of each individual condition
