@@ -47,3 +47,29 @@ do computation on whatever you are observing
 using a prior to compute something that is the opposite
 
 multiplies each feature ->
+
+training set is larger
+60 - 40
+train set -> apply folds
+
+
+testing set is holdout group
+holdout group is applied to the testing set
+    - always part you are leaving behind
+
+training on 3 folds and testing on holdout data set
+
+test set is holdout data set
+
+
+
+
+
+go over hypothesis tests
+AA test
+AB test
+testing a website
+opening a coffee shop
+    - new billboard, change old one
+        - how can you test if the new one is better than the old one
+

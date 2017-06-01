@@ -1,0 +1,41 @@
+Overfitting
+    - when your model is so excessively complex that it starts to catch random noise instead of describing the true underlying relationships
+
+        - typically manifested with a model that evaluates as more accurate than it actually is
+
+    - ways to guard against it
+        - how you evaluate your model
+            - using same data to train model and see how well it's doing brings in some potential errors
+                - don't want to predict things we already know
+
+
+        -> Holdout groups
+            - sometimes called 'holdback group'
+            - do not include all of the data in the training set
+                - reserve some of it exclusively for testing
+                - there is a cost, but evaluation will be more reliable
+
+            - use when comparing two models that are based on different techniques or specifications
+
+            - overfit models will have a drop in success rate outside of training data
+
+            - you can holdout between 1% and 50% of data from original and be reasonable
+
+
+        -> Cross validation
+            - more robust version of holdout groups
+            - creation of several holdout groups, not just one
+
+            - break up data into several equally size pieces
+                - called 'folds'
+
+            - for as many folds as you have, you go through the training and testing process that many times
+                - each time, one of the folds is left out
+
+            - at most extreme, create the same number of folds as you have observations in your data set
+
+            - called 'Leave one out'
+                - useful if you are worried about single observations skewing the model
+                - large folds combat more general overfitting
+
+            - sklearn has built in functions for both of these

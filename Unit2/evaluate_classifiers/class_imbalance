@@ -1,0 +1,51 @@
+- if one outcome is more common than the other, it skews the model
+
+
+Class Imbalance
+    - in a perfect world -> training data would contain an equal number of all possible outcomes
+        - rare occasion
+
+    - small imbalance => not much difference
+    - large class imbalance => huge affect on model
+        - if one class makes up large portion of data, it can be pretty successful just choosing the dominant class every time
+            - not suuuper useful
+        - rare event needs distinguishing features, but if those features are also in the dominant class, it is incredibly hard to tell if model is useful
+
+        - also want to avoid false negatives, especially in the case of disease detection and fraud detection
+            - if disease is rare, we fall into class imbalance problem
+
+Baseline Performance
+    - how can we come up with a good baseline for performance?
+
+    - one of simplest ways -> dominant class rate
+        - dominant class = the most common outcome for our target variable
+
+        - simplest version of classifier is to predict the result that is most likely
+
+            - if you predict something at 99% but the 99% of data is from the dominant class, it's not impressive
+
+
+Dealing with Class Imbalance
+    -> ignore it
+        - if you only care about the absolute accuracy of model
+        - try to engineer features that strongly identify the minority class
+
+    -> change sampling
+        - deliberately oversample the minority class or undersample the majority class
+            - creates balance
+        - useful if you are trying to correctly identify minority class
+        - can create synthetic samples or weighted samples
+
+        -> oversampling minority and undersampling majority
+
+    -> probability outputs
+        - NB probabilities are generally inaccurate
+        - other models provide better probabilities of a certain class
+
+        -> logistic regressions
+        -> state vector machines('SVM')
+
+    -> create cost functions for errors
+        - quantify ways in which errors are not equal
+        - find some functional form to scale the cost of an error up or down
+            - Type II error is twice is bad as Type I or 100X as bad

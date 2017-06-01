@@ -1,0 +1,33 @@
+first things to note -> what data is directly comparable for model evaluation
+    - target (actual outcomes) and y_pred (predicted outcomes from classifier)
+        - both are ordered arrays
+        - when the two agreem the model was a success
+
+- most basic measure of success -> how often the model is correct
+    - called 'accuracy'
+
+- success rate is usually not sufficient
+    1. not all errors are created equal
+        - letting a spam message in is not as bad as throwing a good message away
+    2. understanding how model fails is key to making it better
+        - if an outcome is not being accurately predicted, make more features to identify the outcome
+
+
+Confusion Matrix
+    - shows the count of each possible permutation of target and prediction
+        - shows count for when message is ham and ham is predicted, when a message was ham and spam is predicted, when a message is spam and ham is predicted and when a message is spam and spam is predicted
+
+    from sklearn.metrics import confusion matrix
+    confusion_matrix(target, y_pred)
+
+    - columns are predictions, rows are actual
+
+    - 2 kinds of errors in NB
+        - false positive -> identify something as spam that is not
+            - called a type I error or a false alarm
+        - false negative -> identify something as not spam that is actually spam
+            - called a type II error or a miss
+
+    - sensitivity vs specificity
+        - sensitivity is the percentage of positives correctly identified
+        - specificity is the percentage of negatives correctly identified
