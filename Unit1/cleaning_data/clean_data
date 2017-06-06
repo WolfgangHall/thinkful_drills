@@ -28,6 +28,8 @@ Methods for cleaning data
     - user submits a form twice
     - overlap of two data sources
 
+
+
 Systemetic Cleaning
     - dirty patterns that are widespread/systematic
         - income survey -> low income respondents may skip this question

@@ -1,0 +1,45 @@
+- Regressions allow you to predict continuous variables
+
+- one method of regression is by far the most common
+    - "OLS" -> ordinary least squares
+    - so common, it is commonly just referred to as 'regression'
+
+
+
+Simple linear regression
+    - OLS operates by finding estimators for coefficients in a formula that you define to explain the relationship between variables
+
+    - have a target variable and one or more input variables
+
+        - in a two-variable example (one input and one target)
+            - called simple linear regression
+                - creation of simple 1:1 scatter plot
+
+    - to quantify the relationship, you need to use regression
+
+    - regression requires you to give the model a functional form that it will use to estimate parameters
+
+        - for two variables and a linear relationship -> use equation for a line
+            -> y = mx + b (b is the y-intercept, m is the slope)
+
+
+
+
+Least Squares
+
+    - OLS learns through errors
+    - given the function passed into the model, OLS uses the estimators (the y-intercept and slope) that minimize the error
+
+    - the error is called a 'residual'
+        - by default, is the sum of the squared distances between each datapoint and the fit line
+
+    - goal of the algorithm is to minimize the sum of these squared residuals over all of the data points in the training set
+        - graphically, it minimizes the cumulative distance of all the points from the line
+
+
+
+- model defines a linear relationship between the two variables
+- explanatory power
+
+- one potential danger here is model assumes the input relationship is valid for all values of x
+    - very large x values will still creat output information, even though that information is not even in the sample model

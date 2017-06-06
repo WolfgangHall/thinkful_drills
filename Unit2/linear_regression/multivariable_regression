@@ -1,0 +1,42 @@
+Multivariable Regression
+    - when you are interested in a relationship between more than two variables
+
+    - Least squares can handle almost any functional form you pass into it
+        - will simply estimate the coefficients
+
+
+
+Multivariable Least Squares
+    - when a least squares regression has more than one independent variable (or input) -> called multivariable least squares regression
+
+    - used when there are multiple variables affecting your outcome
+        - Example: rent -> square footage, bedrooms, bathrooms, year built
+
+
+
+Categorical Variables
+
+    - categorical variable -> type of category (boolean, state in country)
+        - cannot imply a single linear relationship between these values
+
+    - SKlearn needs binary indicators (instead of the categorical variable 'Neighborhood', use 'South')
+        - one category will always be excluded
+            - it will be incorporated into the intercepy and you would run into collinearity problems
+
+            - each of the categories is typically mutually exclusive
+
+        - SKlean has built in function OneHotEncoder that provides this functionality
+
+
+
+Linears does not have to mean lines
+    - model assumes a linear relationship between predictors and the outcome
+        - but the predictors themselves can take on more complicated forms
+        theta is y-intercept
+        y = theta + x + x^2
+
+        - doable if you have dataframe where one column is x and the other is x^2
+            - not uncommon to see things like sine and cosine when dealing with a seasonal time series
+
+
+    - adding a lot of terms can destory you model by violating assumptions of OLS
