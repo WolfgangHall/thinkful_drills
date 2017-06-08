@@ -1,0 +1,77 @@
+The Extraordinary power of explanatory power
+    - strengths of multiple linear regression
+        -> provides straightforward and interpretable solutions
+            - predict future outcomes
+            - provide insight into the underlying processes that create these outcomes
+
+    - round widgets are twice as fast to produce as non-round widgets
+
+    theta represents y-intercept
+
+    - R-squared value
+        -> a proportion between 1 and 0
+        -> expresses how much variance in the outcome variable our model was able to explain
+
+        -> higher R^2 values are better
+            -> a low R^2 indicates that our modelis not explaining much info about the outcome
+                -> not very good for predictions
+            -> a high R^2 is a warning sign for overfitting
+                -> likely to be biased
+
+    - Coefficients show the per-unit increase (regr.coef_)
+    - intecept is the base value (regr.intercept_)
+    - R^2 => regr.score(X, Y)
+
+
+
+
+Assumptions of Multivariate Linear Regression
+    1. linear relationship
+    2. multivariate normality
+    3. homoscedasticity
+    4. low multicollinearity
+
+
+    -> linear relationship
+        - features in regression need to have a linear relationship with the outcome
+            - if relationship is non-linear, regression model will try to find any hint of a linear relationship
+                - can be fixed by applying a non-linear transformation function to a feature
+                    - if relationship between feature and outcome is quadratic and all feature scores are > , take the square root of the feature
+                        - results in linear relationship between the outcome and the square root(a feature)
+                - if the initial scatter plot looks quadratic
+                    - apply [math.sqrt(x) for x in feature]
+
+
+    -> multivariate normality
+        * error from model is calculated by subtracting the model-predicted values from the real outcome values
+            - the errors should be normally distributed
+
+        - since OLS regression models are fitted by choosing the parameters that best minimize error, skewness or outliers can result in serious mis-estimations
+
+
+
+    -> homoscedasticity
+        - distribution of your error terms should be consistent for all predicted values
+            - homescedastic
+
+        - if error terms are not consistently distributed
+            -> more variance in error for large outcomes than for small ones
+
+            - the confidence interval for large predicted values will be too small because it will be based on the average error variance
+                -> leads to overconfidence in the accuracy of your model's predictions
+
+        Fixes:
+            - transforming the dependent variable
+            - adding features that target the poorly-estimated areas
+
+            Example:
+                - a model tracks data over time and model error variance jumps in the Sep to Nov period
+                    - a binary feature indicating season may be enough to solve the problem
+
+
+    -> Low multicollinearity
+        - if we want to know which features matter most when predicting an outcome, multicollinearity can cause us to underestimate the relationship between features and outcomes
+
+        Fixes:
+            - PCA
+            - discarding some of the correlated features
