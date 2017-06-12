@@ -1,0 +1,54 @@
+from sklearn.cross_decomposition import PLSRegression
+
+
+Dimensionality Reduction in Linear Regression
+
+
+    - having a lot of features can cause problems
+        - the more features, the more complex the model, the longer it takes to run
+
+    - variance in features unrelated to the outcome (the Y variable) may create noise in predictions
+        - especially if paired with multicollinearity
+
+        - more features => more unrelated variance => more noise
+
+    - if more predictors than datapoints => negative degrees of freedom
+        - model will not run
+
+    - if you are only interested in a prediction model (and not interpreting the individual parameters) you can reduce the dimensions
+        -> simplify feature space -> retain predictive power
+
+    - reduce a matrix of features (X variable) into a matrix with fewer columns
+        - expected value of Y given X (E(Y|X)) is equal to the expected value of Y given R(X)
+
+        - say expected value rather than predicted value to be aligned with math notation
+
+    - smaller set of features that will produce the same predicted values for Y
+
+
+
+Partial least squares regression (PLSR)
+
+    - PLSR is iterative -> like PCA
+
+    - first tries to find the vector within the n-dimensional space of X with the highest covariance with y
+
+    - looks for second vector, perpendicular to the first, that explains the highest covariance with y that remains after accounting for first vector
+
+
+# Fit a linear model using Partial Least Squares Regression.
+# Reduce feature space to 3 dimensions.
+pls1 = PLSRegression(n_components=3)
+
+# Reduce X to R(X) and regress on y.
+pls1.fit(X, y)
+
+
+
+    - PLSR will not work as well if:
+        -> features are uncorrelated
+        -> if the only feature correlations are paired (feature 1 and 2, feature 3 and 4)
+
+
+    - trick to successful PLSR
+        -> select the right number of components to keep

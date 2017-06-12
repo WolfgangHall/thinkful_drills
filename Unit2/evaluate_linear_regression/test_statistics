@@ -1,0 +1,115 @@
+2 main aspects of a regression model that can be evaluated using significance tests:
+    1. whether the model explains more variance in the outcome than a model with no features
+    2. whether each individual feature in the model adds additional explanatory power
+
+
+whole model: F-test
+    - whole-model test of explanatory power is an f-test
+    - F-test can be calculated in different ways depending on the situation
+        -> principally represents the ratio between the unexplained variance of your model and the unexplained variance of a reduced model to which our model is compared
+
+            -> reduced model -> a model with no features
+                - all variance is unexplained
+
+    - F-test is built from these pieces:
+        -> unexplained model variance
+        -> unexplained variance in reduced model
+        -> number of paramters in the model
+        -> number of parameters in the reduced model
+        -> number of datapoints
+        -> degrees of freedom of unexplained model variance
+        -> degrees of freedom of unexplained variance in reduced model
+
+    - parameter is any predictor in a regression model
+        - includes both the intercepts and the features
+
+    - Degrees of freedom quantify the amount of information 'left over' to estimate variability after all parameters are estimated
+
+        - y = mx + b -> 0 degrees of freedom (2 minus the number of parameters)
+            - these 2 parameters have all the information in the data
+                - if you know m and b, you can reproduce the original data
+                    - no added info needed from data
+
+            - if you add another datapoint with the same number of parameters -> 1 degree of freedom
+                - you need to know m, b, and the additional datapoint
+                    - one point of free info not captured by the model
+
+
+        - low degrees of freedom are a warning indicator
+            - overfitting
+            - a very small sample
+
+
+        - F-test has two degree of freedom indicators:
+            - degrees of freedom of the model (p - 1)
+            - degrees of freedom of SSE sub F (n - P sub f)
+
+                - these degrees of freedom define the F-distribution for that F-test value
+
+                - location of the F-test value within the distribution is used to determine the p-value
+                    - probability of getting an F-test of that value or higher if there were no relationship between the outcome and the parameters in the population
+                - a significant p-value ( < .05) suggests that the model as a whole can explain some of the variance in the outcome
+
+                - another way to think about it -> F-test tests whether the R^2 of the model is different from zero
+
+                - a non-significant F-test is a sign that your model is unable to predict the outcome and you need to make a new one
+
+
+
+Individual parameters: t-test
+    - next step, after the F-test, is to learn more about the performance of the individual parameters
+        - the features you created
+
+    - each of the parameters has its own t-test
+        - determines whether that parameter estimate is significantly different from zero
+            - explains a statistically-significant amount of unique variance in the outcome
+                - controls for the variance explained by the other parameters
+
+    - a significant F-test does not guarantee that all the parameters in a model will be significant
+        - if high multicollinearity, it is possible to get a significant F-test with zero statistically significant features
+
+    - a non-significant parameter does not contribute new info
+        - can be discarded with little effect on power of the model
+
+    - sklearn is focused on machine learning prediction, rather than statistical interpretation
+    - statsmodels library is the primary alternative to scikit-learn
+
+
+    # Write out the model formula.
+    # Your dependent variable on the right, independent variables on the left
+    # Use a ~ to represent an '=' from the functional form
+    linear_formula = 'Sales ~ TV+Radio+Newspaper'
+
+    # Fit the model to our data using the formula.
+    lm = smf.ols(formula=linear_formula, data=data).fit()
+
+    lm.params
+    lm.pvalues
+    lm.rsquared
+
+
+    - can also get errpr estimates -> confidence intervals
+        - the range of values within which our population parameter is likely to fall
+        - 95% confidence interval is the standard
+            - if we re-sampled the population multiple times, 95% of the time, the parameter would fall within that interval
+
+    lm.conf_int()
+        - column 0 is the lower bound
+        - column 1 is the upper bound
+
+        -> a confidence interval that contains 0 is a sign that the parameter is not explaining significant variance in the outcome
+
+        - the wider the confidence intervals, the more uncertainty about model estimates
+
+    # Use wls_prediction_std to build confidence intervals
+    prstd, iv_l, iv_u = wls_prediction_std(lm)
+
+    plt.figure()
+    plt.plot(iv_u[0:15], 'o', color='r')
+    plt.plot(iv_l[0:15], 'o', color='r')
+    plt.plot(lm.fittedvalues[0:15], 'o', color='b')
+    plt.title('blue: predicted, red: 95% CI')
+    plt.show()
+
+
+    - If the level of precision offered by your confidence intervals is insufficient for your goals, you may need to add additional significant features to account for more variance.
