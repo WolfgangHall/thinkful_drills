@@ -1,0 +1,59 @@
+K Nearest Neighbors Classifiers
+    -> learning via similarity
+    -> look for the datapoints that are most similar to the observation we are trying to predict
+
+
+- simplest form of a similarity model is the Nearest Neighbor model
+    -> when trying to predict an observation, find the closest known observation in the training set
+
+    -> to find the nearest -> you need to measure distance
+        - typically use Euclidean distance (geometric)
+
+        one observation in n-dimensions (x) and the other (w)
+        square root of the squared difference between xn and wn and adding them all together
+            -> generalization of Pythagorean theorem into n-dimensions
+
+
+    >>> from sklearn.neighbors import KNeighborsClassifier
+    >>> neighbors = KNeighborsClassifier(n_neighbors=1)
+    >>> X = music[['loudness', 'duration']]
+    >>> Y = music.jazz
+    >>> neighbors.fit(X,Y)
+
+    >>> ## Predict for a song with 24 loudness that's 190 seconds long.
+    >>> neighbors.predict([[24, 190]])
+
+        -> returns an array of booleans
+
+
+
+
+
+K-Nearest Neighbors (KNN)
+    -> instead of looking at the single nearest, look at several of the nearest neighbors
+        => k represents the number of neighbors you want to look at
+            -> each one gets to vote on what the predicted outcome is
+
+            -> smooths out predictions
+
+        -> when just looking at the nearest, model explicitly overfits to the training data
+            -> a single outlier can determine the prediction, even if its surrounded by a sea of more viable options
+
+    -> does not just predict classes, provides implicit probabilities
+        =>  votes i / k
+            -> applies to all classes in training set
+
+
+    >>> neighbors = KNeighborsClassifier(n_neighbors=5)
+    >>> X = music[['loudness', 'duration']]
+    >>> Y = music.jazz
+    >>> neighbors.fit(X,Y)
+
+    >>> ## Predict for a 24 loudness, 190 seconds long song.
+    >>> print(neighbors.predict([[24, 190]]))
+    >>> print(neighbors.predict_proba([[24, 190]]))
+
+
+    - can visualize our decision bounds with something called mesh
+        - allows you to generate a prediction over the whole space
+

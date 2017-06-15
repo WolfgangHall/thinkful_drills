@@ -1,0 +1,59 @@
+Tuning KNN - normalizing distance, picking k
+
+    - KNN is a relatively simple model
+    - can still tune its performance
+        -> how distance is handled
+        -> how many neighbors are included
+
+
+Distance and Normalizing
+
+    - distance measurement makes the assumption that all units are equal
+        - one of the major problems with KNN
+        - units are rarely equivalent
+
+        - makes including binary or categorical variables nearly impossible
+
+    - also challenging to deal with variables with different scales
+        ~ height in floors vs square footage
+
+    - normalization
+        => way of taking seemingly incommensurate measures and making them comparable
+
+    - two main normalization techniques that are effective with KNN
+
+        1. set bounds at 0 and 1(or -1 and 1), rescale every variable to be within those
+            - measuring variables in terms of distance between max and min of its category
+            - best for linear relationships
+            - best if there are known limits to dataset
+
+        2. calculate how far each observation is from the mean
+            - expressed in number of standard deviations
+                -> called z-scores
+            - measures distance from mean and 'abnormality'
+
+
+Weighting
+
+    - in vanilla version of KNN, all k of the closest observations have equal votes on the outcome
+        - when data is densely population, this is not a problem
+
+    - sometimes, k nearest observations are not all similarly close to the test
+        - may be useful to weight by distance
+            - weights by the inverse of the distance, so that closer datapoints have a higher weight than further ones
+
+
+
+Choosing K
+
+    - last aspect of tuning KNN is picking k
+
+    - choosing k is a tradeoff
+        - the larger the k the more smoothed out your decision space will be
+            - more observations get a vote
+
+        - smaller k values will pick up more subtle deviations
+            - these deviations could just be random
+
+
+k-fold cross validation is a great way to see how the KNN model is performing

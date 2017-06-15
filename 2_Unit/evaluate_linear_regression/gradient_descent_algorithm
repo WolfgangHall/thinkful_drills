@@ -1,0 +1,55 @@
+The gradient descent algorithm
+
+- Gradient descent is an optimization algorithm used to find the values of parameters (coefficients) of a function (f) that minimizes a cost function (cost).
+
+    - Squaring the distance removes concerns about positive vs negative signs, and has a heavier penalty for larger distances
+
+
+    - for many LRs model is simple
+        - cost function can be calculated by solving a system of equations
+
+    - however, other models are more complex
+        - use an iterative algorithm that starts from a random set of parameters and slowly works toward optimizing the cost function
+
+    - gradient descent -> iterative algorithm
+        - iteratively minimizes the cost function using derivatives
+
+
+
+
+Gradient Descent Algorithm
+
+    - works iteratively by picking a location on the surface defined by a combination of parameter values
+        - calculates the direction from that point with the steepest downhill gradient
+            - moves downhill a set distance
+
+        -> repeats until it hits a location on the surface where all possible gradients are 'uphill'
+            -> where all other possible combinations of parameters result in higher error values
+
+        - parameter values that define the location at the lowest point of the space represent the 'optimized solution'
+
+        -> direction of 'downhill' is determined by differentiating the cost function and taking the partial derivative of each paramter of the regression equation
+
+            -> a function is differentiable if a deriviative can be calculated at each value of the function
+
+            -> a derivative is a measure of how sensitive a quantity is to change in another quantity
+
+
+
+
+Decision-points in Gradient Descent
+
+    - 3 elements of the GD algorithm that requires decision making
+
+    1. What are the starting values of the parameters?
+        -> many start by setting all parameters to zero
+            -> not a requirement
+
+    2. How far do we 'move downhill' after each iteration?
+        -> called the 'learning rate'
+            -> if too small, model will be inefficient
+            -> if too large, can overshoot the target minimum
+
+    3. When do we stop?
+        -> can run until it reaches the optimal solution, but not necessary
+            -> can get really slow
