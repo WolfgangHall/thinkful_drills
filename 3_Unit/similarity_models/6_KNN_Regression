@@ -1,0 +1,13 @@
+KNN Regression
+    - also a reasonable algorithm for regression
+
+
+
+Everything's the Same
+    - as a classifier, the k observations voted for a category
+    - as a regression, the k observations vote for a value
+        - algorithm then averages the votes
+            - can perform a weighted average
+
+    - weighted averages may grossly overfit to surrounding datapoints
+        - happens if decay in weight happens quickly
