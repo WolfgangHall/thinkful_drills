@@ -11,3 +11,11 @@ Everything's the Same
 
     - weighted averages may grossly overfit to surrounding datapoints
         - happens if decay in weight happens quickly
+
+
+
+Validating KNN
+
+    - Cross validation is still tremendously valuable
+    - can do holdouts
+    - still get a R^2 value for the regression
