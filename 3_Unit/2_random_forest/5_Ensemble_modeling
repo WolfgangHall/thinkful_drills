@@ -1,0 +1,37 @@
+Ensemble Modeling
+    -> models made up of other models
+    - Example -> random forests are made up of decision trees
+        - random forests generate decision trees and generate a single prediction via a voting process
+
+
+
+Methods of Ensemble Modeling
+    - infinite kinds
+
+    3 main categories
+
+        1. Bagging
+            - take subsets of the data and train a model on each subset
+                - subsets simultaneously vote on the outcome
+                    - either takes majority or mean of vote
+            - Random Forests
+
+        2. Boosting
+            - uses the output of one model as an input into the next in a form of serial processing
+            - daisy chain until stopping condition
+
+        3. Stacking
+            - two phase process
+                1st phase -> multiple models are trained in parallel
+                2nd phase -> the models are used as inputs into a final model to give your prediction
+
+                - combines the parallel approach of bagging and the serial approach of boosting
+
+
+
+** Think Like a Data Scientist
+    - ensemble models are usually very accurate
+    - tend to have low variance
+
+    - boosting is prone to overfitting
+    - lose lots of transparency 

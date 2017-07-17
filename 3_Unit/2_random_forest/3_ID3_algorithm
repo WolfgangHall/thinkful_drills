@@ -1,0 +1,44 @@
+ID3
+    - One popular algorithm for building a decision tree using entropy and information gain
+    - stands for iterative dichotomizer 3
+    - one of the simplest ways to make a decision tree
+
+    - goes through every feature to find the most valuable attribute
+        - splits based on it
+
+    - moves further and further down the tree until it either has a pure class or has met a terminating condition
+
+    data requirements
+        - outcomes have to be binary
+            - simplest version of ID3 is a binary classifier
+        - attributes have to be categorical
+            - must be known and countable
+
+
+
+Calculating Entropy
+    Screenshot: calculate entropy
+    => https://www.screencast.com/t/rRO1FGBM
+
+- To find the possible questions with the most information gain, find the lowest entropy values
+    - the less uncertainty after a question, the more information is gained
+
+
+
+ID3 in plain English
+    1. create a root node
+    2. if you are already exclusively one class, just label with that class
+        - or label with the most likely outcome
+    <-- the real algorithm -->
+    3. find the best attribute by calculating entropies for all possible values (Ex. tall, medium, short)
+        - attribute value pair with the lowest entropy is th best attribute
+    4. use that rule to split the node
+        - creates subsets of observations
+    5. there are then 2 new nodes
+
+    6. at each new node, start the algorithm again
+
+* points
+    - not always optimal
+    - the tree can get stuck in local optima, like with gradient descent algorithm
+    - has no way to work backwards

@@ -1,0 +1,66 @@
+Decision Trees have issues with:
+    - high variance
+    - propensity to overfit
+
+Random Forests handle these issues and are much more powerful
+
+
+What is a Random Forest?
+    - instead of making one decision tree, make several
+        - a forest
+        - each tree in the forest gets a vote on the outcome for the observation
+
+    - is a top performer due to low variance and high accuracy
+
+    - can be used for both regression and classification
+        - classifiers -> most popular outcome is returned
+        - regression -> average or mean
+
+
+
+Parameters
+    - set parameters for both the tree and the forest
+    tree params
+        - set the depth
+        - number of features used in each rule or split
+        - how tree is split
+    - number of estimators you want to generate
+    - number of trees in the forest
+
+    - tradeoff between how much variance is explained and computational complexity
+        - increasing the number of trees causes accuracy to converge on 0
+
+
+
+Bagging and Random Subspace
+    - use of bagging and random subspace to generate trees that are different
+        - doesn't use same data over and over again -> trees would be too similar
+
+    -> Bagging
+        - each tree selects a subset of observations with replacement to build the training set
+            -> replacement -> can choose the observation multiple times
+                - can be put back into the bag
+
+    -> Random Subspace
+        - random forests use a random subset of features for each split
+            - only looks at random subspace created by a random subset of some of the features as possibilities to generate that rule
+
+            - avoidance of correlation problem -> trees are built with same features at every point
+
+        - for a dataset with x features
+            -> the square root of x are used for classifiers
+            -> x/3 features are used for regression
+
+
+
+Advantages and Disadvantages of Random Forest
+
+    Advantages
+        - tendency to be a strong performer
+
+    Disadvantages
+        - in classification or regression, model will not predict outside of sample
+        - can become large and slow if wildly grown
+        - lack of transparency in the process
+            - 'black box' model
+

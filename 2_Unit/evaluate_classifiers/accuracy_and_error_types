@@ -1,7 +1,7 @@
 first things to note -> what data is directly comparable for model evaluation
     - target (actual outcomes) and y_pred (predicted outcomes from classifier)
         - both are ordered arrays
-        - when the two agreem the model was a success
+        - when the two agree the model was a success
 
 - most basic measure of success -> how often the model is correct
     - called 'accuracy'

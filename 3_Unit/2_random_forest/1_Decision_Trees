@@ -1,0 +1,106 @@
+Decision Trees
+
+    - you can ask questions about a dataset
+        -> does an observation have this particular feature?
+        -> is the value above a specific threshold?
+
+    - asking questions to gain more info about the observation you are investigating
+
+
+
+Learning from Questions
+    Example =>
+        - trying to figure out where a person is
+            - are you in a national capital?
+            - are you in the southern hemisphere?
+            - are you on a coast?
+
+
+    Node
+        - each of the questions is a node
+        - root node -> the first node
+        - interior node -> follow up questions
+        - leaf nodes -> endpoints
+
+    Rule
+        - every node except for leaf nodes contains a rule
+        - the rule is the question being asked
+
+    Branches/Paths
+        - the links between nodes are called
+
+
+    - start at root node
+    - follow branches through interior nodes until you arrive at a leaf node
+
+    - Looks like an upside down tree
+
+    - each rule divides the data, usually into binary subgroups
+
+    - all data has to have a way to flow through the tree
+
+    - a series of rules to arrive at a conclusion
+
+
+
+Entropy
+    - when designing a tree, be as efficient as possible
+    - not all questions contain the same amount of info
+
+    - to evaluate questions, or nodes, need tools from information science
+        1. information gain
+        2. entropy
+
+
+    - entropy -> means disorder, or uncertainty
+
+    Shannon Entropy equation => https://www.screencast.com/t/VEzj9jgDQGg
+        -> corresponds to the weighted sum of log base two of the probabilities of all outcomes
+        -> is a measure of uncertainty in the outcome
+
+        -> as potential options are limited, entropy decreases
+
+        - can use entropy to measure information gain
+
+    - information gain -> change in entropy from the original state to the weighted potential outcomes of the following state
+
+    - gain the most information as quickly as possible
+
+
+
+
+
+- Guided Example
+
+    import pydotplus, graphviz
+
+
+    - calculates entropy for every node
+        - 1 is uncertain, 0 is certain
+
+    - calculates the samples remaining,
+        the distributions of those samples,
+        the dominant class
+
+    - set criterion to 'entropy'
+    - set max_features to 1 -> only one feature is used per node
+    - set max_depth to 4 -> only have four decision levels below the root of our classification
+
+
+
+Why Decision Trees?
+
+    Benefits
+        - easy to represent the model visually
+        - can handle varied types of data
+        - feature selection is a part of the model
+        - easy to use with little data preparation
+
+    Downfalls
+        - random to the generation -> leads to variance in estimates
+        - does not get built the same way every time
+        - prone to overfitting -> if grown too deep or made to complex
+        - balanced data is needed -> due to to bias towards the dominant class
+
+
+Can be used as both classifier and regression model
