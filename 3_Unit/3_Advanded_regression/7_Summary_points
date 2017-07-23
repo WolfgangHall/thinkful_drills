@@ -3,5 +3,17 @@ Lasso and Ridge Regression are improvements on basic OLS regression
 - Ridge Regression
     -> tool to use with correlated features
 
+    -> imposes penalty on large coefficients
+        - sum of the square of all model coefficients
+            - as it gets larger, penalty gets larger
+
+        - fights multicollinearity
+
 - Lasso Regression
     -> efficient method of feature selection when dealing with large feature space
+
+    - penalizes sum of the absolute values of coefficients
+
+    - constantly checks the accuracy of model and removes params with little influence
+
+        - coordinate descent algorithm
