@@ -1,0 +1,7 @@
+Lasso and Ridge Regression are improvements on basic OLS regression
+
+- Ridge Regression
+    -> tool to use with correlated features
+
+- Lasso Regression
+    -> efficient method of feature selection when dealing with large feature space

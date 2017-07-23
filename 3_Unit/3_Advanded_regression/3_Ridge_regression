@@ -1,0 +1,52 @@
+Improving on OLS
+    - first introduction to regression
+        - model fit is determined by minimizing the sum of the squared differences between the predictions and actual values
+            - OLS
+
+    - can get more accurate predictions by modifying cost function
+    - OLS cost function optimizes variance explained in the training set
+
+    - Ridge and Lasso regressions modify the cost function
+        - optimize variance explained in the test set
+
+
+
+Ridge Regression
+
+    - additional part of equation
+        -> imposes a penalty on large coefficients
+        -> represents the sum of the square of all model coefficients (1 through p)
+            -> multiplied by regularization parameter lambda
+                ==> as lambda increases, so does the penalty
+
+                ==> the solution that minimizes the cost function will have smaller coefficient estimates
+
+            -> 'L2 regularization'
+                ==> regularization based on the sum of the squared weights
+
+    -> core priniciple of ridge regression
+        -> as models become increasingly complex and features become multicolinear, coefficients from OLS become increasinly large
+            - sign that model is incorporating too much variance, overfitting
+
+
+        - ridge regression is a model variance minimizer
+            - works to fend off overfitting
+
+    Ridge regression is an excellent tool to reach for whenever you have many correlated parameters
+
+    also useful when you see parameter estimates infalte as the R-square estimate goes up
+        - suggests overfitting
+
+
+
+Regularization parameter: Ridge
+
+    - set lambda equal to any value greater than 0
+        - called alpha in sklearn
+
+    - best way to choose an optimal regularization parameters is through cross-validation
+        - which parameter gives the most consistent results
+
+    - if lambda is too large, all params will be set to zero
+
+

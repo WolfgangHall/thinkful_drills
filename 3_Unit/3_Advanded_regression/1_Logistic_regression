@@ -1,0 +1,102 @@
+Logistic Regression
+
+    Using regression like a classifier
+        - whether a customer will buy a product or not
+        - whether an employee will leave the company or stay
+
+        - outcomes are categorical, not continuous
+
+        - looking for probability of an outcome
+
+
+
+Logistic Regression vs Linear Regression
+    - formula for binary logistic regression relates p to a matrix of variable X
+        =>  ln ( p / 1 - p ) = BX
+
+
+    - if unfair coin has 80% chance of getting heads
+        => .8/(1 - .8)
+        => 4 times as likely to get heads
+
+    - convention is to calculate the odds of the more likely outcome
+
+
+    - have many of the same assumptions after transformation of Logistic regression
+        - assumes linearity
+        - multivariate normality of the residuals
+        - homoscedasticity
+            - variance of the residuals is constant across all predicted values
+        - low multicollinearity
+
+
+Why log?
+
+    ln (p / 1 - p) is often summarized as logit(p)
+        - represents the natural log of the odds of getting y=1
+
+    - convert binary outcomes into logged odds because regression requires normally distributed residuals
+        - come from a linear relationship between outcome and predictor
+
+
+    - count up how many times y = 1 for each value x
+        - divide it by the number of times y = 0
+
+
+    - still not a linear relationship
+
+
+Linear vs non-linear transformations
+
+    - a linear transformation is one where the relationship between the original value is the same for all values in a variable
+        - examples: adding, subtracting, multiplying, dividing
+
+
+    - squaring and logarithmic functions are not linear
+
+
+
+Logarithms to the rescue
+    - logarithm is the power to which the base must be raised to produce the number being logged
+
+    - useful when dealing with data where values become more and more widely spaced as they become larger
+
+    - shrinks the values toward zero
+        - greater shrinkage factor for larger values
+
+    - logging the odds has the possibility of evening up the distances between the odds values
+        - leads to a linear relationship with x
+
+
+    - look for distances of similar magnitudes between points
+
+    - when interpreting individual coefficients from a binary logistic regression, it's customary to back-transform the log-odds into odds by exponentiating
+
+
+    - convention is to use the natural log when logging odds
+        - exponentiation uses Euler's number e as the base
+
+
+
+Beyond Binary
+    using regression to predict a categorical variable with more than two possible outcomes
+        - can use multinomial logistic regression
+            - binary logistic regression is a special case
+
+        - ordinal logistic regression for classifying rank
+            - like placing runners
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

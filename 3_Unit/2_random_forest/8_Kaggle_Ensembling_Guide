@@ -1,0 +1,242 @@
+Model Ensembling
+    -> powerful technique used to increase accuracy of Machine Learning tasks
+
+
+Creating ensembles from submission files
+    - most basic and convenient way to ensemble
+
+    - only need the predictions on the test set
+        - no need to retrain a model
+
+
+    Voting Ensembles
+        - simplest error correcting code is a repition code
+            - signal corruption is rare, occurs in small bursts
+            - extremely rare to have a corrupted majority vote
+            - as long as corruption has less than a 50% chance of occuring, signals can be repaired
+
+        - 3 binary classifiers with a 70% success rate for each can obtain 78% accuracy through voting
+            - 34% chance all 3 are correct
+            - 44% chance 2 are correct
+
+
+        Number of Voters
+            - ensembles usually improve when adding more ensemble members
+            - voting ensemble of 5 pseudo-random classifiers with 70% accuracy would be correct ~83% of time
+
+
+        Correlation
+            - Uncorrelated submissions do better when ensembled than correlated submissions
+            - a lower correlation between ensemble model members seems to result in an increase in the error-correcting
+
+
+        Use for Kaggle: Forest Cover type prediction
+            - majority votes make most sense when the evaluation metric requires hard predictions
+                - (multiclass-) classification accuracy
+
+
+        Weighting
+            - weighted majority vote => give better models more impact
+                - count the vote by the best model 3 times
+                - other 4 models count for one vote each
+
+            - only way for inferior models to overrule the best model is for a collective and confident agreement to the alternative
+
+
+        Code
+            - averaging helps because when two models disagree, one of them is often right
+                - the average prediction will place much more weight on the correct answer
+
+            - effect is especially strong whenever the network is confident when right and unconfident when wrong
+
+
+
+    Averaging
+        - works well for a wide range of problems
+            - classification
+            - regression
+            - metrics (AUC, squared error, logarithmis loss)
+
+        - taking means of invididual model predictions
+            - 'bagging submissions'
+
+        - often reduces overfit
+        - want smooth separation between classes
+        - a single model's predictions can be a little rough around the edges
+
+        - our goal is not to memorize the training data, but to generalize well to new unseen data
+
+
+        Kaggle use: Bag of Words Meets Bags of Popcorn
+            - sentiment analysis for movies
+
+            - perceptron is a decent linear classifier
+                - guaranteed to find a separation if the data is linearly separable
+                    - perceptron stops learning once separation is reached
+                    - might not find best separation for new data
+
+                - initialize 5 perceptrons with random weights, combine for a predictive average
+
+            - ensembling can (temporarily) save you from learning finer details and inner workings of a specific ML algorithm
+
+
+
+    Rank Averaging
+        - not all predictors are perfectly calibrated
+            - may be over or under confidence when predicting low or high probabilities
+
+        - can turn predictions into ranks, then average the ranks
+            - normalize the averaged ranks between 0 and 1
+                - results in even distribution of predictions
+
+
+        Historical Ranks
+            - ranking requires a test set
+            - score the old test predictions together with their rank
+
+
+        Kaggle use case: Acquire Valued Shoppers Challenge
+            - ranked averages do well on ranking and threshold-based metrics (like AUC) and search-engine quality metrics (average precision at k)
+
+
+
+    Stacked Generalization & Blending
+        - averaging prediction files is not the only method
+
+        - stacking and blending
+
+
+        Stacked generalization
+            - use a pool of base classifiers
+                - then use another classifier to combine their predictions
+                    - aim is to reduce generalization error
+
+
+            Let’s say you want to do 2-fold stacking:
+
+                - Split the train set in 2 parts: train_a and train_b
+                - Fit a first-stage model on train_a and create predictions for train_b
+                - Fit the same model on train_b and create predictions for train_a
+                - Finally fit the model on the entire train set and create predictions for the test set.
+                - Now train a second-stage stacker model on the probabilities from the first-stage model(s).
+
+            A stacker model gets more info on problem by using the first-stage predictions as features, then if it were trained in isolation
+
+
+        - stacked generalization is a means of non-linearly combining generalizers to make a new generalizer
+            - use differing types so that each one does not provide the same info
+
+
+    Blending
+        - close to stack generalization
+            - a bit simpler
+            - less risk of an information leak
+
+        - stack ensembling and blending are used interchangeably
+
+        => instead of creating out-of-fold predictions for the train set, create a small holdout set of say 10% of the train set
+            -> stacker model trains on this holdout set only
+
+        Pros
+            - simpler than stacking
+            - wards against information leak
+                -> generalizers and stackers use different data
+            - do not need to share a seed for stratified folds with teammates
+                -> can throw models in the blender, blender decides to keep that model
+
+        Cons
+            - uses less data overall
+            - may overfit to holdout set
+            - CV is more solid with stacking (uses more folds) as opposed to single small holdout set
+
+
+        ===> create stacked ensembles with stacked generalization and out-of-fold predictions
+            ===> then use holdout set at third stage
+
+
+    Stacking with logistic Regression
+        - one of the more basic and traditional ways
+
+
+    Stacking with non-linear algorithms
+        - popular non-linear algorithms for stacknig
+            -> GBM (gradient boosting methods)
+            -> KNN (K nearest neighbor)
+            -> NN (nearest neighbor)
+            -> RF (random forest)
+            -> ET
+
+
+        - stack predicted class probabilities with an extremely randomized trees model
+
+        MAE == mean absolute error
+
+
+    Feature weighted linear stacking
+        - stacks engineered meta-features together with model predictions
+        - the stacking model learns which base model is the best predictor for samples with a certain feature value
+        - linear models are used to keep the resulting model fast and simple to inspect
+
+
+    Quadratic linear stacking of models
+        - similar to feature weighted
+        - creates combinations of model predictions
+
+
+    Stacking classifiers with regressors and vice versa
+        - one may try a base model with quantile regression on a binary classification problem
+            -> a good stacker should be able to take info from the predictions
+                ==> even though regressions is not usually the best classifier
+
+        - using classifiers for regression is trickier
+            -> use binning first
+            -> turn the y-label into evenly spaced classes
+            - regression problems can be turned into multiclass classification problems
+                ==> find wages => class 1 is under 20k, class 2 is above 20k
+
+
+    Stacking unsupervised learned features
+
+        - K means clustering
+            -> Sofia-ML => fast online k-means algorithm
+
+
+    Online stacking
+        - be suspicious of papers that only use artificial data to showcase an algorithm
+
+        - ad-click predictions
+            -> models trained on recent data perform better
+
+            - when data has a temporal effect use Vowpal Wabbit (essence of speed in ML, learning system library) to train entire dataset
+                - then use a more powerful tool like XGBoost to train the last day of data
+                - let Vowpal Wabbit do optimizing loss functions
+
+    Everying is a hyper-parameter
+        1. not scaling
+        2. standard scaling
+        3. minmax scaling
+
+            => all are simply extra parameters to be tuned to improve ensemble performance
+
+
+    Model Selection
+        - can optimize scores by combining multiple ensembled models
+            1. ad-hoc approach
+                -> use averaging, voting, rank averaging on well-performing ensembles
+
+            2. greedy forward
+                -> start with 3 base models, add a model when it improves the train set score the most
+
+            3. genetic
+                -> uses genetic algorithm and CV-scores
+
+            4. Fully random
+                -> create 100 or so ensembles from random selection
+                    - no placeback
+                -> pick the highest scoring
+
+    Automation
+        - can beat state-of-the-art academic benchmarks
+        - automated large ensembles ward against overfit
+            - adds a form of regularization without requiring much tuning or selection
+        - one of the best methods to improve ML algorithms

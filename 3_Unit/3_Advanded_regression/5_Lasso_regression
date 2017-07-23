@@ -1,0 +1,61 @@
+Ridge regression shrinks parameter estimates but they never reach exactly 0
+
+LASSO (Least absolute shrinkage and selection operator)
+    -> model optimization mechanic that works by trying to force small parameter estimates to be 0
+        - effectively dropped from the model
+
+    - prevents overfitting
+    - embedded feature selection method
+
+    - when dealing with thousands of predictors and you need to optimize processor time
+
+
+    - cost function is very similar to ridge regressions
+        -> rather than penalizing by the sum of squared coefficients, lasso penalizes by the sum of absolute values of the coefficients
+
+        - penalty does not increase as swiftly with size of coefficient
+
+    - called 'L1 regularization'
+
+    -> penalizing with the sum of absolute values of coefficients leads to a solution with zero estimates because of derivatives
+
+        => a partial derivative represents the sensitivity of one quantity to changes in another quantity
+
+        - we can calculate a derivative for most of the values of x in lasso
+            - there is no derivative where x = 0
+
+
+
+Fitting Lasso: Coordinate Descent Algorithm
+    - lasso is optimized using a coordinate descent algorithm, not a gradient descent algorithm
+
+    Coordinate descent
+        -> pick a starting value for beta (often 0)
+
+        -> for each feature j in beta
+            - predict the outcome using all features except for j
+            - look at how the residuals from the model using all betas except j correlate with feature j
+                => called Pj
+
+            - if the correlation falls within an area enclosing 0 defined by lambda, set beta of j = 0 (soft threshholding)
+
+            - if Pj < lambda / 2 set Bj equal to Pj + lambda / 2
+
+            - if Pj > lambda / 2 set Bj equal to Pj - lambda / 2
+
+        -> this iterates through all features 1 through j for multiple cycles
+
+        -> can exclude a feature at random each iteration
+
+        -> each time a feature is checked, it will shrink a bit, unless it is 0, where it will remain
+
+        -> continues untl the max difference between parameter estimates in the previous and the current cycle is less than a set threshhold (tol)
+            - in sklearn,  .0001
+
+
+    ==> Lasso works by iteratively fitting a model to the data while excluding one of the features
+        - if the model fits well enough without the excluded feature ==> its beta is set to zero, essentially removing it from the model
+
+
+
+Regularization parameter: Lasso

@@ -31,7 +31,7 @@ ID3 in plain English
         - or label with the most likely outcome
     <-- the real algorithm -->
     3. find the best attribute by calculating entropies for all possible values (Ex. tall, medium, short)
-        - attribute value pair with the lowest entropy is th best attribute
+        - attribute value pair with the lowest entropy is the best attribute
     4. use that rule to split the node
         - creates subsets of observations
     5. there are then 2 new nodes

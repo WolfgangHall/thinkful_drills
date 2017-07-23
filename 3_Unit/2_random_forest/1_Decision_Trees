@@ -104,3 +104,11 @@ Why Decision Trees?
 
 
 Can be used as both classifier and regression model
+
+
+
+
+
+Entropy is a log value
+    - slighty slower for larger datasets
+gini is a squared values?
