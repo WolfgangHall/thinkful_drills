@@ -1,0 +1,34 @@
+Random Forests
+    -> uses many decision trees with a random sample of features
+
+    - each tree gets a vote on the outcome
+
+    - new random sample of features is chosen for each tree at every split
+
+        - usually the square root of the number of features
+
+    - this is important
+
+    - using the bagged trees, one very strong feature in the data set will create an ensemble of similar trees that are highly correlated
+        - this method randomly leaves out features
+            - makes them more independent of each other
+
+            - reduces variance
+
+
+
+Bagging
+    - decreases variance
+    - uses combinations of features that can be repeated (called replacement), or put back into the bag
+        - called a random subspace
+
+    - each combination gets a vote on what the outcome should be
+        - majority or mean
+
+
+
+
+Boosting
+    - uses the output of one model as the input for the next model
+
+    - from what I understand it is usually a model that is picked to cover some deficiency that has not been covered yet
