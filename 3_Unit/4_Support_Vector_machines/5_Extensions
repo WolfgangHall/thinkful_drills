@@ -1,0 +1,63 @@
+Multiple classes
+
+    - SVM is not only used as a binary classifier
+
+    -> do a hold-one-out form of binary classifier many times
+
+    -> for each category create a binary classifier between having categoriy or having any other outcome
+
+    -> to aggregate and create the multi-class classifier
+        -> each one has an output function to define its confidence in classification
+            -> related to its distance from the boundary and the weights for the accuracy of the classifier
+
+        -> highest output values decides the class
+
+
+
+    => can also use pairwise method
+        - every category is compared to others in pairs
+            -> class is decided by the maximum number of wins given an observations characteristics
+                - an observation is categorized under every possible pair of outcomes
+                    - most common wins
+
+
+
+SVM as a Regressor
+
+    - SVR -> Support Vector Regression
+
+    -> interested in the values far away from the prediction
+        - unlike classification where we looked for points closest to the boundary
+
+    -> 2 values that are tuned:
+        1. C
+            -> the box constraint
+            -> sets the penalty for being outside of our margin
+
+        2. epsilon
+            -> sets the size of the margin
+
+    -> gather data
+    -> find the distance from a specified point ( the prediction )
+    -> optimize the cost from observations being outside the margin
+
+    => can set the sensitivity when building the model
+
+
+
+
+Clustering
+
+    -> can be used as an unsupervised clustering algorithm
+
+
+
+Why SVM?
+
+    - flexibility
+    - great visual explanatory power
+        -> linear SVC
+    - clustering
+        -> SVClustering
+    - control of specificity of training
+        - SVR

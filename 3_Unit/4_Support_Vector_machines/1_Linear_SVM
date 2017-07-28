@@ -1,0 +1,37 @@
+simplest example => linear support vector binary classifiers
+
+    - a boundary line passomg close to data points is bad
+        -> susceptible to noise
+
+    - in SVM the margin is the distance between the nearest point of each class and the boundary
+
+    - nearest points are the support vectors
+
+    - looking for larger margins
+
+    - goal of SVM is to find the best boundary
+        -> or the boundary that optimizes the margin
+
+
+Finding the optimal boundary
+
+
+Things get Messy
+
+    - SVM works in many dimensions
+    - the boundary between two groups is not always a line
+        - works for 2 dimensions
+
+    -> Boundary is always a 'hyperplane'
+
+        => a hyperplane in n-dimensional space is an n-minus-one-dimensional-space
+
+            -> for a 2-d plane, a hyperplane is 1-d
+            -> for a 3-d plane, a hyperplane is 2-d
+
+    - not always possible to group things with a hard margin
+        - hard margin -> each observation is exclusively on one side of the line
+
+        - to deal with this, SVM imposes a cost function that allows balance for 2 things
+            1. the size of the margin (wants to maximize)
+            2. cumulative distance of points on the wrong side of the margin from the boundary (wants to minimize)

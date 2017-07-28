@@ -1,0 +1,50 @@
+- can create non-linear decision boundaries by transforming our data into a higher dimension
+    -> finding a good hyperplane boundary in the higher dimension
+    -> transforming the result back to starting data
+
+
+Kernel and the 'kernel trick'
+    - knowning how many dimensions you will need is not a simple calculation
+    - you'll run SVM on a large number of features
+        - high dimensional space
+
+    - can find the optimal hyperplane of a higher dimensional space without actually transforming our data into that space
+        => the kernel trick
+
+
+What is a kernel?
+
+    - kernel functions, mapping data to a space using weights
+
+    - kernel smoothing -> take a series of observations and instead of plotting each one individually, you generate a smoothed curve
+        -> each observation becomes a weighted distribution in and of itself
+            -> aggregate the cumulative distributions
+
+
+Kernels in SVM
+    - a kernel is a function that computes how 'similar' two vectors are by computing their dot product
+
+    - a kernel is a function that implicitly computes the dot product between two vectors in a higher-dimensional space without actually transforming the vectors into that space
+
+
+    - the dot product is all we need to find our optimal hyperplane in a higher dimensional space
+
+    - complexity of kernel functions depends on the number of dimensions in the input
+        - does not depend on the number of dimensions in the higher dimensional feature space
+
+        - can work with infinite-dimensional features space
+
+
+
+
+Kernel Estimation in Practice
+
+    - default kernel in sklearn is radial basis function
+        - uses a Gaussian decay according to the distance from the original point
+
+    - linear kernels, polynomial kernels, sigmoid kernels
+
+
+    - if you know enough about the data and its geometry, suitable method choosing
+
+    - rely on cross validation

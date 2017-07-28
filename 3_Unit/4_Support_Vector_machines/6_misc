@@ -1,0 +1,18 @@
+non-probablistic binary linear classfier
+
+
+SVM model is a representation of the examples as points in space
+    - they are mapped so that the examples of the separate categories are divided by a clear gap
+        - the gap is as wide as possible
+
+    - new examples ae mapped into that same space and predicted to belong to a category based on which side of the gap they fall on
+
+
+
+Choose a hyperplane (dividing line) that maximizes the margin between classes
+
+vector points that the margin line touches are known as support vectors
+
+
+can expand this idea to non-linearly separated data through the kernel trick
+
