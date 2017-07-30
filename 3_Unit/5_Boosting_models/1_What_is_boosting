@@ -1,0 +1,37 @@
+Ensemble models combine many less effective models into one more effective model
+
+Boosting models
+    -> models the data over and over
+    -> adjusts the model based on what was learned from the previous one
+
+    -> works for classification and regression
+
+    -> can be combined with any of the models we have seen so far
+
+
+Iterative model
+    -> start by fitting a simple model on the data
+
+    -> identify the information that model was not able to accout for
+        -> incorrect predictions -> classifier
+        -> residual error -> regression
+
+    -> build a new simple model that targets that new pool of information
+
+    -> repeat until we reach a predetermined stopping rule
+
+    -> combo of all models is used to make the final predictions
+
+
+Why Boosting?
+    -> can use many simple models that are each computationally fast to arrive at very accurate predictions
+
+    -> Can use almost any model you like
+
+    -> can use residuals, incorrect prediction, or any cost function
+
+    -> can weight predictions
+        -> can model only the subset of data that inaccurately predicted
+
+    -> can stop once you have run a certain number of models
+        -> set a variance threshhold

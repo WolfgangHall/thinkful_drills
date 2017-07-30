@@ -1,0 +1,40 @@
+- can use SVD to get PCA
+
+- singular values are the square root of the eigenvalues of Data * Data.T
+
+-> SVD is a data summary method
+-> extracts import features from the data
+
+- reconstructs the original dataset into a smaller dataset
+    -> used for things like image compression
+
+    -> can be used in recommendation systems
+
+
+3 steps:
+    1. calculate SVD
+    2. decide how many Singular Values 'S' you want to keep
+    3 take out columns more than S of U
+
+Igvita
+
+- M users and N products
+    -> looking at an M x N matrix
+
+    -> theorem states that we can decompose such a matrix into 3 components
+        -> MxM -> called U
+        -> MxN -> called S
+        -> NxN -> called V
+
+        -> can use this decomposition to approximate the original MxN matrix
+            -> taking the first k eigenvalues of the matrix X, can obtain a compressed representation of the data
+
+
+- if you can identify significant concepts, we can represent a large dataset with fewer bits
+
+- SVD allows us to compress a large matrix by approximating it in a smaller-dimensional space
+
+- SVD allows us to collapse a matrix into a smaller-dimensional space where highly correlated items are captured as a single feature
+
+
+- a common way to judge similarity between any two vectors is to look at the angles separating them: cosine similarity

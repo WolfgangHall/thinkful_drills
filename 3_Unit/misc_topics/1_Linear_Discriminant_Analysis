@@ -1,0 +1,108 @@
+LDA
+    -> used as a dimensionality reduction technique in the pre-processing step for pattern classification and machine learning
+
+    goal:
+        -> project a dataset onto a lower-dimensional space
+            -> good class-separability avoids overfitting
+        -> reduce computational costs
+
+
+    - approach of LDA is similar to PCA
+        - in addition to finding the component aces that maximize the variance (PCA), additional interest in axes that maximize the separation between multiple classes (LDA)
+
+
+    - goal of LDA:
+        -> project a feature space (a dataset n-dimensional samples) onto a smaller subspace k (k <= n-1)
+            - maintain class-discriminatory information
+
+    - dimensionality reduction
+        -> helps reduce computational costs
+        -> can help avoid overfitting by minimizing the error in parameter estimation
+            - 'curse of dimensionality'
+
+
+
+PCA vs LDA
+
+    - both LDA and PCA are linear transformation techniques
+        - both commonly used for dimensionality reduction
+
+    PCA
+        -> 'unsupervised'
+        -> 'ignores' class labels
+        -> goal is to find the directions (principal components) that maximize variance in a dataset
+
+    LDA
+        -> 'supervised'
+        -> computes the directions (linear discriminants) that will represent the axes that maximize the separation between multiple classes
+
+    - classification accuracy for image recognition shows that PCA tends to outperform LDA if the number of samples per class is relatively small
+
+    - not uncommon to use both LDA and PCA in combination
+
+        -> use PCA for dimensionality reduction and follow it up with an LDA
+
+        - use PCA to find the component axes that maximizes the variance
+        - follow up with LDA to maximize the component axes for class-separation
+
+
+
+What is a 'good' feature subspace?
+
+    - goal is to reduce the dimensions of d-dimensional dataset by projecting it onto a k-dimensional subspace (where k < d)
+
+    - how do we know what size we should choose for k?
+    - how do we knwo if we have a feature space that represents our data well?
+
+        - if all eigenvalues have a similar magnitude, this may be a good indicator that our data is already projected on a good feature space
+
+            => eigenvectors are associated with an eigenvalue
+                -> tells us about the 'length' or 'magnitude' of the eigenvectors
+
+        -> if some of the eigenvalues are much larger than otheres, might keep only those eigenvectors
+            -> contain more info about the data distribution
+
+            -> eigenvalues close to 0 are less informative
+                - may be droppable
+
+
+LDA approach in 5 steps
+
+    1. compute the d-dimensional mean vectors for the different classes from the dataset
+
+    2. compute the scatter matrices
+        -> in-between-class and within-class scatter matrix
+
+    3. compute the eigenvectors and corresponding eigenvalues for the scatter matrices
+
+    4. sort eigenvectors by decreasing eigenvalues
+        -> choose k eigenvectors with the largest eigenvalues to form a d x k dimensional matrix W
+            -> every column represents an eigenvector
+
+    5. use the d x k eigenvector matrix to transform the samples onto the new subspace
+        -> Y = X x W
+
+        => X is an n x d-dimensional matrix representing the n samples
+        => Y are the transformed x x k-dimensional samples in the new subspace
+
+
+LDA assumptions:
+    -> normal distributed data
+    -> statistically independent features
+    -> identical covariances matrices for every class
+
+        => only applies for LDA as a classifier
+
+    => LDA for dimensionality reductions works reasonable well if the assumptions are violated
+
+
+
+PCA finds the axes with maximum variance for the whole data set where LDA tries to find the axes for best class seperability. In practice, often a LDA is done followed by a PCA for dimensionality reduction.
+
+Where the PCA accounts for the most variance in the whole dataset, the LDA gives us the axes that account for the most variance between the individual classes
+
+
+feature scaling such as [standardization] does not change the overall results of an LDA and thus may be optional
+
+
+

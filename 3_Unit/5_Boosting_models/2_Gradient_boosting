@@ -1,0 +1,72 @@
+Revisit Gradient descent
+    -> context of fitting linear regression models
+
+        - for a regression model with n parameters, an n+1 dimensional space existed defined by all the parameters plus the cost/loss minimizing function
+
+        - combo of parameters and loss function define a surface within the space
+
+        - fit regression model by moving down the steepest 'downhill' gradient
+            - until lowest point on surface is reached
+
+        - final model is made up of the parameter estimates that define that location on the surface
+
+        - the underlying data used to estimate the parameters and calculate the loss function never changes
+
+
+        ===> In Gradient Boosting, the data changes
+
+        - most often gradient boosting uses decision trees to minimize the residual or the negative log-likelihood
+
+
+Gradient boosting with regression trees
+
+    -> loss function to minimize is the sum of squared residuals
+        -> basic OLS
+
+    -> each time a decison tree is run, extract th residuals
+        -> run a new decision tree, using the residuals as the outcome to be predicted
+
+        - after a stopping point is reached, add together the predicted values from all of the decision tree
+            -> creates the final gradient boosted prediction
+
+
+    -> the decision trees can be very simple
+        - may only have a a max depth of 2 -> max of 4 leaves
+
+
+    -> the greatest gains will happen in the earliest models
+        - subsequent steps will yield smaller gains in explanatory power
+
+    - gradient boosting with weak learner is more effective than one complex decision tree
+
+    - gradient boosted decision trees perform better than random forests
+
+    - less prone to overfitting than individual decision trees
+
+
+
+Overfitting
+    - the more iterations you run, the more likely you are to overfit
+
+    - Gradient boost has some methods to avoid overfitting
+        -> cross-validation
+
+    - methods to use before using the test set
+
+        -> subsampling
+            -> each iteration of the boost algorithm uses a subsample of the original data
+                - introducing some randomness -> makes overfitting harder
+
+        -> shrinkage
+            -> reduces the impact of subsequent iterations on the final solution
+            -> 'learning rate' -> causes each step to be a little smaller than the previous one
+
+            => prevents any one iteration from being too influential
+
+            -> many small steps is less prone to overfitting than few large steps
+
+            -> range from 0 (only initial iteration matters) to 1 (all iterations weighed equally)
+
+            -> can lead to slower running times
+
+

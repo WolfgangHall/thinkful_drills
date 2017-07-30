@@ -1,0 +1,28 @@
+Wrapper methods
+    -> measure usefulness of features based on classifier performance
+        - optimize classifier performance => the 'real' problem
+        - computationally more expensive due to repeated learning steps and cross-validation
+
+    => recursive feature elimination
+    => sequential feature selection algorithms
+    => genetic algorithms
+
+
+Filter methods
+    -> pick up the intrinsic properties of the features
+        => measured via univariate stats instead of cross-validation performance
+
+    => information gain
+    => chi-square test
+    => fisher score
+    => correlation coefficient
+    => variance threshhold
+
+
+Embedded Methods
+    -> similar to wrapper methods
+    -> used to optimize the objective function of performance of model
+
+    => L1 (LASSO) regularization
+    => decision tree
+

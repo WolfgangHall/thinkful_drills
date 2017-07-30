@@ -1,0 +1,36 @@
+- unsupervised stats technique used to examine the interrelations among a set of variables in order to identify the underlying structure of those variables
+
+- also known sometimes as a 'general factor analysis'
+
+
+-> factor analysis determines several orthogonal lines of best fit to the data set
+    -> orthogonal -> at right angles
+        -> perpendicular lines in an n-dimensional space
+
+        -> n-dimensional space is the varible sample space
+            - as many dimensions as there are variables
+                -> 4 variables -> 4-D
+
+
+    -> orthogonal line is perpendicular to the regression line of best fit
+
+- Components are a linear transformation that chooses a variable system for the data set such that the greatest variance of the data set comes to lie on the first axis
+
+- second greatest variance on the second axis and so on ...
+
+    -> allows us to reduce the number of variables used in an analysis
+
+    -> horizontal line might explain 76% of variation
+    -> vertical line might explain 28% of the variation
+
+- componensts are uncorrelated
+    -> because in the sample space, they are orthogonal to each other
+
+- can continue our analysis into higher dimensions
+
+- if technique is used on dataset with large number of variables
+    -> can compress the amount of explained variation to a few components
+
+- most challenging part is interpreting the components
+
+- usually want to standardize our data by some scale for PCA
