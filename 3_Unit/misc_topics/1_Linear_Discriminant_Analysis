@@ -8,7 +8,7 @@ LDA
 
 
     - approach of LDA is similar to PCA
-        - in addition to finding the component aces that maximize the variance (PCA), additional interest in axes that maximize the separation between multiple classes (LDA)
+        - in addition to finding the component axes that maximize the variance (PCA), additional interest in axes that maximize the separation between multiple classes (LDA)
 
 
     - goal of LDA:
@@ -52,7 +52,7 @@ What is a 'good' feature subspace?
     - goal is to reduce the dimensions of d-dimensional dataset by projecting it onto a k-dimensional subspace (where k < d)
 
     - how do we know what size we should choose for k?
-    - how do we knwo if we have a feature space that represents our data well?
+    - how do we know if we have a feature space that represents our data well?
 
         - if all eigenvalues have a similar magnitude, this may be a good indicator that our data is already projected on a good feature space
 
@@ -97,7 +97,7 @@ LDA assumptions:
 
 
 
-PCA finds the axes with maximum variance for the whole data set where LDA tries to find the axes for best class seperability. In practice, often a LDA is done followed by a PCA for dimensionality reduction.
+PCA finds the axes with maximum variance for the whole data set where LDA tries to find the axes for best class separability. In practice, often a LDA is done followed by a PCA for dimensionality reduction.
 
 Where the PCA accounts for the most variance in the whole dataset, the LDA gives us the axes that account for the most variance between the individual classes
 

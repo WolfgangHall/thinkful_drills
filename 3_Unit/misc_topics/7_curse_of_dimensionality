@@ -1,0 +1,14 @@
+The difficulty of searching through the space gets a *lot* harder as you have more dimensions.
+
+This exponential growth in data causes high sparsity in the data set and unnecessarily increases storage space and processing time for the particular modelling algorithm
+
+ Value added by additional dimension is much smaller compared to overhead it adds to the algorithm
+
+
+
+ This is the thesis that in large N, when you have enough data points, all machine learning algorithms tend to converge on the same answer
+
+
+ Dimensionality reduction uses linear algebra to reduce the dimensions you're looking at to the part of the data space where your data is most dense, ignoring parts where the data is sparse.
+
+ PCA and SVD are two such techniques for accomplishing this. These techniques (which are more or less mathematically equivalent), work by looking for areas---called sub-spaces---of the entire data space where most of the data points tend to vary

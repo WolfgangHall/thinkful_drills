@@ -1,0 +1,27 @@
+ reduce the number of columns in the data set and lose the smallest amount of information possible at the same time
+
+ - Data columns with too many missing values are unlikely to carry much useful information
+
+ -  data columns with little changes in the data carry little information
+    -> variance is range dependent; therefore normalization is required before applying this technique
+
+- Data columns with very similar trends are also likely to carry very similar information
+
+- Decision Tree Ensembles, also referred to as random forests, are useful for feature selection in addition to being effective classifiers
+    -> generate a large and carefully constructed set of trees against a target attribute and then use each attribute’s usage statistics to find the most informative subset of features
+
+- Principal Component Analysis
+    -> the first principal component has the largest possible variance; each succeeding component has the highest possible variance under the constraint that it is orthogonal to (i.e., uncorrelated with) the preceding components
+
+    -> Keeping only the first m < n components reduces the data dimensionality while retaining most of the data information, i.e. the variation in the data
+
+    -> sensitive to the relative scaling of the original variables
+        -> Data column ranges need to be normalized before applying PCA
+
+        -> not real system-produced variables anymore
+
+        -> If interpretability of the results is important for your analysis, PCA is not the transformation for your project
+
+- Backward Feature Elimination
+
+- Forward Feature Construction

@@ -1,0 +1,22 @@
+Regression problems
+
+for lasso, ridge, SVM
+    -> you should preprocess the data
+
+for random forest and tree based methods, it is not required
+
+for tree based methods, the features are split against each other
+
+in other models the features are compared against one another
+
+
+
+
+
+Credit card fraud
+- subsample from all of the datapoints
+
+use an algorithm with a penalty function
+- regularization methods
+
+- Lasso methods

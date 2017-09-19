@@ -1,0 +1,109 @@
+t-distributed stochastic neighbor embedding
+
+    -> It would be helpful to get a simplified and non-overlapping representation of the data whose features can be identified with the underlying parameters that govern the data
+
+    -> The data set lies along a low-dimensional manifold embedded in a high-dimensional space, where the low-dimensional space reflects the underlying parameters and high-dimensional space is the feature space
+
+    -> machine learning algorithm for dimensionality reduction
+
+    -> nonlinear dimensionality reduction technique
+
+    -> embedding high-dimensional data into a space of two or three dimensions
+
+        -> then visualized in a scatter plot
+
+    -> models each high-dimensional object by 2 or 3 dimensions
+        -> similar objects are modeled by nearby points and dissimilar objects are modeled by distant points
+
+
+    -> These algorithms works towards extracting the low-dimensional manifold that can be used to describe the high-dimensional data
+
+2 main stages
+
+    1. construct a probability distribution over pairs of high-dimensional objects
+        -> similar objects have a high probability of being picked
+        -> dissimilar objects have a low probability of being picked
+
+
+    2. define a similar probability distribution over the points in the low-dimensional map
+        - minimizes ** kullback-leibler divergence between the two distributions with respect to the locations of points in the map
+
+
+
+- often used to visualize high-level representations learned by an artificial neural network
+
+
+** a measure of how one probability distribution diverges from a second expected probability distribution
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+- create two-dimensional maps from data with hundreds or thousands of dimensions
+
+- goal is to take a set of points in a high dimensional space and find a faithful representation of those points in a lower-dimensional space
+    -> typically 2-d
+
+- non-linear algorithm
+
+- adapts to the underlying data
+    -> performs different transformations on different regions
+
+- tuneable parameter => 'perplexity'
+    - how to balance attention between local and global aspects of your data
+
+    - is a guess about the number of close neighbors each point has
+
+    -> typically between 5 and 50
+        - may need to analyze multiple plots with different perplexities
+
+    - with low perplexity, local variations dominate
+
+    - the perplexity should be smaller than the number of points
+
+
+- if you see a t-SNE plot with pinched shapes, chances are the process was stopped too early
+    - increase the # of steps
+
+
+- cluster size (different std devs) means nothing in the plot
+    -> naturally expands dense clusters
+
+
+- distances between clusters might not mean anything
+    - at lower perplexity, the clusters look equidistant
+
+    - if you add more points to each cluster, the perplexity has to increase as well
+
+    - distances between well-separated clusters might mean nothing
+
+
+- random noise does not always look random
+
+
+- you can see some shapes, sometimes
+    - at low perplexity, local effects and meaningless clumping take center stage
+
+
+- for topology, you may need more than one plot
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+- make sure the same scale is used for all features
+    -> based on nearest neighbor search
+
+
+
+
+
+Disadvantages
+
+    -> computationally expensive

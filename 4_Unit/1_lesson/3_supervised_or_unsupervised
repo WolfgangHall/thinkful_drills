@@ -1,0 +1,14 @@
+1. Define the likelihood that an individual will contract a specific disease
+    - Supervised learning. It seems more likey that this test is run with conditions or variables from people who have already contracted some disease.
+
+2. Translate a set of images into variables for modeling
+    Both. If modeling variables for certain types of images, you may need a supervised learning method. If your clustering pictures based on similarities, you may need an unsupervised learning method.
+
+3. An ecommerce company wants to identify power users
+    - Both. If the power users are labeled or if you are just grouping based upon indpendent features.
+
+4. That same company wants to see shopping patterns in users
+    Both. You can look for groupings based off of shopping patterns or predict specific variables based on an outcome of interest.
+
+5. You want to reduce the number of variables inputting into your random forest model.
+    Both.

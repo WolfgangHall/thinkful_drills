@@ -1,0 +1,11 @@
+- Classification algorithm based on Bayes theorem
+
+- principle is that every feature classified is considered independent of the value of any other feature
+
+- each feature contributes independently to the probability of the outcome
+
+- features are not always independent
+
+- used for spam detection, sentiment analysis
+
+- allows you to predict a class, given a set of features using probability

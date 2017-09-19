@@ -1,3 +1,5 @@
+- PCA can help explain observations for very many particular things in terms of very few general things, and, that matches how many things in the world work, which is useful.
+
 - unsupervised stats technique used to examine the interrelations among a set of variables in order to identify the underlying structure of those variables
 
 - also known sometimes as a 'general factor analysis'

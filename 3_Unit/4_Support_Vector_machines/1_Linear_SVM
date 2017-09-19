@@ -1,6 +1,6 @@
 simplest example => linear support vector binary classifiers
 
-    - a boundary line passomg close to data points is bad
+    - a boundary line passing close to data points is bad
         -> susceptible to noise
 
     - in SVM the margin is the distance between the nearest point of each class and the boundary

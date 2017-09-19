@@ -113,3 +113,6 @@ Bayesian Poisoning
 
     - done through including words in your spam message that your model correctly identified
         - convinces the model that the message is legitimate
+
+
+assumes normal distribution of outcomes

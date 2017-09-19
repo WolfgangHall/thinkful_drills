@@ -1,0 +1,75 @@
+1. Predict the running times of prospective Olympic sprinters using data from the last 20 Olympics.
+
+-> Linear Regression based model. Predicting a numeric value/continuous outcome over time.
+
+
+
+2. You have more features (columns) than rows in your dataset.
+
+-> Lasso Regression to reduce the number of features and keep the ones that impact the dataset the most.
+
+
+
+3. Identify the most important characteristic predicting likelihood of being jailed before age 20.
+
+-> Decision Trees/Random Forests have a parameter that track feature_importance and return the parameters that explain the most variance.
+
+-> can use the value/constant associated with the feature itself
+    -> if you are only working with 2 or 3 features
+        -> fit a logistic model
+        -> based on coefficient size
+
+
+
+4. Implement a filter to “highlight” emails that might be important to the recipient.
+
+-> Bernoulli Naive Bayes assumes binary data (important email or not) and is mostly used in text data classification. Commonly used in sentiment analysis.
+
+
+
+5. You have 1000+ features.
+
+-> Lasso Regression to reduce the number of features and keep the ones that impact the dataset the most.
+
+-> Other means of dimensionality reduction
+
+
+
+6. Predict whether someone who adds items to their cart on a website will purchase the items.
+
+-> Logistic Regression in order to predict this categorical binary outcome of consumers purchasing items.
+
+
+
+7. Your dataset dimensions are 982400 x 500.
+
+-> computational efficiency
+
+-> lots of features, multiple regression model
+
+-> what models are faster on bigger datasets?
+
+-> support vector machines for classification problems
+    -> very fast on a big dataset
+
+    -> if not, go for tree based approach
+
+
+
+8. Identify faces in an image.
+
+-> Support Vector Machines are commonly used in image classification.
+
+-> computer vision problems
+    -> neural networks
+
+
+9. Predict which of three flavors of ice cream will be most popular with boys vs girls.
+
+-> split the data
+
+-> random forest method
+    -> grab probabilities for each of the classes
+        -> review this!
+
+

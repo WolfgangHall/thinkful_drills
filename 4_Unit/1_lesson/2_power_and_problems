@@ -1,0 +1,25 @@
+Evaluation
+
+    - probably the biggest difficulty in unsupervised learning
+        - nothing to evaluate against
+
+    -> can look at volatility of model
+        -> if model is stable during fluctuations or the exclusion or addition of data, that is good
+
+    -> often has to simply be tested
+        -> if making clusters, test what you want to do with clusters
+        -> evaluate later steps and tweak model
+
+    - is hard to say whether a model is good or bad
+
+
+Complexity
+
+    - because of evaluation difficulties it is hard to decided on a stopping condition
+    - models may become increasingly more complex and resource consuming
+        -> particularly true of neural networks
+
+    - impose limitations
+    - keep some structures simple
+
+    - complex models do have some advantages and can be strong

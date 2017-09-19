@@ -3,7 +3,7 @@
 - singular values are the square root of the eigenvalues of Data * Data.T
 
 -> SVD is a data summary method
--> extracts import features from the data
+-> extracts important features from the data
 
 - reconstructs the original dataset into a smaller dataset
     -> used for things like image compression
@@ -38,3 +38,7 @@ Igvita
 
 
 - a common way to judge similarity between any two vectors is to look at the angles separating them: cosine similarity
+
+
+
+The best way to explain SVD to a layperson is that it is a way of combining information from several (likely) correlated vectors, and forming basis vectors that are guaranteed to be orthogonal in higher dimensional space and explain the most of the variance in the data.

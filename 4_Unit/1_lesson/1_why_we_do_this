@@ -1,0 +1,32 @@
+Unsupervised Learning
+
+    - no outcome variable
+    - no concept of training and test data
+
+
+Clustering
+
+        - simplest to logically grasp
+        - clustering algorithm goes over a set of variables and groups related observations
+
+            - can tell it how many groups/clusters
+                - algo creates the groups to minimize a cost function
+            - can let the algorithm find the groups on its own
+                - rarer application
+
+
+Variable Importances
+
+    - things like PCA
+    - help find which variables are the most important
+
+
+Neural Networks
+
+    - can function as supervised or unsupervised technique
+
+    - unsupervised
+        - image recognition
+        - discovers latent variables
+            - impactful but not explicitly defined in data
+
