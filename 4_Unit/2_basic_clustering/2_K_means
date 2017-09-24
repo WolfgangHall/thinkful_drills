@@ -1,0 +1,74 @@
+K-Means
+
+    - mathematically straightforward
+    - computationally intensive
+    - hard-clustering method
+
+    - groups data into clusters of similar data points with similar variances
+
+    - uses a cost function called 'inertia'
+    - chooses means (centroids) that minimize the inertia
+
+    formula for inertia:
+        -> https://www.screencast.com/t/vzLRbjYRp
+
+    - inertia
+        -> the sum of the squared differences between the centroid of a cluster and the data points in the cluster
+
+    - goal
+        -> define cluster means so that the distance between a cluster mean and all the data points within the cluster is as small as possible
+
+    - means in k-means refers to the centroids
+    - k is the number of centroids the algorithm works with
+        -> number of clusters, provided by user
+
+    - pick k through trial and error
+
+    - clusters representing actual data will be stable across training set and test set
+
+
+How the algorithm works
+
+    - iterative algorithm that eventually converges on a solution
+    - begins by choosing k centroids at random, repeats two steps until convergence
+
+        1. assign each data point to the nearest centroid
+        2. create new centroids by taking the mean of all the data points assigned to each centroid
+
+    - algorithm stops when the difference between old and new centroids is lower than a given threshold
+
+    - recommended to start the algorithm with different starting centroids
+        - bad starting values arrive at bad solutions
+
+    ** sklearn has kmeans++ option for initializing distant centroids
+
+
+Assumptions made by k-means models
+
+    - assumes underlying 'true' clusters are isotropic
+        -> radially symmetrical
+        -> uniform in all directions
+        -> edges curve outwards
+
+    - assumes clusters have similar variances
+
+
+Speed
+
+    - k-means runs more slowly on high-dimensional data
+        - more computationally demanding to measure distance between each data point and the mean in a higher-dimensional space
+
+    - commonly run PCA on the data first
+        - dimension reduction
+        - search for clusters in reduced data
+
+    - if you do not want to reduce dimensions
+        - run MiniBatchKMeans in sklearn
+            - randomly samples subsets of training data in each iteration
+
+        1. assign samples to nearest centroids
+        2. update centroids based on the streaming average of all the samples that have been assigned to the centroid so far
+
+            -> slightly worse by much faster than regular K-Means
+
+

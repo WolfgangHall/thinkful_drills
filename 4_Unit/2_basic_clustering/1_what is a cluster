@@ -1,0 +1,34 @@
+What is a cluster?
+
+    - dealing with more than one variable at a time
+        -> let an algorithm organize data points with similar characteristics into groups
+
+    - hard clustering
+        -> each data point is assigned to only one cluster
+
+    - soft clustering
+        -> each data point is assigned a degree of membership for every cluster
+
+    - an algorithmic cluster is a set of data points that have been determined to be more similar to one another than to other data points
+        - the way similarity is determined is what differentiates various clustering methods
+
+    - useful for generating features for a model
+    - useful for learning more about associations between data points
+
+
+    Caveats:
+        -> normalize data before clustering
+            -> all variables have equal potential impact on algorithm
+
+        -> just because an algorithm can find a certain number of clusters, that doesn't mean all clusters are meaningful
+
+        - if number of clusters is too high,
+            - leads to overfitting
+            - splitting on trivial differences
+
+        - if number of clusters is too low
+            - no useful information is gained
+
+        - can cluster hierarchically
+            -> lower-level clusters are formed and then grouped into higher-level clusters
+
