@@ -1,0 +1,120 @@
+Other methods - mean shift, spectral, affinity
+
+
+    Mean Shift
+        - first calculates the probability that a data point will be present at any point in the n-dimensional space defined by the number of features
+            -> can visualize probabilities as a surface have peaks and valleys
+                - peaks have many data points
+                - valleys have fewer data points
+
+                -> peaks represent what will become the cluster means
+
+                -> surface of probabilities is called a kernel density surface
+
+        - iterative algorithm
+            -> at each iteration
+                - each data points is shifted up to the nearest hill
+                - if data point is at peak, it stays
+                - once all points are at peaks and any further shifts are below a certain threshold -> algorithm terminates
+
+            - data points are assigned cluster based on peaks
+
+        - peaks are based on user-defined input parameter called 'bandwidth' that ranges from 0 to 1
+            - higher bandwidths create a smoother kernel density surface
+                - fewer peaks
+                - smaller hills are smoothed out
+
+        - makes no assumptions about the nature of the data or number of clusters
+
+        - more versatile than k-means
+
+        - creates clusters where data points form an n-dimensional 'globe' around a central point -> like k-means
+
+        - works for data sets where many clusters are suspected
+
+        - mean shift is slow (runtime increases with the square of the size of the input)
+            - recommended for small to medium-sized datasets only
+
+        - if a point is too far away from peaks, it may not be assigned to a peak at all
+            - unlike others, like k-means, where all data points are assigned, no matter how a poor a fit
+
+        when to use:
+            - when you don't know how many clusters you are looking for
+            - suspect clusters are hetergenous is size or shape
+            - small enough data set
+
+
+    Spectral Clustering
+
+        - based on quantifying similarity between data points
+
+        Examples.
+            - pixels in an image
+            - people in a social network that share the same category
+            - words that appear in the same context
+
+        - defines a similarity matrix of n x n dimensions
+            - n is the number of data points in the dataset
+
+            - made up of indices of similarity of every pairwise combo of data points
+
+            - transformation matric is applied to calculate a set of eigenvectors with appropriate eigenvalues
+
+            - PCA on a similarity matrix, rather than a covariance matrix
+
+        - can takes many different measures of similarity -> called affinity
+            - nearest neighbors
+            - gaussian kernel of the euclidean distance (radial basis function - rbf)
+
+        - user provides the number of clusters, k, desired
+        - the k eigenvectors with the k largest eigenvalues are extracted
+            - data is converted to the new k-dimensional space
+
+        - k-means algo is then applied to the new k-dimensional data to extract k clusters
+
+        - spectral is slow and works best when k is not too large
+        - clusters should be equal in size
+
+        - can identify clusters with the non-flat geometry
+
+        - clusters are not necessarily globular in the original dimensional space
+
+
+    Affinity propagation
+
+        - based on defining exemplars for data points
+            - exemplar -> data point similar enough to another data point that one could conveivably be represented by the other
+                - convey largely the same information
+
+        - chooses number of clusters based on the data
+
+        - used for parsing images
+
+        - tends to select more clusters than other methods
+            - suitable for data where many clusters are suspected
+
+        - clusters can be uneven in size
+        - can involve non-flat geometry
+
+        - begins with n x n similarity matrix
+
+        - within the similarity matrix, each data point also has a real number indicating whether or not we want to evaluate it an an exemplar
+
+        - also a clustering matrix
+            - n x n
+            - defines exemplar status
+
+        - goal is to find a matrix composition for c that maximizes the net similarity
+            - measured as the sum of each value of c multiplied by its corresponding value for s
+
+            - maximized by juggling two parameters:
+                1. availability
+                    - how well-suited the point is to be an exemplar
+                2. reponsibility
+                    - quantify how well-suited data point is to be a member of that exemplar's cluster
+
+
+            - algorithm iterates
+                - uses current availability info to update responsibility info
+                - using new responsibility info to update availability info
+
