@@ -1,0 +1,96 @@
+Clustering Evaluation
+
+    Consistency
+
+        - one critical component is consistency across sub-samples/folds
+        - same kinds of data points are grouped together each time you run the cluster on different subsets
+
+        - no formal metric for assessing how 'similar' clusters are between different sets of data
+
+        - can plot cluster assignments against features created by PCA
+            -> information value depends on how much information is retained by the PCA
+
+
+    Cluster-level descriptive statistics
+
+        - compute descriptive statistics for the features for each cluster
+        - clusters should have similar scores and variances for each feature
+
+
+    Existing Labels: Contingency tables, RI, ARI
+
+        - base 'ground truth'
+        - some existing data point group memberships that you can use to check your clusters against
+
+        Contingency tables
+            - compare cluster memberships of ground truth and the new cluster solution
+                - use crosstabs
+
+            - only tells us about cluster memberships of individual points
+            - does not tell us about relationships between datapoint pairs
+
+        Rand Index
+            - compares how pairs of datapoints relate in the ground truth and in the new solution
+            - 4 possile types of pair relationships
+
+                1. members of the same cluster in the GT <-> members of the same cluster in the new solution
+
+                2. members of the same cluster in the GT <-> members of different cluster in the NS
+
+                3. members of different clusters in the GT <-> members of the same cluster in the NS
+
+                4. members of different clusters in the GT <-> members of different clusters in the NS
+
+            - Rand Index, RI
+                -> ratio of the number of pairs where the GT and the NS agree / the total number of pairs
+
+                - scores range from 0 to 1
+                    -> 1 = perfect agreement between GT and NS
+
+                - can be interpreted as the probability that the GT and the NS will agree for any pair
+                    - fails to account for the effect of chance
+
+                - RI produced by random cluster assignment is called the Expected RI
+
+            - Adjusted Rand Index
+                - applies E(RI) as a correction factor
+
+                - possible to get values less than 0
+                - 1 indicates perfect agreement
+                - 0 indicates perfect randomness
+
+                - two cluster solution with equal datapoints in each cluster with random placement yields an RI of .5
+
+                - can be used effectively on all clustering algorithm types
+
+
+
+    Similarity: silhouette coefficient
+
+        - what if there is no GT?
+            - need to use other criteria, like similarity
+
+        - good clusters
+            -> made up of datapoints that are more similar to one another than to datapoints in other clusters
+
+        - one way of computing similarity is the silhouette coefficient
+
+        - silhouette coefficient
+            - the difference between
+                - the mean distance of a datapoint and all other points in its cluster
+                - and the mean distance between that datapoint and all other points in the nearest other cluster
+                - divided by whichever of the two values is highest
+
+            - the mean of the silhouette coefficients for all datapoints is the silhouette coefficient for that clustering solution on that data
+
+            - values range from -1 (bad clusters) to +1 (dense clusters)
+
+            - if clusters employ non-flat geometry, index will not work
+
+            - useful for comparing solutions of different clustering algorithms and you don't have a GT
+                - can be compared across algorithms
+                - creates a one-number index to represent a clustering solution and compare it against others
+
+
+    TLAD: Defaults are Decisions too
+        - be sure to check parameter options when using features like sklearn

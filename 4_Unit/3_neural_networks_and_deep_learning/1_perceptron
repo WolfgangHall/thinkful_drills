@@ -1,0 +1,33 @@
+Perceptron
+
+    - perceptron models form the basis of neural networks
+    - perceptron models are indebted to linear regression
+
+    - perceptrons rely on linear specifications for different purposes
+    - perceptrons are classifier
+        -> at their core, binary classifiers
+        - ways to expand them to multiple classes
+
+    y = mx + b
+    - y is the shift
+         - regularizes the boundary to zero
+
+    - b is the weight, controls influence of each variable in a linear fashion
+
+    Cost
+        - the sum of the output of our functional form from all misclassified examples
+            - minimizing the error for the classifier
+
+        - creates a boundary with errors, take the absolute value of each misclassified observations and them together for our cost
+
+        - based on cost function, all boundaries that correctly divide all data points into classes with no errors will have the same cost: zero
+
+    - in a simple perceptron, no probability is given or gradient permitted
+
+    - common practice to invoke a curve with a gradient to it
+        - prediction takes non binary values between zero and one
+
+    - most common curve to use is called the logistic function/sigmoid curve
+        1 / 1 + e^-x
+
+    - neural network is an ensemble of perceptrons

@@ -1,0 +1,53 @@
+What is a neural net?
+
+    - neurons
+        - information processes of the brain
+        - react to signals and create responses
+
+    - axons
+        - connect neurons to each other
+
+    - the human brain is made up of billions of neurons linked to each other
+
+    - often called 'artificial neural networks'
+
+
+    - perceptron takes in some data and generates a response
+        - usually a poor performing model
+
+        - can be augmented with bagging, like random forests
+        - can also augment that bagging with boosting
+            - taking output from one model and using it as input for another
+
+    - columns of perceptrons are called layers
+        - can be single layer of mutli layered
+
+        - first layer is called visible layer
+
+        - any layers after the first layer are called hidden layers
+            - features built on features
+            - called hidden because we are not directly observing inputs or outputs
+
+        - gets around linearity of the initial perceptron boundary
+            - function of a function
+                - gives greater detail and subtlety
+
+    - the perceptrons are different
+        - each variable input to the model is given a weight
+        - the different perceptrons give different variables different sets of weight
+
+        - not uncommon for a layer to be hundreds or thousands of perceptrons wide
+
+        - when combined they form the initial assumption of linearity
+            - models with different combinations of variables have hugely different effects
+                - very powerful model
+
+        - 'fully connected networks'
+            - every perceptron in one layer is linked to every perceptron in the following layer
+
+            - can weight so perceptrons are not fully connected
+
+    - many layered networks enter into the realm of deep learning
+
+    - data does not always flow in one direction
+        - the way data feeds back into each other ends up differentiating them

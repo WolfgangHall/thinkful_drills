@@ -1,0 +1,39 @@
+Supervised neural nets
+
+    - can be used as both a regression or a classification model
+
+    - MLP
+        - multi-layer perceptron
+
+    - neural networks in general like a lot of data
+
+    - they take a long time to run
+
+
+
+Model Parameters
+
+    - hidden_layer_size
+        - how many and how big to make our layers
+        - pass in a tuple
+            Ex.
+                - 1000 neurons wide and one layer => (100, 4, )
+
+        - how many layers to include is determined by two things
+            1. computational resources
+            2. cross validation searching for convergence
+
+            - generally less than the number of inputs you have
+
+    - alpha
+        - regularization parameter that penalizes large coefficients
+        - alpha scales the penalty
+
+    - activation function
+        - determines whether the output from an individual perceptron is binary or continuous
+            - by default it's binary
+                - rectified linear unit function
+
+            - sigmoid (logistic) is a reasonable alternative
+                - allows for continuous variables between 1 and 0
+                    - allows for more nuance

@@ -1,0 +1,38 @@
+Other terms in neural networks
+
+    -> Recursive neural networks
+
+        - feedforward
+            - clear directionality or flow to the network
+
+        - data can run through nodes or neurons more than once
+
+        - can be useful for drawing out more complex relationships
+
+
+     -> Convolutional neural networks
+
+        - typically the relationship between layers is (relatively) simple matrix multiplication
+
+        - the link can involve another layer of complexity by linking those matrices via linear equations
+            - called convolutions
+
+
+    -> Deep Learning
+
+        - a neural network with several hidden layers
+            - no explicit cutoff to quality as 'deep'
+
+        - additional complexity adds to runtime
+        - leads to a black box solution
+
+
+    -> Reinforcement Learning
+
+        - a model gets feedback from its environment or sytem
+
+        - model tries potential actions at random
+            - checks the feedback it receives
+            - learns to operate through a series of events that generates the most positive feedback
+
+        - Ex. playing a video game (walking into a red shell = bad), driving cars

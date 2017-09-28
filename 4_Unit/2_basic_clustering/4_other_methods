@@ -118,3 +118,29 @@ Other methods - mean shift, spectral, affinity
                 - uses current availability info to update responsibility info
                 - using new responsibility info to update availability info
 
+                - calculates net similarity score for the c matrix based on avail and respons
+
+                - called the 'sum-product algorithm'
+                    - net similiarity score is the sum of products
+
+
+            - 2 parameters used to tune the affinity propagation algorithm
+                - allows you to discover more or fewer clusters
+
+                1. damping
+                    - causes respons and avail calculations to be weighted by previous options
+                        - makes changes slower
+                        - helps avoid situation where calculations consistently overshoot best solution
+
+                2. preference
+                    - specify, before algo runs, whether there are certain data points that should be more likely to be chosen as exemplars
+                        - if no value is set, values are set to the median of the similarity values for all data point pairs
+
+        - not a quick algorithm
+
+        - time it takes to run each iteration increases with the square of the input data
+
+        - memory intensive
+            - small to medium sized datasets
+
+        - known to overestimate the number of clusters
