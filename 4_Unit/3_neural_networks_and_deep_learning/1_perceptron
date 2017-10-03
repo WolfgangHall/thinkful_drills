@@ -31,3 +31,19 @@ Perceptron
         1 / 1 + e^-x
 
     - neural network is an ensemble of perceptrons
+
+
+Perceptron
+    has input, weight, and bias
+
+    output of one gets input of next one
+
+    weights play big role
+
+    keeps on checking error in weights, happens in multiple stages
+
+    keep tuning weights until everything seems to be tuned well
+
+    how many layers, what are the weights of the layers
+    how many perceptrons
+
