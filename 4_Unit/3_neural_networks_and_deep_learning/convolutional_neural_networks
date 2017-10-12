@@ -1,0 +1,132 @@
+4 main operations of ConvNet
+
+    1. Convolution
+    2. Non Linearity (ReLU)
+    3. Pooling or sub sampling
+    4. Classification (Fully Connected Layer / MLP)
+
+
+Convolution Step
+    - primary purpose of convolution is to extract features from the input image
+    - preserves spatial relationship between pixels by learning image features using smaller squares of input data
+
+    - computation is done by:
+        - sliding a smaller matrix over the original matrix by 1 pixel
+            - called a stride
+
+        - for each position, compute element wise multiplication between both matrices
+
+        - outputs a final integer
+
+    - smaller matrix only sees a part of the image at a time
+
+    - smaller matrix is called a filter
+
+    - CNN will learn the values of the filters during the training process
+
+    - parameters to specify:
+        -> number of filters
+        -> filter size
+        -> architecture of the network
+
+    - size of feature map is controll by 3 parameters:
+        -> depth
+            - # of filters
+        -> stride
+            - # of pixels to slide
+        -> zero-padding
+            - size of feature map
+
+
+Introducing Non Linearity (ReLU)
+    - Rectified Linear Unit
+        -> is a non-linear operation
+
+    - element wise operation
+        -> applied per pixel
+
+    - replace all negative pixel values with 0 (zero)
+
+    - account for non-linearity by introducing it
+
+    - other non linear functions include:
+        - tanh
+        - sigmoid
+
+
+The Pooling Step
+    - reduces the dimensionality of each feature map
+    - retains the most important information
+
+    - has different types:
+        - max
+        - average
+        - sum
+
+    - max performs consistently well
+
+    - define a spatial neighborhood and take the largest element from the rectified feature map
+
+    - function of Pooling is to progressively reduce the spatial size of the input representation
+
+    - makes input representations (feature dimension) smaller and more manageable
+
+    - reduce number of parameters, controls overfitting
+
+    - makes network invariant to small transformation
+        -> small distortions wont change the output of pooling
+
+    - helps for arrival at an almost scale invariant representation of our image
+
+
+Fully Connected Layer
+    - traditional multi layer perceptron
+    - uses a softmax activation function in the output layer
+
+    - output from convolutional and pooling layer represent high-level feature of the input image
+
+    - Fully Connected layer uses these features for classifying the input image into various classes based on training dataset
+
+    - adding a fully-connected layer is also a cheap way of learning non-linaer combos of these features
+
+    - sum of output probabilities from the FCL is 1
+        - ensured by using softmax as activation function
+            - takes a vector of real-valued scores and squashes it to a vector values between 0 and 1 that sum to 1
+
+
+Convolution + Pooling layers as a Feature Extractors
+FCL acts a classifier
+
+
+
+Step 1:
+    - Initialize all filters and parameters/weights with random values
+
+Step 2:
+    - network takes a training image as input, goes through the forward propagation step (convolution, ReLU and pooling, FCL)
+    - finds output probabilities for each clas
+    - weights are randomly assigned for first training example
+
+Step 3:
+    - calculate total error at the output layer (summation over all 4 classes)
+
+Step 4:
+    - use back propagation to calculate the gradients of the error with respect to all weights in the network
+    - use gradient descent to update all filter values/weights and parameters to minimize the output error
+
+    - weights are adjusted in proportion to their contribution to total error
+
+    - network learns to classify the image by adjusting its weights
+        - via reducing output error
+
+    - parameters are fixed values
+        - do not change during training process
+
+
+Step 5:
+    - repeat steps 2-4 with each image in train set
+
+
+Misc.
+    - not necessary to have a pooling layer after a convolutional layer
+    - the operations can be repeateed a number of times, sometimes thousands
