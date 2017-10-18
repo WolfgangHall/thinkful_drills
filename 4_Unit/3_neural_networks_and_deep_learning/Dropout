@@ -1,0 +1,32 @@
+Dropout
+
+- Overfitting can be reduced by using “dropout” to prevent complex co-adaptations on the
+training data. On each presentation of each training case, each hidden unit is randomly omitted
+from the network with a probability of 0.5, so a hidden unit cannot rely on other hidden units
+being present.
+
+- A simple yet very powerful technique for decreasing the amount of overfitting of your model to
+training data is called dropout
+
+- Dropout is a technique where randomly selected neurons are ignored during training. They
+are dropped-out randomly
+
+-  their contribution to the activation of downstream
+neurons is temporally removed on the forward pass and any weight updates are not applied to
+the neuron on the backward pass
+
+- Neighboring
+neurons become to rely on this specialization, which if taken too far can result in a fragile model
+too specialized to the training data
+
+
+
+
+
+-  Random
+dropout makes it possible to train a huge number of different networks in a reasonable time.
+
+
+- A familiar and extreme case of dropout is “naive bayes” in which each input feature is
+trained separately to predict the class label and then the predictive distributions of all the features
+are multiplied together at test time

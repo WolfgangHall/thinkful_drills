@@ -1,0 +1,91 @@
+
+The paper defines 3 basic requirements of a recurrent neural network:
+
+    - That the system be able to store information for an arbitrary duration.
+
+    - That the system be resistant to noise (i.e. fluctuations of the inputs that are random or irrelevant to predicting a correct output).
+
+    - That the system parameters be trainable (in reasonable time).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+This, then, is a recurrent neural network. Instead of simply taking an image and returning an activity, an RNN also maintains internal memories about the world (weights assigned to different pieces of information) to help perform its classifications.
+
+knowledge can change pretty chaotically
+
+This chaos means information quickly transforms and vanishes, and it's difficult for the model to keep a long-term memory
+    - you’d like for the network to learn how to update its beliefs
+        - you’d like is for the network to learn how to update its beliefs
+         - knowledge of the world evolves more gently
+
+
+How this is done?
+    1. add a forgetting mechanism
+        - when new inputs come in, it needs to know which beliefs to keep or throw away
+
+    2. add a save mechanism
+        - When the model sees a new image, it needs to learn whether any information about the image is worth using and saving
+
+    3. processing the data
+        - when new a input comes in, the model first forgets any long-term information it decides it no longer needs
+        -  it learns which parts of the new input are worth using, and saves them into its long-term memory
+
+    4. focus long-term memory into working memory
+        - the model needs to learn which parts of its long-term memory are immediately useful
+        - the model needs to learn which parts of its long-term memory are immediately useful
+
+
+    RNN
+        - can overwrite its memory at each time step in a fairly uncontrolled fashion
+
+    LSTM
+        - transforms its memory in a very precise way
+        - uses specific learning mechanisms that help it keep track of info over longer periods of time
+
+
+LSTM has two types of memory
+    - long-term memory (cell state)
+
+    - working memory (hidden state)
+        - pulls out and focuses the long-term memories when they're needed
+
+    -> when memory is irrelevant, we expect hidden state to turn off
+
+    - We also described a specific remembering mechanism inside the LSTM, whose job is to keep or discard information from the long-term memory.
+    - We expect it to fully activate when it needs to remember something exactly, and to turn off when information is never going to be needed again.
+
+    - the remembering mechanism (traditionally called a forget gate)
+
+    - saving mechanism (traditionally called the input gate) that decides whether or not information from a new input is useful enough to keep. Thus, it should turn off at worthless information.
+
+
+First, many of the problems we'd like to solve are sequential or temporal of some sort, so we should incorporate past learnings into our models. But we already know that hidden layers of neural networks encode useful information, so why not use these hidden layers as the memories we pass from one time step to the next? And so we get RNNs.
+
+We selectively decide what information to save, what information to discard, and what pieces of information to use to make decisions the next time we read the news. Thus, we want to learn how to gather, update, and apply information – and why not learn these things through their own mini neural networks? And so we get LSTMs.
+
+
+maybe you think it's silly for LSTMs to distinguish between long-term and working memories – why not have one? Or maybe you find separate remember gates and save gates kind of redundant – anything we forget should be replaced by new information, and vice-versa. And now you've come up with one popular LSTM variant, the GRU
+
+Or maybe you think that when deciding what information to remember, save, and focus on, we shouldn't rely on our working memory alone – why not use our long-term memory as well? And now you've discovered Peephole LSTMs
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+A LSTM network has the following three aspects that differentiate it from an usual neuron in a recurrent neural network.
+
+    1. It has control on deciding when to let the input enter the neuron.
+
+    2. It has control on deciding when to remember what was computed in the previous time step.
+
+    3. It has control on deciding when to let the output pass on to the next time stamp.
+
+    LSTM decides all this based on the current input itself
+
+
+The input signal x(t) at the current time stamp decides all the above 3 points. The input gate takes a decision for point 1. The forget gate takes a decision on point 2 and the output gate takes a decision on point 3. The input alone is capable of taking all these three decisions. This is inspired by how our brains work and can handle sudden context switches based on the input.

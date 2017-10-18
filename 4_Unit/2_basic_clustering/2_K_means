@@ -26,6 +26,10 @@ K-Means
 
     - clusters representing actual data will be stable across training set and test set
 
+termination
+fixed
+# of clusters do not change
+centroids do not change
 
 How the algorithm works
 
@@ -71,4 +75,23 @@ Speed
 
             -> slightly worse by much faster than regular K-Means
 
+
+- easy to explain
+- does not recognoze noise, includes them in clusters
+
+
+
+
+lstm
+
+negatively effected by multicollinearity and heteroscedsicaty??
+
+- not badly affected by collinearity
+- if you drop variables the wrong way, you may bring some samples closer
+
+
+initialization??
+    - recommended to start the algorithm with different starting centroids
+        - bad starting values arrive at bad solutions
+        - can initialize centroids that are distant from each other, less likely to have a flawed solution
 

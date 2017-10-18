@@ -2,6 +2,7 @@ Other methods - mean shift, spectral, affinity
 
 
     Mean Shift
+        - nonparametric - data is not required to fit a normal distribution
         - first calculates the probability that a data point will be present at any point in the n-dimensional space defined by the number of features
             -> can visualize probabilities as a surface have peaks and valleys
                 - peaks have many data points
@@ -40,8 +41,28 @@ Other methods - mean shift, spectral, affinity
 
         when to use:
             - when you don't know how many clusters you are looking for
-            - suspect clusters are hetergenous is size or shape
+            - suspect clusters are hetergenous in size or shape
             - small enough data set
+
+        - Essentially, mean shift treats the clustering problem by supposing that all points given represent samples from some underlying probability density function, with regions of high sample density corresponding to the local maxima of this distribution
+
+        -  the algorithm works by allowing the points to attract each other
+
+
+        Mean shift pros:
+
+            -> No assumptions on the shape or number of data clusters.
+            -> The procedure only has one parameter, the bandwidth.
+            -> Output doesn’t depend on initializations.
+
+
+        Mean shift cons:
+
+            -> Output does depend on bandwidth: too small and convergence is slow, too large and some clusters may be missed.
+            -> Computationally expensive for large feature spaces.
+            -> Often slower than K-Means clustering
+
+
 
 
     Spectral Clustering
@@ -58,7 +79,7 @@ Other methods - mean shift, spectral, affinity
 
             - made up of indices of similarity of every pairwise combo of data points
 
-            - transformation matric is applied to calculate a set of eigenvectors with appropriate eigenvalues
+            - transformation matrix is applied to calculate a set of eigenvectors with appropriate eigenvalues
 
             - PCA on a similarity matrix, rather than a covariance matrix
 
@@ -78,6 +99,18 @@ Other methods - mean shift, spectral, affinity
         - can identify clusters with the non-flat geometry
 
         - clusters are not necessarily globular in the original dimensional space
+
+        - think about it as a clustering method where your points are projected into a space of infinite dimensions, clustered there and then you use those results as the results of clustering your points
+
+        - Few clusters, even cluster size, non-flat geometry
+
+        - low-dimension embedding of the affinity matrix between samples, followed by a KMeans in the low dimensional space
+
+        - requires the number of clusters to be specified
+
+
+
+
 
 
     Affinity propagation
@@ -128,7 +161,7 @@ Other methods - mean shift, spectral, affinity
                 - allows you to discover more or fewer clusters
 
                 1. damping
-                    - causes respons and avail calculations to be weighted by previous options
+                    - causes response and avail calculations to be weighted by previous options
                         - makes changes slower
                         - helps avoid situation where calculations consistently overshoot best solution
 
@@ -144,3 +177,16 @@ Other methods - mean shift, spectral, affinity
             - small to medium sized datasets
 
         - known to overestimate the number of clusters
+
+
+        - Many clusters, uneven cluster size, non-flat geometry
+
+        - creates clusters by sending messages between pairs of samples until convergence.
+
+        - A dataset is then described using a small number of exemplars, which are identified as those most representative of other samples.
+
+        -The messages sent between pairs represent the suitability for one sample to be the exemplar of the other, which is updated in response to the values from other pairs.
+
+        - This updating happens iteratively until convergence, at which point the final exemplars are chosen, and hence the final clustering is given.
+
+    - DBSCAN

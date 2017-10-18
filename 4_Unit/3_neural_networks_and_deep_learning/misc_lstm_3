@@ -1,0 +1,43 @@
+- popular choice for sequential modelling tasks, due to its ability to store both long and short term
+
+- RNNs function in a similar manner, but does not possess effective ways of storing long-term memory
+
+- LSTMs specifically implement “memory cells” which has the capability to store memory for longer periods of time
+
+
+RNN
+
+    - RNNs are known for their performance in sequential tasks due to there recurrent connections (e.g. W_{h^ih^i}) which provide them with limited memorizing capabilities
+
+    - similar to standard neural network, except for the recurrent connections
+
+    - RNNs can also suffer from the vanishing/exploding gradient
+        - when the gradient becoming so small over time resulting in poor learning, where the exploding gradient causes very large gradients making the computations very unstable eventually leading to numerical errors
+            - overcome exploding gradient, we apply a hack called gradient clipping. That is, whenever the gradient exceeds a threshold value, we clip it. Thus resulting numerically stable gradients.
+
+
+LSTM
+    - LSTM replaces the hidden layers of RNN with a different model.
+    - LSTM architecture comprises 4 main components; input gate (i), forget gate (f), output gate (o) and memory cell (c).
+    - uses gated architecture
+
+
+Input gate should I write to the memory from the current input?
+
+Forget gate should I forget the existing knowledge in the memory cell?
+
+Output gate should I read from the current output and memory?
+
+Memory cell stores the long-term memory
+
+- We replace binary gates with sigmoidal functions. Allowing continuous operations on reading,forgetting and writing
+
+    -> now the network can write 50% of the input, forget 25% of the memory and read 75% of the output. This is a much better approach in contrast to binary gates
+
+
+
+-  Feed an input x_t, calculate hidden layer activations (h_t^0,h_t^1,\ldots,h_t^N), predict the output (y_t), calculate the loss (L_t) and finally backpropagate the loss through the network.
+
+    - the backpropagation would change as LSTMs employ a rich architecture with more connections
+
+- We add a softmax classifier with weights W and biases b. And connect W,b to the output h_t of the LSTM. Input remains x_t

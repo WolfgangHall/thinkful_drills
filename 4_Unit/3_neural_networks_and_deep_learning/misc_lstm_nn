@@ -1,0 +1,109 @@
+LSTM networks
+
+    - Long short term memory networks
+
+    - kind of recurrent neural network (rnn)
+
+    - designed to avoid long-term dependency problem
+        - remembering info for long periods of time is default behavior
+
+    - Standard rnn has the form of a chain of repeating modules of a neural network
+        - usually has a simple structure
+            -> ie. single tanh layer
+
+    - LSTMs have a chain-like structure but the repeating module has a different structure
+        - instead of having a single NN layer, there are 4
+
+
+Core Idea
+    - key to LSTM is the cell state
+        -> like a conveyor belt
+        -> runs straight down entire chain
+
+    - LSTM can remove or add info to the cell state
+        - regulated by structures called gates
+
+    - gates optionally let information through
+        - have a sigmoid neural net layer and a pointwise multiplication operation
+            -> sigmoid ouputs #s between 0 and 1
+            -> describes how much of each component should be let through
+
+        -> LSTM has 3 gates to protect and control the cell state
+
+
+
+Step-by-step LSTM walkthrough
+
+    1st step
+        - decide what information you are going to throw away from the cell state
+            - decision is made by a sigmoid layer called the 'forget gate layer'
+            => language model trying to predict the next word based on previous ones
+            => cell state might include the gender of the present subjects, so that the correct pronouns can be used
+            => if you see a new subject, you may want to forget the gender of the old subject
+
+    2nd step
+        - decide what new information we are going to store in the cell state
+
+            -> has 2 parts
+
+                1. a sigmoid layer called the 'input gate layer'
+                    - decides which values to update
+
+                2. a tanh layer crehttp://colah.github.io/posts/2015-08-Understanding-LSTMs/img/LSTM3-focus-C.pngates a vector of new candidate values that could be added to the state
+
+        Example
+            => in example of language model, we want to add the gender of the new subject to the cell state, to replace the old one
+
+
+    3rd Step
+        - update the old cell state into the new cell state
+        - previous step decides what to do, this just actually does it
+
+        - multiply the old state by f sub t
+        - forget the things that we decided to forget earlier
+        - add in the new candidate values, scaled by how much we decided to update each state value
+
+        Example
+            => where we drop the information about the old subject's gender and add the new information
+
+
+    Finally
+        - decide what we are going to output
+        - output is based on cell state, will be a filtered version
+
+        first
+            - run a sigmoid layer
+                -> decides what parts of the cell state we are going to output
+
+        second
+            - put the cell state through tanh (to push the values between -1 and 1)
+            - multiply it by the output of the sigmoid gate, so that we only output the parts we decided to
+
+
+        Example:
+            => if language model just saw a subject, it might want to output information relevant to a verb
+                => a verb will come next
+
+                => might output whether the subject is singular or plural
+                => lets you know what verb should be conjugated into if a verb follows
+
+
+
+Variants on Long Short Term Memory
+
+    -> adding 'peephole connections'
+        - letting gate layers look at the cell state
+
+    -> use coupled forget and input loops
+        - instead of separately deciding what to forget and what should have new information added, make those decisions together
+
+        - only forget when you are going to input something in its place
+        - only input new values to the state when we forget something older
+
+    -> Gated Recurrent Unit (GRU)
+        - combines the forget and input gates into a single 'update gate'
+        - also merges the cell state and hidden state
+        - makes other changes
+
+        - resulting model is simpler than standard LSTM
+
