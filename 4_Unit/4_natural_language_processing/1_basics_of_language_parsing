@@ -1,0 +1,90 @@
+- majority of info available to world is verbal
+
+
+Processing and Analysis
+
+    - NLP is two part problem
+        1. process the data from original form
+            - convert blocks of text into a form that computer understands
+            - data cleaning
+            - feature extraction
+            - language parsing
+
+            -> domain knowledge
+                - word frequency
+                - meaning
+                - grammar
+
+        2. conduct analysis on processed data
+
+
+    - Packages
+        -> NLTK
+            - natural language toolkit
+            - good for language parsing
+            - customizable
+            - older models and methods
+
+        -> spaCy
+            - processes text data
+            - state of the art
+            - leaner
+
+
+Regular expressions
+# This pattern matches all text between square brackets.
+pattern = "[\[].*?[\]]"
+persuasion = re.sub(pattern, "", persuasion)
+
+# Now we'll match and remove chapter headings.
+persuasion = re.sub(r'Chapter \d+', '', persuasion)
+
+# Remove newlines and other extra whitespace by splitting and rejoining.
+persuasion = ' '.join(persuasion.split())
+
+
+
+What information can be extracted from text?
+
+    - tokens
+        - each individual meaningful piece from text
+        - words
+        - punctuation
+
+        -> tokenization
+            - breaking up the text into pieces
+
+        -> stop-words
+            - potentiallty uninformative tokens
+            - 'the', 'of'
+
+            - some approaches use them, some do not
+
+Lemmas
+    - can reduce each word to its root
+        -> think, thought, thinking
+
+    ** can also be done with prefixes and suffixes
+
+
+Sentences
+    - can consider text at the level of sentences
+
+    - sentiment analysis
+    - length of sentences
+    - unique words in a sentence
+
+    -> provide context for words
+
+    example_words = [token for token in example_sentence if not token.is_punct]
+    unique_words = set([token.text for token in example_words])
+
+
+
+Parts of speech, dependencies, entities
+    - tokens contain parts of speech
+        - avoid issues with homographs
+            - words that are spelled the same but have different meanings
+
+    - dependencies
+        - how words relate to each other syntatically

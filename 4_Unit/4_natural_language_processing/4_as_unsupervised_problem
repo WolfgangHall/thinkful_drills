@@ -1,0 +1,135 @@
+Semantics
+    -> the meaning of the words and sentences
+
+    - models can get tripped up on things like synonyms (milday, lady)
+
+    - can modify spacy dictionary to identify other lemmas
+
+    - Rather than us 'telling' the model how language works and what each sentence means, we can feed the model a corpus of text and have it 'learn' the rules by identifying recurring patterns within the corpus.
+        - unsupervised neural networks are great at this
+
+    - unsupervised models are limited by their corpus
+        - medical texts will understand the differences between medical terms
+
+
+Term document matrix
+
+    - column for each sentence, row for each work
+
+    - ignore stop words
+    - discard words that only occur once
+    - reduce words to their root
+
+    -> term 'document' refers to the individual text chunks worked with
+        - could be sentences, paragraphs, whole text files
+
+    - want to weight the matrix so that words that occur in many different sentences have lower weights
+        - or else, words would bring up more than one topic, not very useful
+        - need to use a floor though
+            - words that only occur once are totally useless for finding associations
+
+
+Quantifying documents
+
+    - document frequency
+        - how many sentences a word appears in
+
+    - collection frequency
+        - counts how often a word appears, total, over all sentences
+
+
+Penalize indiscriminate words
+
+    - weight so that words that occur less often are more influential
+
+    - calculate ratio of total documents (N)
+    - divided by df
+    - take the log(base 2) of the ratio
+    - produces inverse document frequency number (idf) for each term (t)
+
+
+Term-frequency weights
+
+    - how frequently a term appears within a sentence
+        - need to weight words so model knows
+
+    - create unique weights for each sentence
+        - combes the term frequency with the idf
+
+    - terms appearing multiple times in one sentence will have higher weight for that sentence
+
+
+    tf_idf
+        - terms that occur a lot within a small number of sentences will have high tf_idf scores
+        - words that occur in most or all sentences will have low scores
+
+
+    - tf_idf vectors are like a translation from human-readable language to computer usable numeric form
+        - some info is going to be lost in translation
+
+
+    Decisions to make
+        - which stop words to include or exclude
+        - use phrases or not
+        - threshold for infrequent words
+        - how many terms to keep
+            - keep the words the highest collection frequency scores, for example
+
+
+Vector Space Model
+
+    - vector representation of space
+
+    - can be used to compute similarity between sentences or between a new phrase or sentence
+        -> used by search engines to grab possible results
+
+    - sentences exist in an n-dimensional space where n is th number of terms in the term-document matrix
+
+    - to compute sentence similarity to a new one, transform new sentence into a vector space and place it in
+        -> calculate how different the angle are
+        -> calculate whose angle is closest to the new vector
+
+        -> typically done by calculating cosine of angle between vectors
+            -> if 2 vectors are identical, angle between them will be 0 degrees and the cosine will be 1
+            -> if orthogonal. angle will be 90 degrees and the cosine will be 0
+
+            - high similarity score = high cosine
+
+
+
+Latent Semantic Analysis
+
+    - limitations to VSM
+    - treats each word as distinct from every other word
+        - runs into problems with synonyms
+        - problems with polysemy
+            - words spelled the same but have different meaning
+        - problems with very large documents
+            - the more words, the more opportunities to diverge from other elements in the space
+                - increases difficulty of seeing similarities
+
+    - potential solution?
+        - reduce tf-idf-weighted term-document matrix into a lower dimensional space
+            - express info using fewer rows by combining info from multiple terms into one new row/dimension
+            - done through PCA
+
+    Latent Semantic Analysis
+        - applying PCA to a tf-idf term-document matrix
+
+        - produces clusters of terms that presumably reflect a topic
+
+        - each document gets a score for each topic
+            - each document gets a score for each topic
+            - higher scores indicate the document is relevant to the topic
+            - documents can pertain to more than one topic
+
+        - LSA is useful when your corpus to too large to topically annotate by hand
+        - useful when you do not know what topics characterize your documents
+
+
+Dimension reduction
+
+    - use the Singular Value Decomposition because we do not want to mean-center variables
+        - as opposed to PCA
+        - loses sparcity with PCA
+

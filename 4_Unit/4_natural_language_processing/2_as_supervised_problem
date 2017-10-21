@@ -1,0 +1,12 @@
+Supervised NLP
+    - requires pre-labeled dataset
+
+    - generally interested in categorizing text in some way
+
+    - predict what book a sentence comes from
+
+
+    -> feature generation approach
+        - Bag of Words (BoW)
+            -> for each sentence, count how many times each word appears
+            -> use these counts as features

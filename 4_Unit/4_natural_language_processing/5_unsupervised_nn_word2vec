@@ -1,0 +1,86 @@
+word2vec
+    - the most common unsupervised neural network approach for NLP
+    - shallow neural network for converting words to vectors using distributed representation
+
+    - each word is represented by many neurons
+    - each neuron is involved in representing many words
+
+    -> assigns a vector of random values to each word
+
+    - for a word (W) it looks at words that are near W in the sentence
+    - shifts the values in the word vectors so that the vectors for words near W are closer to the W vector
+    - vectors for words not near W are farther away from the W vector
+
+    -> will result in words that often appear together having vectors that are near one another
+
+    - using the vectors, similiarity scores are computed for each pair of words by taking the cosine
+
+
+    Method differences
+        word2vec -> creates representations of individual words based on words around them
+
+        LSA -> creates vector representations of sentences based on the words in them
+
+
+What is it good for?
+
+    - useful when computers need to parse request written by humans
+
+    - word2vec help search engines return the best results for queries
+        -> they do not just contain the exact words you have input
+
+        - search engine needs to understand request as well as match idiosyncratic language
+
+
+
+Generating vectors: multiple algorithms
+
+    - word2vec has two options that are inverse of one another
+
+        1. continuous bag of words (cbow)
+            -> identity of a word is predicted using the words near it in a sentence
+
+        2. skip-gram
+            -> identities of words are predicted from the word they surround
+            - work better on large corpuses
+
+
+        - For the sentence "Terry Gilliam is a better comedian than a director", if we focus on the word "comedian" then
+
+        CBOW will try to predict "comedian" using "is", "a", "better", "than", "a", and "director".
+
+        Skip-gram will try to predict "is", "a", "better", "than", "a", and "director" using the word "comedian".
+
+        In practice, for CBOW the vector for "comedian" will be pulled closer to the other words,
+
+        while for skip-gram the vectors for the other words will be pulled closer to "comedian".
+
+
+
+        - while vectors for nearby words move closer together, every time a word is processed, some vectors are moved farther away
+
+            - 2 approaches to 'pushing' vectors apart
+
+                1. negative sampling
+                    - each time a word is pulled toward some neighbor, the vectors for a randomly chosen small set of other words are pushed away
+
+                2. hierarchical softmax
+                    - every neighboring word is pulled closer or farther from a subset of words chosen based on a tree of probabilities
+
+
+
+What is similarity? strengths and weaknesses
+
+    - word2vec operates on assumption that frequent proximity indicates similarity
+        - words can be similar in differeny ways
+            - conceptually
+                - 'royal', 'king', 'throne'
+
+            - functional
+                - 'tremendous', 'negligible' -> side modifiers
+
+
+    - can identify similarities between words that never occur near one another in the corpus
+
+    - works best with a corpus is at least several billion words long
+        - algorithm is speedy but it still takes a while to process this much data
