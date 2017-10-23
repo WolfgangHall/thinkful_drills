@@ -1,0 +1,46 @@
+Natural Language Processing
+
+    - use cases for working with structured and unstructured text data
+
+        - group news articles by topic
+        - sift through thousands of pages to find relevant pages
+
+
+    - compile docs
+    - featurize them
+    - compare the features
+
+
+    -> featurizing based on the word count
+
+
+Bag of Words
+    - document represented as a vector of word counts
+
+    - use cosine similarity on the vectors made to determine similarity
+
+    - can improve bag of words by adjusting word counts based on word frequency in the corpus (group of all docs)
+
+    - use tf-idf (term frequency-inverse doc frequency)
+
+    Term frequency
+        - importance of the term within that document
+        TF(d, t) -> number of occurrences of term t in document d
+
+    Inverse Document Frequency
+        - importance of the term in the corpus
+        IDF(t) = log(D/t)
+            -> D - total # of docs
+            -> t = # of docs with the term
+
+
+
+    W x,y = tf x,y times log(N/ dfx)
+
+    TF-IDF - term x within document y
+
+    tf x,y = frequency of x in y
+    dfx = # of docs containing x
+    N = total # of docs
+
+    done so that we do not just have a word count for the document but also how important the word is relative to the entire corpus
