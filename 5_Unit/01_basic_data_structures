@@ -1,0 +1,61 @@
+The List
+
+    - an ordered sequence of items with an incrementing index
+
+    - can call any element of the list by knowing its index
+    - can easily add new items to the list
+
+    - last in, first out queue
+        -> handle the person who has been around the longest
+
+
+Efficiency and Fundamental steps
+
+    - Big O
+        -> way of quantifying the efficiency of a process in terms of the size of the data structure you are dealing with as input
+
+        -> asymptotic efficiency, approaching of a limit
+
+    - when thinking about efficiency, think about how many steps it would take for us to complete a process
+        - how that number changes as the size of our input data increases
+
+
+Linked List
+
+    - maintains order of items, does not have an index
+
+    - each entry is linked to the next item
+        - can be singly or doubly linked
+        - depends on whether the links only point forwards or also backwards
+
+    - advantage of removing indexes and pointing
+        -> deletion
+            - O(n) for lists
+            - O(1) for linked lists
+
+            - only updates the pointer that was pointed to the removed item, rather than all indexes
+
+
+    - disadvantage
+        - linked lists are at a disadvantage to lists
+
+        - always have to start at first item and move through the chain until you get where you want
+
+
+Queue
+    - more specialized linked list
+
+    - items only come in at one end, leave at the other
+
+    - entering the queue -> 'enqueing'
+        - items are linked to the last element of the list
+
+    - leaving the queue -> 'dequeing'
+
+
+Stack
+    - could also be a LIFO queue
+
+    - a linked list where items are only added or removed from one end
+
+    - to have access to an element later in the queue you have to remove the preceding elements

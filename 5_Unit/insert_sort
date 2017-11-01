@@ -1,0 +1,20 @@
+def insert_sort(input_list):
+    # copy the input to a new list so we don't modify the original
+    new_list = input_list
+
+    # iterate through the list
+    for i in range(len(new_list)):
+        # assign place to a new variable
+        j = i
+
+        # move through the list as long as the previous is larger
+        #   than the current element of list
+        while j > 0 and new_list[j - 1] > new_list[j]:
+
+            # swap places
+            new_list[j - 1], new_list[j] = new_list[j], new_list[j - 1]
+
+            # reduce j by one
+            j = j - 1
+
+    return new_list

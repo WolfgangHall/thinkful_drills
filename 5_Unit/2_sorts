@@ -1,0 +1,10 @@
+Insertion Sort
+
+    - one of the simplest methods of sorting
+
+    - maintain two lists
+        - first is original list
+        - new list will be ordered
+
+    - to add elements, take an element from the original list and move through the new list
+        - stop and insert at the appropriate place

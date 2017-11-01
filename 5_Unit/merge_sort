@@ -1,0 +1,41 @@
+# our merge function takes two ordered lists and merges them together into one ordered list
+
+
+def merge(a, b):
+    # check for empty list
+    if len(a) == 0 or len(b) == 0:
+        return a or b
+
+    # start with an empty result
+    result = []
+
+    # track two indexes
+    i, j = 0, 0
+
+    # set a while condition to ensure we iterate only for the length of our two lists
+    while (len(result) < len(a) + len(b)):
+        # if a's next element is lower append that element to our result
+        if a[i] < b[j]:
+            result.append(a[i])
+            i += 1
+        # otherwise append b's next element
+        else:
+            result.append(b[j])
+            j += 1
+        # when one list is empty just append everything from the other list and stop
+        if i == len(a) or j == len(b):
+            result.extend(a[i:] or b[j:])
+            break
+
+    return result
+
+
+def merge_sort(lst):
+    if len(lst) < 2:
+        return lst
+
+    mid = int(len(lst) / 2)
+    a = merge_sort(lst[:mid])
+    b = merge_sort(lst[mid:])
+
+    return merge(a, b)
