@@ -8,3 +8,29 @@ Insertion Sort
 
     - to add elements, take an element from the original list and move through the new list
         - stop and insert at the appropriate place
+
+    - does not scale well
+
+    - if the list is already sorted, this sort takes n steps to complete
+        - will simply iterate through list
+
+    - if list is completely out of order, could take n-squared steps
+
+
+
+Merge sort
+    - takes advantage of fact that merging two small sorted lists into one large sorted list is fast
+
+    - starts by breaking our large list into single element sublists
+        - each individual list is inherently ordered
+
+        - merge the single element list together into pairs, read from single end to preserve order
+
+    - worthwhile for use on long lists
+
+    - technique is called divide and conquer
+        - breaks task into smaller ones
+        - sorts small lists and brings them together
+
+    - much faster than insertion sort
+    - runs recursively

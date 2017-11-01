@@ -1,0 +1,40 @@
+Trees
+    - useful for storing information that has a hierarchical structure
+    - useful if you need rapid searchability
+    - flexible
+
+    - simplest version -> binary tree
+
+    - all trees are a set of nodes connected in a hierarchy
+    - each node is a value
+    - nodes connected below -> children
+    - nodes connected above -> parent
+    - top node is called a root
+    - if node has no children -> leaf
+
+    - a tree is binary if each non-leaf node has no more than 2 children
+
+    - leaves do not have to be in pairs for binary tree
+
+
+Use Cases
+    - flexible
+        - can put data into them in a variety of ways
+
+
+Traversing a tree
+    - seeing the values of all nodes in a tree and discerning its structure
+
+    - breadth
+        - explore the full breadth of a layer, one layer at a time, starting at root
+
+    - depth
+        - moves all the way through tree on the left side
+
+
+
+Binary heaps
+    - type of binary tree
+    - 2 defining features
+        1. must be complete binary trees
+        2. values within the heap must either always increase or decrease, moving from layer to layer

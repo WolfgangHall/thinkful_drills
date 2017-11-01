@@ -1,0 +1,19 @@
+# create Node Class
+class Node:
+    def __init__(self, val):
+        self.left = None
+        self.right = None
+        self.val = val
+
+
+# establish the initial root node and children
+root = Node('A')
+root.left = Node('B')
+root.right = Node('C')
+
+# add the appropriate children for 'B' and 'C'
+root.left.left = Node('D')
+root.left.right = Node('E')
+
+root.right.left = Node('F')
+root.right.right = Node('G')
