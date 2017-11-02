@@ -1,0 +1,12 @@
+def check_pal():
+    return str(max(i * j
+
+                   # checks every 3 digit number against every other 3 digit number
+                   for i in range(100, 1000)
+                   for j in range(100, 1000)
+
+                   # pythonic method of reversing a string
+                   if str(i * j) == str(i * j)[::-1]))
+
+
+print(check_pal())

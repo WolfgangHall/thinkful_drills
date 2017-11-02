@@ -1,0 +1,4 @@
+import sieve
+
+primes = list(sieve.primerange(1, 2000000))
+print(primes[-1])

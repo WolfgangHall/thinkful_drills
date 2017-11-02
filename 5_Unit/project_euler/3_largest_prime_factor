@@ -1,0 +1,12 @@
+def find_primes(n):
+    multiples = []
+
+    for i in range(2, n + 1):
+        if i not in multiples:
+            for j in range(i * i, n + 1, i):
+                multiples.append(j)
+
+    return multiples
+
+
+print(max(find_primes(100000)))
