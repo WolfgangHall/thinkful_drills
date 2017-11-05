@@ -1,0 +1,34 @@
+what is scraping?
+
+    - access a web page
+    - locate info on web page
+    - save information for later access
+
+
+Access web pages
+    - skip the browser
+    - send a request to the web server
+    - server responds with html or error code
+
+    - may need to provide token information
+
+
+Locate specific info
+    - parse the response
+    - html uses tags to differentiate pieces of information
+    - one common html parser is Xpath
+
+Save info somewhere
+    - can be stored in various file formats
+        - json, csv, sql db
+
+    - upload from that file to work with it
+
+
+Tools
+    - requests (for access to web page)
+    - beautifulsoup or lxml (for parsing)
+    - json or pymysql (for storing)
+
+    - scrapy (incorporates all of these things)
+        - has built-in default methods to keep it from crashing

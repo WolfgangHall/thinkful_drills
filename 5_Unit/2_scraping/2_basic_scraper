@@ -1,0 +1,18 @@
+Scrapy
+    - comes with its own API
+    - makes it easy to write and debug spiders
+    - can run it on the command line or jupyter
+
+
+- Not a good idea to use regular expressions to pick out what you want on the html page
+    - regex ignores context
+
+
+- Auto-throttle
+    - dynamically sets delay based on how quickly server responds
+
+- caching
+    - to avoid hammering the server, used a cached version of the website
+
+- robots.txt file
+    - tells you what kind of activities you can engage in

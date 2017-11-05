@@ -1,0 +1,11 @@
+Retry-After: 0
+Location: https://www.reddit.com/r/nba//
+Accept-Ranges: bytes
+Date: Sat, 04 Nov 2017 00:57:55 GMT
+Via: 1.1 varnish
+X-Served-By: cache-jfk8120-JFK
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1509757076.870944,VS0,VE0
+Cache-Control: private, max-age=3600
+Server: snooserv

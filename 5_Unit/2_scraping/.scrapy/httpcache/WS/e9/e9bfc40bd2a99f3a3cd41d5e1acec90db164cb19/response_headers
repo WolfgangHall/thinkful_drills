@@ -1,0 +1,24 @@
+Date: Fri, 03 Nov 2017 21:14:03 GMT
+Content-Type: text/xml; charset=utf-8
+Server: mw1228.eqiad.wmnet
+X-Powered-By: HHVM/3.18.6-dev
+X-Content-Type-Options: nosniff
+Cache-Control: private, must-revalidate, max-age=0
+P3P: CP="This is not a P3P policy! See https://en.wikipedia.org/wiki/Special:CentralAutoLogin/P3P for more info."
+Content-Encoding: gzip
+X-Frame-Options: SAMEORIGIN
+Content-Disposition: inline; filename="api-result.xml"
+Vary: Accept-Encoding,Treat-as-Untrusted,X-Forwarded-Proto,Cookie,Authorization
+Backend-Timing: D=38710 t=1509743643122014
+X-Varnish: 224480563, 564998343
+Via: 1.1 varnish-v4, 1.1 varnish-v4
+Accept-Ranges: bytes
+Age: 0
+X-Cache: cp1055 pass, cp1055 pass
+X-Cache-Status: pass
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+Set-Cookie: WMF-Last-Access=03-Nov-2017;Path=/;HttpOnly;secure;Expires=Tue, 05 Dec 2017 12:00:00 GMT
+Set-Cookie: WMF-Last-Access-Global=03-Nov-2017;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Tue, 05 Dec 2017 12:00:00 GMT
+Set-Cookie: GeoIP=US:NY:New_York:40.71:-74.01:v4; Path=/; secure; Domain=.wikipedia.org
+X-Analytics: ns=-1;special=Badtitle;https=1;nocookies=1
+X-Client-Ip: 196.52.2.34

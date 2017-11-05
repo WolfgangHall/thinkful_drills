@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" type="text/css" href="http://everydaysexism.com/wp-content/themes/blankslate-child/style.css?v2.1" />
+<title>Everyday Sexism Project</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Everyday Sexism Project &raquo; Feed" href="http://everydaysexism.com/feed" />
+<link rel="alternate" type="application/rss+xml" title="Everyday Sexism Project &raquo; Comments Feed" href="http://everydaysexism.com/comments/feed" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/everydaysexism.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.3"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<script type='text/javascript' src='http://everydaysexism.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://everydaysexism.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://everydaysexism.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://everydaysexism.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://everydaysexism.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8.3" />
+</head>
+<body class="blog">
+<div id="wrapper" class="hfeed">
+<header id="header" role="banner">
+<section id="branding">
+<div id="flags">
+	<ul>
+		<li><a href="/country/ar"><img src="/wp-content/uploads/2016/02/argentina.png"></a></li>
+		<li><a href="/country/au"><img src="/wp-content/uploads/2016/02/australia.png"></a></li>
+		<li><a href="/country/at"><img src="/wp-content/uploads/2016/02/austria.png"></a></li>
+		<li><a href="/country/br"><img src="/wp-content/uploads/2016/02/brazil.png"></a></li>
+		<li><a href="/country/ca"><img src="/wp-content/uploads/2016/02/canada.png"></a></li>
+		<li><a href="/country/cn"><img src="/wp-content/uploads/2016/02/china.png"></a></li>
+		<li><a href="/country/dk"><img src="/wp-content/uploads/2016/02/denmark.png"></a></li>
+		<li><a href="/"><img src="/wp-content/uploads/2016/02/united-kingdom.png"></a></li>
+		<li><a href="/country/fr"><img src="/wp-content/uploads/2016/02/france.png"></a></li>
+		<li><a href="/country/de"><img src="/wp-content/uploads/2016/02/germany.png"></a></li>
+		<li><a href="/country/it"><img src="/wp-content/uploads/2016/02/italy.png"></a></li>
+		<li><a href="/country/jp"><img src="/wp-content/uploads/2016/02/japan.png"></a></li>
+		<li><a href="/country/mx"><img src="/wp-content/uploads/2016/02/mexico.png"></a></li>
+		<li><a href="/country/md"><img src="/wp-content/uploads/2016/02/moldova.png"></a></li>
+		<li><a href="/country/nl"><img src="/wp-content/uploads/2016/02/netherlands.png"></a></li>
+		<li><a href="/country/nz"><img src="/wp-content/uploads/2016/02/new-zealand.png"></a></li>
+		<li><a href="/country/pt"><img src="/wp-content/uploads/2016/02/portugal.png"></a></li>
+		<li><a href="/country/refugee"><img src="/wp-content/uploads/2016/02/refugee.png"></a></li>
+		<li><a href="/country/ro"><img src="/wp-content/uploads/2016/02/romania.png"></a></li>
+		<li><a href="/country/ru"><img src="/wp-content/uploads/2016/02/russia.png"></a></li>
+		<li><a href="/country/rs"><img src="/wp-content/uploads/2016/02/serbia.png"></a></li>
+		<li><a href="/country/za"><img src="/wp-content/uploads/2016/02/south-africa.png"></a></li>
+		<li><a href="/country/es"><img src="/wp-content/uploads/2016/02/spain.png"></a></li>
+		<li><a href="/country/se"><img src="/wp-content/uploads/2016/02/sweden.png"></a></li>
+		<li><a href="/country/us"><img src="/wp-content/uploads/2016/02/united-states.png"></a></li>
+	</ul>
+</div>
+</section>
+<nav id="menu" role="navigation">
+
+	
+</nav>
+<div id="top-logo"><img src="/wp-content/uploads/2016/02/everyday-sexism-logo.png"></div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30408944-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</header>
+<div id="container"><section id="content" role="main">
+
+
+<div class="my_extra_menu_class"><ul id="menu-main-menu" class="menu"><li id="menu-item-187" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-187"><a href="/">project</a></li>
+<li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="http://everydaysexism.com/about">about</a></li>
+<li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13"><a href="http://everydaysexism.com/contact">contact</a></li>
+<li id="menu-item-194" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-194"><a href="http://everydaysexism.com/help-support">support</a></li>
+<li id="menu-item-197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-197"><a href="http://everydaysexism.com/digital-security">digital security</a></li>
+</ul></div><div class="social_menu">
+<div class="tw-like social_menu_item"> <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://everydaysexism.com" data-hashtags="everyday-sexism">Tweet</a></div>
+<div class="fb-like social_menu_item" data-href="http://www.everydaysexism.com/" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="arial"> </div>
+</div>
+
+<div class="project">
+<p>The Everyday Sexism Project exists to catalogue instances of sexism experienced on a day to day basis. They might be serious or minor, outrageously offensive or so niggling and normalised that you don’t even feel able to protest. Say as much or as little as you like, use your real name or a pseudonym – it’s up to you. By sharing your story you’re showing the world that sexism does exist, it is faced by women everyday and it is a valid problem to discuss.
+</p><p>
+If you prefer to e-mail me at laura@everydaysexism.com I can upload your story for you instead. Follow us on Twitter (and submit entries by tweet) at @EverydaySexism.
+</p>
+</div>
+
+<div class = "form_area"><h3>Add your story:</h3>
+                <div class='gf_browser_gecko gform_wrapper' id='gform_wrapper_1' ><form method='post' enctype='multipart/form-data'  id='gform_1'  action='/'>
+                        <div class='gform_body'><ul id='gform_fields_1' class='gform_fields top_label form_sublabel_below description_below'><li id='field_1_1' class='gfield gfield_contains_required field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_1' >name<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_post_title'>
+					<input name='input_1' id='input_1_1' type='text' value='' class='medium' tabindex='1'  placeholder='name' />
+				</div></li><li id='field_1_2' class='gfield gfield_contains_required field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_2' >Story<span class='gfield_required'>*</span></label><div class='ginput_container ginput_container_post_content'>
+					<textarea name='input_2' id='input_1_2' class='textarea medium' tabindex='2'    rows='10' cols='50'></textarea>
+				</div></li><li id='field_1_4' class='gfield field_sublabel_below field_description_below' ><label class='gfield_label'  >Post tags (optional) tick all that apply</label><div class='ginput_container ginput_container_checkbox'><ul class='gfield_checkbox' id='input_1_4'><li class='gchoice_1_4_1'>
+								<input name='input_4.1' type='checkbox'  value='Workplace'  id='choice_1_4_1' tabindex='3'  />
+								<label for='choice_1_4_1' id='label_1_4_1'>Workplace</label>
+							</li><li class='gchoice_1_4_2'>
+								<input name='input_4.2' type='checkbox'  value='Public space'  id='choice_1_4_2' tabindex='4'  />
+								<label for='choice_1_4_2' id='label_1_4_2'>Public space</label>
+							</li><li class='gchoice_1_4_3'>
+								<input name='input_4.3' type='checkbox'  value='Home'  id='choice_1_4_3' tabindex='5'  />
+								<label for='choice_1_4_3' id='label_1_4_3'>Home</label>
+							</li><li class='gchoice_1_4_4'>
+								<input name='input_4.4' type='checkbox'  value='Public Transport'  id='choice_1_4_4' tabindex='6'  />
+								<label for='choice_1_4_4' id='label_1_4_4'>Public Transport</label>
+							</li><li class='gchoice_1_4_5'>
+								<input name='input_4.5' type='checkbox'  value='School'  id='choice_1_4_5' tabindex='7'  />
+								<label for='choice_1_4_5' id='label_1_4_5'>School</label>
+							</li><li class='gchoice_1_4_6'>
+								<input name='input_4.6' type='checkbox'  value='University'  id='choice_1_4_6' tabindex='8'  />
+								<label for='choice_1_4_6' id='label_1_4_6'>University</label>
+							</li><li class='gchoice_1_4_7'>
+								<input name='input_4.7' type='checkbox'  value='Media'  id='choice_1_4_7' tabindex='9'  />
+								<label for='choice_1_4_7' id='label_1_4_7'>Media</label>
+							</li></ul></div></li><li id='field_1_5' class='gfield field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_5' >Add your own tags</label><div class='ginput_container ginput_container_text'><input name='input_5' id='input_1_5' type='text' value='' class='large'  tabindex='10'  placeholder='Add your own tags (separate with commas, not hashtags)' /></div></li><li id='field_1_6' class='gfield field_sublabel_below field_description_below' ><label class='gfield_label' for='input_1_6' >Captcha</label><script type='text/javascript'> var RecaptchaOptions = {theme : 'blackglass'}; if(parseInt('11') > 0) {RecaptchaOptions.tabindex = 11;}</script><div class='ginput_container ginput_container_captcha' id='input_1_6'><script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6LdUshUTAAAAACfkGOJCTANp34g0V1ydpU4rexqk&hl=en"></script>
+
+	<noscript>
+  		<iframe src="http://www.google.com/recaptcha/api/noscript?k=6LdUshUTAAAAACfkGOJCTANp34g0V1ydpU4rexqk" height="300" width="500" frameborder="0"></iframe><br/>
+  		<textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+  		<input type="hidden" name="recaptcha_response_field" value="manual_challenge"/>
+	</noscript></div></li>
+                            </ul></div>
+        <div class='gform_footer top_label'> <input type='submit' id='gform_submit_button_1' class='gform_button button' value='Submit' tabindex='12' onclick='if(window["gf_submitting_1"]){return false;}  window["gf_submitting_1"]=true;  ' /> 
+            <input type='hidden' class='gform_hidden' name='is_submit_1' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='1' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_1' value='WyJbXSIsImM1ZmVkNTNjMWFhMzMxNTMzOWZiNjZlYmI3M2EzYWRiIl0=' />
+            <input type='hidden' class='gform_hidden' name='gform_target_page_number_1' id='gform_target_page_number_1' value='0' />
+            <input type='hidden' class='gform_hidden' name='gform_source_page_number_1' id='gform_source_page_number_1' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div><script type='text/javascript'> jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 1) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type='text/javascript'> jQuery(document).ready(function(){jQuery(document).trigger('gform_post_render', [1, 1]) } ); </script></div>
+<article id="post-177632" class="post-177632 post type-post status-publish format-standard hentry category-everyday-sexism tag-university tag-workplace">
+<header>
+<h2 class="entry-title"><a href="http://everydaysexism.com/everyday-sexism/177632" title="Bekah" rel="bookmark">Bekah</a></h2> <section class="entry-meta">
+<span class="author vcard"><a href="http://everydaysexism.com/author/everydaysexism" title="Posts by everydaysexism" rel="author">everydaysexism</a></span>
+<span class="meta-sep"> | </span>
+<span class="entry-date">26th October 2017</span>
+</section></header>
+<section class="entry-content">
+<p>For seven months I worked in a research group at a UK university. The group consisted of just two members of staff, me and my manager. On my second day he shouted at me, telling me how stupid I was. Often he would sit next to me with his hand on my leg while we analysed data together. Once I made a mistake in my experiment and he laughed, but clapped me on the back so hard that it hurt. I was very unwell at the time and felt unable to do anything about my manager&#8217;s behaviour. I didn&#8217;t know where to look for support from my department as I was very isolated from other staff and I knew that other staff had seen what was happening but not taken any action. I knew I needed a good reference from him to get another job. So I left, and pretended it was due to circumstances outside work. I was unemployed for two months while I found another job in a different city. I now work at the same university again, in a different research group, but I sometimes see him, and hide. I don&#8217;t know what the right thing is to do. Confront him? Report him? Hope to successfully avoid him until he retires? If he sees me, be polite? Be honest? I don&#8217;t know. I hope he isn&#8217;t doing the same thing to anyone else. I don&#8217;t want to endanger my position and relationships at my current job, and I am still ill, and feel I don&#8217;t have the energy to take on the additional stress of making a formal complaint.</p>
+<div class="entry-links"></div>
+</section><footer class="entry-footer">
+<span class="cat-links">Categories:<a href="http://everydaysexism.com/country/everyday-sexism" rel="category tag">Everyday Sexism</a></span>
+<span class="tag-links">Tags: <a href="http://everydaysexism.com/tag/university" rel="tag">University</a>, <a href="http://everydaysexism.com/tag/workplace" rel="tag">Workplace</a></span>
+</footer> </article><article id="post-177633" class="post-177633 post type-post status-publish format-standard hentry category-everyday-sexism tag-school">
+<header>
+<h2 class="entry-title"><a href="http://everydaysexism.com/everyday-sexism/177633" title="Daisy" rel="bookmark">Daisy</a></h2> <section class="entry-meta">
+<span class="author vcard"><a href="http://everydaysexism.com/author/everydaysexism" title="Posts by everydaysexism" rel="author">everydaysexism</a></span>
+<span class="meta-sep"> | </span>
+<span class="entry-date">26th October 2017</span>
+</section></header>
+<section class="entry-content">
+<p>I was sexually assaulted three times by a guy in my class. I was sick of it, so I reported it. I was relieved that it was over but people started coming up to me asking why I “Snaked on *his name*”. Another guy asked me if I felt aroused after it, and another guy called me a sadist and a bitch. It hurts. These people were once my friends. It’s crazy to think of that now.</p>
+<div class="entry-links"></div>
+</section><footer class="entry-footer">
+<span class="cat-links">Categories:<a href="http://everydaysexism.com/country/everyday-sexism" rel="category tag">Everyday Sexism</a></span>
+<span class="tag-links">Tags: <a href="http://everydaysexism.com/tag/school" rel="tag">School</a></span>
+</footer> </article><article id="post-177634" class="post-177634 post type-post status-publish format-standard hentry category-everyday-sexism tag-creepymen-predators tag-public-space">
+<header>
+<h2 class="entry-title"><a href="http://everydaysexism.com/everyday-sexism/177634" title="Laura M" rel="bookmark">Laura M</a></h2> <section class="entry-meta">
+<span class="author vcard"><a href="http://everydaysexism.com/author/everydaysexism" title="Posts by everydaysexism" rel="author">everydaysexism</a></span>
+<span class="meta-sep"> | </span>
+<span class="entry-date">26th October 2017</span>
+</section></header>
+<section class="entry-content">
+<p>Life in a small rural area means a sense of forced intimacy. There&#8217;s no getting around seeing your neighbours on the regular, as you shop, etc.<br />
+This makes it particularly tricky when faced with someone overly &#8220;handsy&#8221; as I have been. His reputation speaks for itself. &#8220;Creepy, rapey, watch out&#8221;&#8230;.. He told me himself that he&#8217;s &#8220;too strong&#8221; for most people.<br />
+I&#8217;ve made it a habit to never, ever be alone with him. Last summer he cornered me, &#8220;helping&#8221; me put my groceries in my truck. He stood pointedly between the door and door frame. I&#8217;m hard-wired for politeness and live alone, so I struggle with being assertive enough to make the point but not put myself in harm&#8217;s way due to his shredded ego. He&#8217;s sizeable and menacing. I asked him politely to move.<br />
+As I went to leave he suddenly went in for a hug. I kept my hands close to my body. He whispered creepily, &#8220;I just want to eat you up.&#8221; I replied, &#8220;not going to happen&#8221; and as he released me his hands grazed my breasts.<br />
+Gross. Truly no describing how disgusted I feel at this creep. I told friends here and they generally agree, in that Weinstein way, that it&#8217;s &#8220;just how he is&#8221; and he&#8217;s &#8220;probably not going to change&#8221;&#8230;. None of the men here seem willing to take him on, despite plenty of stories of him getting aggressive with the local women. Disappointing and infuriating.</p>
+<div class="entry-links"></div>
+</section><footer class="entry-footer">
+<span class="cat-links">Categories:<a href="http://everydaysexism.com/country/everyday-sexism" rel="category tag">Everyday Sexism</a></span>
+<span class="tag-links">Tags: <a href="http://everydaysexism.com/tag/creepymen-predators" rel="tag">#creepymen #predators</a>, <a href="http://everydaysexism.com/tag/public-space" rel="tag">Public space</a></span>
+</footer> </article><article id="post-177635" class="post-177635 post type-post status-publish format-standard hentry category-everyday-sexism tag-public-space">
+<header>
+<h2 class="entry-title"><a href="http://everydaysexism.com/everyday-sexism/177635" title="Alice" rel="bookmark">Alice</a></h2> <section class="entry-meta">
+<span class="author vcard"><a href="http://everydaysexism.com/author/everydaysexism" title="Posts by everydaysexism" rel="author">everydaysexism</a></span>
+<span class="meta-sep"> | </span>
+<span class="entry-date">26th October 2017</span>
+</section></header>
+<section class="entry-content">
+<p>a couple of guys grabbed my bum multiple times in the nightclub. I couldn&#8217;t believe they did this, especially after the Weinstein allegations being all over the news at the moment. I felt horrified, disgusted and violated as if i was just a thing to be taken advantage of, how can they not see that their actions are not right and class as sexual assault.<br />
+I realised harassment/assault is something women just assume will happen/ high risk of it when on a night out or even during the day. I feel many just think &#8216; well there are worse things happening in the world to less fortunate people&#8217; and that becomes an excuse of explanation for harassment/ assault so it is not taken/tackled seriously.</p>
+<div class="entry-links"></div>
+</section><footer class="entry-footer">
+<span class="cat-links">Categories:<a href="http://everydaysexism.com/country/everyday-sexism" rel="category tag">Everyday Sexism</a></span>
+<span class="tag-links">Tags: <a href="http://everydaysexism.com/tag/public-space" rel="tag">Public space</a></span>
+</footer> </article><article id="post-177638" class="post-177638 post type-post status-publish format-standard hentry category-everyday-sexism tag-public-space">
+<header>
+<h2 class="entry-title"><a href="http://everydaysexism.com/everyday-sexism/177638" title="Linda LaForge" rel="bookmark">Linda LaForge</a></h2> <section class="entry-meta">
+<span class="author vcard"><a href="http://everydaysexism.com/author/everydaysexism" title="Posts by everydaysexism" rel="author">everydaysexism</a></span>
+<span class="meta-sep"> | </span>
+<span class="entry-date">26th October 2017</span>
+</section></header>
+<section class="entry-content">
+<p>I have be gropped so many times in public spaces I cannot remember since the age of 13. I have been cat called in public so many times I cannot in public. I have been raped once. I have been stalked by my ex boyfriend who threatened to kill me. I cross the threat to avoid groups of boys or men to avoid comments.</p>
+<div class="entry-links"></div>
+</section><footer class="entry-footer">
+<span class="cat-links">Categories:<a href="http://everydaysexism.com/country/everyday-sexism" rel="category tag">Everyday Sexism</a></span>
+<span class="tag-links">Tags: <a href="http://everydaysexism.com/tag/public-space" rel="tag">Public space</a></span>
+</footer> </article><article id="post-177640" class="post-177640 post type-post status-publish format-standard hentry category-everyday-sexism tag-workplace">
+<header>
+<h2 class="entry-title"><a href="http://everydaysexism.com/everyday-sexism/177640" title="K" rel="bookmark">K</a></h2> <section class="entry-meta">
+<span class="author vcard"><a href="http://everydaysexism.com/author/everydaysexism" title="Posts by everydaysexism" rel="author">everydaysexism</a></span>
+<span class="meta-sep"> | </span>
+<span class="entry-date">26th October 2017</span>
+</section></header>
+<section class="entry-content">
+<p>The nature of my job means that I live and work on a ship with the same people for three/four months before moving on. It&#8217;s coming up to four months now and so I know my colleagues pretty well. I&#8217;ve had comments along the lines of &#8220;you&#8217;re always happy&#8221; &#8220;people like to be around you because you have a positive energy&#8221; &#8220;you smile the most out of everyone on the ship.&#8221; by various people at different times.<br />
+Another colleague described me as &#8216;moody&#8217; today. Why does this guy have such a different opinion of me than the others (all male, I&#8217;m the only female)? Because he is the one I get the most objectifying and sexist comments from. And I deal with it by either ignoring him, a sarcastic comment, or if I&#8217;m feeling up for it calling him out on his innapropriate comments. Somehow this makes me moody and incooperative.</p>
+<div class="entry-links"></div>
+</section><footer class="entry-footer">
+<span class="cat-links">Categories:<a href="http://everydaysexism.com/country/everyday-sexism" rel="category tag">Everyday Sexism</a></span>
+<span class="tag-links">Tags: <a href="http://everydaysexism.com/tag/workplace" rel="tag">Workplace</a></span>
+</footer> </article><article id="post-177641" class="post-177641 post type-post status-publish format-standard hentry category-everyday-sexism tag-home">
+<header>
+<h2 class="entry-title"><a href="http://everydaysexism.com/everyday-sexism/177641" title="that woman" rel="bookmark">that woman</a></h2> <section class="entry-meta">
+<span class="author vcard"><a href="http://everydaysexism.com/author/everydaysexism" title="Posts by everydaysexism" rel="author">everydaysexism</a></span>
+<span class="meta-sep"> | </span>
+<span class="entry-date">26th October 2017</span>
+</section></header>
+<section class="entry-content">
+<p>Sky engineer came to put our satellite dish up. OH and his brother were busy in the garage, and I was dealing with the Sky guy. He was  extremely odd and behaving inappropriately. The final straw came when he started to sing a song about him and me being in the bathroom together.</p>
+<p>I went down to the garage &#8216;to ask my husband something&#8217; (I needed to be sure that Sky guy knew that there was someone else in the house), and told my OH and BIL about the situation. They said &#8216;Let us know if you need us&#8217;. I was turning to head back up to the house when I thought better of it, and pointed out that I had, indeed, just let them know that I needed them.</p>
+<div class="entry-links"></div>
+</section><footer class="entry-footer">
+<span class="cat-links">Categories:<a href="http://everydaysexism.com/country/everyday-sexism" rel="category tag">Everyday Sexism</a></span>
+<span class="tag-links">Tags: <a href="http://everydaysexism.com/tag/home" rel="tag">Home</a></span>
+</footer> </article><article id="post-177643" class="post-177643 post type-post status-publish format-standard hentry category-everyday-sexism tag-degradation tag-mockery tag-public-space tag-sexism">
+<header>
+<h2 class="entry-title"><a href="http://everydaysexism.com/everyday-sexism/177643" title="Emily" rel="bookmark">Emily</a></h2> <section class="entry-meta">
+<span class="author vcard"><a href="http://everydaysexism.com/author/everydaysexism" title="Posts by everydaysexism" rel="author">everydaysexism</a></span>
+<span class="meta-sep"> | </span>
+<span class="entry-date">26th October 2017</span>
+</section></header>
+<section class="entry-content">
+<p>I was at a Halloween get-together with a small group of friends (including myself there were 6 females and 4 males) last night. At one point a (horrible) guy I&#8217;d gone to high school with was the topic of conversation. I was explaining to one of my (male) friends why the guy we were talking about was so horrible. I told my friend about how this guy refers to women as &#8220;warm holes&#8221; and all kinds of other degrading terms, how he has been known to degrade and insult, humiliate and assault specifically women. My friend was somewhat understanding, but the other males in the room just laughed at what I was saying, mocking me in a way and downplaying the terrible things the guy has done. They told me they thought his reference to women as &#8220;warm holes&#8221; was &#8220;hilarious&#8221; and that I needed to stop being so uptight. None of the girls in the room said anything, but it was clear to me that they were uncomfortable. </p>
+<p>I am just so sick of situations like that. I&#8217;ve been in far too many of them&#8230;The guy we were talking about is one of the most sexist people I know, and most of the males in the room just mocked me for even bringing it up. Why do (certain) men feel the need to dominate the conversation and make women feel as if their valid feelings of resentment towards sexism are purely over-exaggerated and unnecessary? It makes me fucking sick.</p>
+<div class="entry-links"></div>
+</section><footer class="entry-footer">
+<span class="cat-links">Categories:<a href="http://everydaysexism.com/country/everyday-sexism" rel="category tag">Everyday Sexism</a></span>
+<span class="tag-links">Tags: <a href="http://everydaysexism.com/tag/degradation" rel="tag">degradation</a>, <a href="http://everydaysexism.com/tag/mockery" rel="tag">mockery</a>, <a href="http://everydaysexism.com/tag/public-space" rel="tag">Public space</a>, <a href="http://everydaysexism.com/tag/sexism" rel="tag">Sexism</a></span>
+</footer> </article><article id="post-177644" class="post-177644 post type-post status-publish format-standard hentry category-everyday-sexism tag-gender-stereotyping">
+<header>
+<h2 class="entry-title"><a href="http://everydaysexism.com/everyday-sexism/177644" title="Kitty" rel="bookmark">Kitty</a></h2> <section class="entry-meta">
+<span class="author vcard"><a href="http://everydaysexism.com/author/everydaysexism" title="Posts by everydaysexism" rel="author">everydaysexism</a></span>
+<span class="meta-sep"> | </span>
+<span class="entry-date">26th October 2017</span>
+</section></header>
+<section class="entry-content">
+<p>The fact that if you&#8217;re a woman in a male-dominated occupation or a woman who does something like boxing or footy, then you get assumptions made about you. Whether you&#8217;re a lesbian or not &amp; whether you&#8217;re &#8216;one of the lads&#8217; are 2 such examples. Another annoyance is having your appearance commented on as opposed to how good you are at whatever it is you&#8217;re doing- moronic stuff to the effect of &#8220;that Janet is well tasty- she has lovely tits, a fit body &amp; lovely legs&#8221;, while not saying a word about how good she is at boxing, footy or whatever, while men don&#8217;t get that. Men do get the former, however- I remember an acquaintance saying that a male friend of his who was a dancer got the piss taken out of him in the pub once by some idiot man over his occupation, &amp; a male MasterChef Australia contestant got stick off his father for wanting to be a chef on the grounds that in their culture (he was oriental), cooking was the job of the females (says who?!). This is equally unacceptable. Another related thing that annoys me is when people assume that only straight men are interested in things like cars &amp; motorbikes, &amp; refer to them as &#8216;boys&#8217; toys&#8217;.</p>
+<div class="entry-links"></div>
+</section><footer class="entry-footer">
+<span class="cat-links">Categories:<a href="http://everydaysexism.com/country/everyday-sexism" rel="category tag">Everyday Sexism</a></span>
+<span class="tag-links">Tags: <a href="http://everydaysexism.com/tag/gender-stereotyping" rel="tag">gender stereotyping</a></span>
+</footer> </article><article id="post-177645" class="post-177645 post type-post status-publish format-standard hentry category-everyday-sexism tag-home tag-metoo tag-school">
+<header>
+<h2 class="entry-title"><a href="http://everydaysexism.com/everyday-sexism/177645" title="Canada Woman" rel="bookmark">Canada Woman</a></h2> <section class="entry-meta">
+<span class="author vcard"><a href="http://everydaysexism.com/author/everydaysexism" title="Posts by everydaysexism" rel="author">everydaysexism</a></span>
+<span class="meta-sep"> | </span>
+<span class="entry-date">26th October 2017</span>
+</section></header>
+<section class="entry-content">
+<p>I just finished Grade 11 in high school and I went on a date with the typical popular guy from a nearby town. He was smart, the quarterback, his family regularly attended church, and other girls also wanted to be with him. During our date he took me to his farm and things started to advance. He wanted to have sex and I told him that I was not ready, and that I wanted to wait. His response was &#8220;I have waited long enough&#8221;. I remember feeling froze and confused at this time and then he became frustrated and told me to just relax as he was now on top of me. I said no and stop, and tried to push him away, but it had no effect. I gave up and felt powerless. It took me over a year before I stopped blaming myself for what happened, as I thought I could have ran when I had the chance or spoke louder. </p>
+<p>The problem is not always with the stereotypical man. The problems are within our own communities with people that would be the most unexpected.</p>
+<div class="entry-links"></div>
+</section><footer class="entry-footer">
+<span class="cat-links">Categories:<a href="http://everydaysexism.com/country/everyday-sexism" rel="category tag">Everyday Sexism</a></span>
+<span class="tag-links">Tags: <a href="http://everydaysexism.com/tag/home" rel="tag">Home</a>, <a href="http://everydaysexism.com/tag/metoo" rel="tag">MeToo</a>, <a href="http://everydaysexism.com/tag/school" rel="tag">School</a></span>
+</footer> </article><nav id="nav-below" class="navigation" role="navigation">
+<div class="nav-previous"><a href="http://everydaysexism.com/page/2" ><span class="meta-nav">&larr;</span> older</a></div>
+<div class="nav-next"></div>
+</nav>
+</section>
+<aside id="sidebar" role="complementary">
+</aside>
+<div class="clear"></div>
+</div>
+<footer id="footer" role="contentinfo">
+<div id="copyright">
+
+</div>
+</footer>
+</div>
+<script type='text/javascript' src='http://everydaysexism.com/wp-includes/js/wp-embed.min.js?ver=4.8.3'></script>
+<script type='text/javascript' src='http://everydaysexism.com/wp-content/plugins/gravityforms-master/js/placeholders.jquery.min.js?ver=1.9.15'></script>
+
+<link href='https://fonts.googleapis.com/css?family=Inika' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="expand.js?ver=1"></script>
+
+</body>
+</html>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 

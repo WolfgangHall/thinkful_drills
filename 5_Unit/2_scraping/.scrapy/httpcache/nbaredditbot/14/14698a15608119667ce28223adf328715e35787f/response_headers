@@ -1,0 +1,20 @@
+Content-Type: text/html; charset=UTF-8
+X-Ua-Compatible: IE=edge
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Set-Cookie: loid=00000000000jpz1tby.2.1509762661596.Z0FBQUFBQlpfU1psOFBDOVdGYWNGcWRaajJEUzkwaXRMVzFVWmdGZG5xUDNvZzdzT1dOcnB2XzFIVjBJR0xyVTQtQjhsdTRQS1pYb3Z0ODRqTGVJTnBEOEprMjg1eUFaZ2Nxb09ORUZ3Si1oQW9DM2NNbm04am4zYkVUOU9wVE4yVGNqMENaSWNqOXg; Domain=reddit.com; Max-Age=63071999; Path=/; expires=Mon, 04-Nov-2019 02:31:01 GMT; secure
+Set-Cookie: session_tracker=EucdZeoQonZdB2TFaB.0.1509762661590.Z0FBQUFBQlpfU1psZ0F2X2RkN0lISnRjR1V2UmtlbXFFLVdVTkhIUGlpM0hadVlYckNRUVpkUnoyVW1aXzNxZ3VvdWVaNDlwZE9TM0NxQ3dyXzNYNHV2WmJmMWhfNXlmRW9OSjZvbHdzQnExbjdjVkNraGpYS0w4Uy1pal9lODQ0THQzay1vSlNxVFg; Domain=reddit.com; Max-Age=7199; Path=/; expires=Sat, 04-Nov-2017 04:31:01 GMT; secure
+Content-Encoding: gzip
+Cache-Control: max-age=0, must-revalidate
+X-Moose: majestic
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Accept-Ranges: bytes
+Date: Sat, 04 Nov 2017 02:31:01 GMT
+Via: 1.1 varnish
+X-Served-By: cache-jfk8140-JFK
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1509762661.491107,VS0,VE197
+Vary: accept-encoding
+Server: snooserv

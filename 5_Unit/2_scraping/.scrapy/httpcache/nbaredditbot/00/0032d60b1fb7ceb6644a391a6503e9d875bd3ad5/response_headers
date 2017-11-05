@@ -1,0 +1,11 @@
+Retry-After: 0
+Location: https://www.reddit.com/robots.txt
+Accept-Ranges: bytes
+Date: Sat, 04 Nov 2017 01:55:40 GMT
+Via: 1.1 varnish
+X-Served-By: cache-ewr18140-EWR
+X-Cache: HIT
+X-Cache-Hits: 0
+X-Timer: S1509760540.026316,VS0,VE0
+Cache-Control: private, max-age=3600
+Server: snooserv

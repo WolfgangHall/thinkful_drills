@@ -1,0 +1,11 @@
+API
+    - can ask the server to send specific information
+    - no need to discard css, html, php
+        - minimizes server demand
+        - speeds up task
+
+    - typically contain inherent throttling parameters
+
+    - access -> request a key
+    - requests -> program requests the data
+    - response -> returns info
