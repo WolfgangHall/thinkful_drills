@@ -1,0 +1,83 @@
+Check variable normality:
+    - histogram, bell-curve
+    - qq plot, check for straight line at 45 degree angle
+
+Parametric vs Non-parametric
+    - parametric test
+        -> uses some known set of parameter estimates to represent the info in the data
+        -> when data has mathematically known distribution, it can be summarized using a few parameters
+
+    - nonparametric test
+        -> used for information that does not follow a certain distribution
+        - estimates used often contain less info
+        - have a harder time detecting small effects
+        - less vulnerable to bias from extreme observations
+
+
+    Normally Distributed
+        - A/B test (2 independent groups)
+            => t-test for independent samples
+
+        - A/B/C test (3 or more independent groups)
+            => one-way ANOVA
+
+        - A/B test (all participants experience both versions)
+            => t-test for paired samples
+
+    Non-Normally
+        - A/B test (2 independent groups)
+            => mann-whitney test
+            => moon's median test
+            => kruskal-wallis test
+
+        - A/B/C test (3 or more independent groups)
+            => moon's median test
+            => kruskal-wallis test
+
+
+        - A/B test (all participants experience both versions)
+            => Wilcoxon signed-rank test
+
+Goal of analysis is to compare the distributions between two groups and check for meaningful differences
+    - compute a measure of central tendency and a measure of variance
+    - compare size of difference
+
+
+Parametric Tests
+    - Calculate how much info in the data can be explained by belonging to groups
+        - often done with group means
+
+    - calculate how much info is on the data overall
+        - often done with standard deviation
+
+    - divide the variance explained in the means by the total variance
+        - returns test statistic
+
+    Test statistics
+        - used to estimate how likely the group differences would occur if the groups did differ
+        - the smaller the likelihood, the more confidence in the difference being real
+            - not due to natural variability
+        - typically around 5% for threshold to conclude that groups are not the same
+
+        - identifies whether any group differs from the others
+
+
+ANOVA
+    - compare how much the group means for a group differs from the overall mean to how much the observations within each value of the group
+
+    - ratio of the average group difference to average within-group variance is used
+    - use of sample size, N
+        - calculate the probability of getting a difference that large in th sample if there were no meaningful difference between the groups
+
+
+Tests for dependent groups
+    - groups may be made up of the same people
+    - check if changning an element changes peoples reactions
+    - leads to dependent groups
+
+    differences from independent t-test
+        -> difference score
+            - subtract each pair of scores, then calculate the mean difference
+                - not calculating the difference of the means
+
+        -> error term is std dev of difference scores
