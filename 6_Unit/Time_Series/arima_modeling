@@ -1,0 +1,76 @@
+ARIMA
+
+    - extension of least squares regression
+
+    - variations
+        -> ARMA
+            - allows for 2 additional kinds of terms to be added to our specs
+                1. auto regression
+                2. moving averages
+        -> ARIMAx
+
+
+Stationarity and Differencing
+
+    - need data for ARIMA to be stationary
+        - easy way to do this -> differencing
+
+    - differencing
+        -> subtracting each term from its following term
+
+        - if there is a constant linear trend, the difference has a constant expecation
+
+        - if rate of change increases at a constant rate, taking the differences will yield a stationary time series
+
+    - goal is to be left with a random stationary process
+
+    - stationary process != expected value of difference is zero
+
+
+Autoregressive Models
+    - linear model where the terms of interest are the previous values of the outcome
+
+        - ex. outcome today is based on yesterdays outcome and some random noise
+
+    - generalized to AR(n)
+        - n is the number of autoregressive terms included
+            -> called the order
+            - terms are not skipped
+
+            - implies the terms that are the lags of 1 through n
+
+
+ARMA modeling
+
+    - defined in two terms: p, q
+        1. p -> the autoregressive component
+        2. q -> order of the moving average component
+
+    - written as ARMA(p, q)
+
+
+- partial autocorrelation function
+    -> takes the correlation of a time series with a lagged version of itself
+
+    - each bar represents the correlation with another lag
+
+    - pacf at 1 is the correlation of our initial series with itself lagged by one
+        - 0 will always return 1
+
+
+    - look for where the values are outliers
+        - indicates a possibly strong autocorrelation
+
+
+- if all the values are high
+    -> might need to use differences
+        - manually created or using ARIMA
+
+
+
+ARIMA (p, d, q)
+    - AR is the past values (p)
+    - I is the level of differencing (d)
+    - MA is adjusting to past errors (q)
+
+

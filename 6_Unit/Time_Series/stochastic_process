@@ -1,0 +1,44 @@
+- a sequence of variables that have happened over a course of time
+    - a process
+
+- when variables are random, based of a distribution it is called a stochastic process
+
+
+Bernoulli process
+    - a set of independent and identically distributed random variables
+        - each variable follows a bernoulli distribution
+
+        -> independent
+            - outcome of one variable does not affect the other
+        -> identically distributed
+            - each random variable comes from the same distribution
+
+        - iid
+
+        -> bernoulli
+            - outcome only has two possible values
+            - p and 1-p probabilities
+
+
+Random Walks
+    - the sum of iid random variables
+
+    - if random dist is bernoulli -> simple random walk
+        - if p is 0.5 -> symmetric simple random walk
+
+    - Wiener Process or Brownian motion
+        - the direction of the next position is normalyl distributed
+
+        - standard normal dist has an expected value of 0
+            - stationary process
+
+            - if deviation from expected
+                - drifts
+
+
+- when tracking a single object, or entity over time
+    - the observed values are a stochastic process
+
+    - moves randomly in some direction over time
+        - purchases by consumers
+        - stock prices

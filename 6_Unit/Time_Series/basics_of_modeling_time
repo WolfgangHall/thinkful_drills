@@ -1,0 +1,17 @@
+Linear Trends
+    - simple linear trend
+    - plot a regression model
+
+    - sklearn requires numeric inputs
+        - convert dates
+
+
+Indicators
+    - indicator varialbes
+        - dummy variables that show whether you are in a time of year or not
+
+        - create an indicator for every period of season
+
+
+Value of trigonometric terms for seasonality
+    - they avoid overfitting by offering a single term to match, the amplitude
