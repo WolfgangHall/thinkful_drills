@@ -1,0 +1,67 @@
+Economic Models
+
+Linear Regression
+    - OLS
+    - logistic
+    - lasso
+    - ridge
+
+    - not most accurate form of predictive modeling
+        - though things can be done to make it more accurate
+
+    - popular due to explanatory power
+        - understanding of why things are happening
+
+    - often deal with aggregate data
+        - unemployment rate
+        - gdp
+
+        - datasets can sometimes be too small for other techniques to be stable or reliable
+
+
+Robust Regression
+    - useful when you have outliers in your data that you want to prevent from dominating the model
+
+    - outliers influence linear model coefficients because errors are so large
+        - leads to volatility of coefficients -> undesirable
+
+    - 3 different types in sklearn:
+
+        1. Huber
+            - works well when the outliers are in the response or outcome
+            - uses a loss function on outliers
+                - the further out they are, the less they influence the regression (though there is still influence)
+
+        2. Thiel-Sen
+            - works better with errors in the inputs
+            - relies on medians
+            - does not assume normally distributed error
+                - makes outliers irrelevant (unless enough exist to shift median)
+
+        3. RANSAC
+            - RANdom SAmple Consensus
+            - tends to work best if the outliers are large
+            - iteratively works through several random samples of data to build linear regression models
+                - searches for outliers (based on errors)
+
+
+Probit and Tobit
+
+    - Probit
+        - models a probablistic outcome
+        - used for the same kinds of problems as logistic regression
+        - cuts off outcomes at 1 and 0 -> forced probablistic bounds
+
+    - Tobit
+        - positives only linear regression
+        - coefficients are reinterpreted -> all negative outcomes are associated with 0
+            - ensures that output is always valid
+            - sometimes negative values arer illogical or impossible
+
+    - Logit
+        - logistic regression
+
+
+STATA
+
+    - more of a scripting language than a programming language

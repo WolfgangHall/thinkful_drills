@@ -74,3 +74,40 @@ ARIMA (p, d, q)
     - MA is adjusting to past errors (q)
 
 
+- Interest in:
+    - p-values of the coefficients
+        -> approximating the likelihood that the coefficient has a significant effect on our outcome
+        -> if zero is within interval, that coefficient is considered to be potentially unncesseary
+
+    - the log likelihood
+        -> log of the likelihood that the given model would generate the data we see
+        -> the closer to zero, the higher the probability we have predicted our outcome, give the model
+
+    - residual stats
+        -> difference between the prediction and the observed quantity
+
+        - typically important
+
+        -> you want them to be random and normally distributed
+            => is the assumption made about errors in modeling
+
+
+Compare Models with AIC
+
+    AIC
+        -> Akaike Information Criteria
+        -> measure of the degree of information contained in the model
+
+        -> the model with the lowest AIC is likely the best model to choose
+            - determine how much better using ratio of AICs
+
+        -> compared in the context of info loss
+
+
+ACF considers all point differences between a time series
+    - 1 to 10
+    - 2 to 10
+    - 3 to 10
+
+PACF only considers the difference between the two points in a time series
+    - only 1 to 10

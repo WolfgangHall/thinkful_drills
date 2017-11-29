@@ -1,0 +1,64 @@
+Production Economics
+    - economics of how things are made
+    - what larger inputs combine to create goods and how changing those will impact the amount produced
+
+
+Economic Production
+    - fixed ratio of inputs
+        - 10 wood and 3 steel == table
+
+    - scaled ratio of inputs
+        - salespeople and products and sales
+
+
+Cobb-Douglas Production
+    - gives the relationship between two inputs and their production
+
+    - $$Y = AL^BK^a $$
+
+    - Y -> the total output produced
+
+    - A -> a factor of productivity
+        -> scales the output appropriately
+
+    - L -> input
+        -> labor
+
+    - K -> input
+        -> capital
+
+    - Beta -> output elasticity
+    - Alpha -> output elasticity
+        -> help quantify the effect of additional units of our inputs on the output
+
+
+    - L and K feature diminishing marginal returns
+        - meaning each additional unit produces decreased output
+
+    - allows for varied forms of returns to scale
+        - if sum of two exponents is less than 1 => decreased returns to scale
+        - if exponents sum to 1 => constant returns to scale
+        - more than 1 => increasing return to scale
+
+
+    - can be used in conjunction with Linear Regression
+        - through use of logs
+        - log each side of the equation
+
+        - $$log(Y) = c + B log(L) + a log(K)
+
+        - transforming Y, L and K
+
+        - coefficients returned estimate the values of beta and alpha
+
+
+Uses
+
+    - any kind of production
+    - trying to model the production of a good from labor and raw materials
+    - sales from marketing and inventory spend
+
+    - problem must have limited, easily countable inputs
+
+    - if the model fits well, you can know more about the relationship of production
+        - can be used to grow production
